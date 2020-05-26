@@ -38,6 +38,10 @@ client-cert-file:
 client-key-file:
 # The password to decrypt the client_key_file
 client-key-password:
+# The NiFi user name
+nifi-user-name:
+# The NiFi user password
+nifi-user-password:
 
 # Options for the entire graph
 graph:
