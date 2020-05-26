@@ -61,9 +61,15 @@ import click
 @click.option("--client-key-password", "client_key_password", required=False,
               help="The password to decrypt the client_key_file"
               )
+@click.option("--nifi-username", "nifi_user_name", required=False,
+              help="The NiFi user name"
+              )
+@click.option("--nifi-user-password", "nifi_user_password", required=False,
+              help="The NiFi user password"
+              )
 def process(existing_graph, conf_name, output_dot_name, output_graphviz_format, output_graphviz_base_name,
             starting_pg_id, depth, nifi_url, use_ssl, use_user_pass, ca_file, client_cert_file, client_key_file,
-            client_key_password):
+            client_key_password, nifi_user_name, nifi_user_password):
     print("foo")
 
 
