@@ -1,5 +1,4 @@
 # dotifi
 
+A utility to generate [DOT](https://graphviz.org/doc/info/lang.html) files and images based on [graphviz](https://graphviz.org/documentation/) from the canvas of an [Apache NiFi](https://nifi.apache.org) instance.
 
-Security: dotifi does not support secure connections to Apache NiFi.  If you require secure connections, then
-you must write your own version of dotifi.py and configure the NiPyApi global security options.
