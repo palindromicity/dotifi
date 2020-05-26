@@ -12,5 +12,5 @@ def test_load_sample_configuration():
 
 def test_load_env_configuration():
     configuration = load_configuration(NO_ENV.absolute().as_posix())
-    assert configuration["path"] != "${PATH}"
-    assert configuration["not_path"] == "not path"
+    assert configuration["path"].as_str_expanded() != "${PATH}"
+    assert configuration["not_path"].get() == "not path"

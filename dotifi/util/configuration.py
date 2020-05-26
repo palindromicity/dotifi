@@ -1,22 +1,12 @@
-import yaml
-import re
-import os
-
-_path_matcher = re.compile(r'\$\{([^}^{]+)\}')
+from confuse import LazyConfig
+import os.path
 
 
-def _path_constructor(loader, node):
-    """ Extract the matched value, expand env variable, and replace the match """
-    value = node.value
-    match = _path_matcher.match(value)
-    env_var = match.group()[2:-1]
-    return os.environ.get(env_var) + value[match.end():]
-
-
-yaml.add_implicit_resolver('!path', _path_matcher)
-yaml.add_constructor('!path', _path_constructor)
-
-
-def load_configuration(configuration_file_path):
-    with open(configuration_file_path) as f:
-        return yaml.load(f, yaml.FullLoader)
+def load_configuration(args, configuration_file_path) -> LazyConfig:
+    config = LazyConfig("Service", __name__)
+    if configuration_file_path is not None:
+        if os.path.isfile(configuration_file_path):
+            config_file = configuration_file_path
+            config.set_file(config_file)
+    config.set_args(args)
+    return config
