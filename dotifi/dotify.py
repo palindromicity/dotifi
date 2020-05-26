@@ -37,7 +37,7 @@ def process():
     parser.add_argument("--nifi-url", "-n", dest="nifi_url", default="http://localhost:8080/nifi", required=False,
                         help="The url of the NiFi instance to connect to.  This is used if --with-existing is not set."
                         )
-    parser.add_argument("--using-ssl", dest="use_ssl", action="store_true, required=False, default=False,
+    parser.add_argument("--using-ssl", dest="use_ssl", action="store_true", required=False, default=False,
                         help="Flag, when specified it signals that the NiFi connection requires SSL"
                         )
     parser.add_argument("--using-user-pw", dest="use_user_pass", action="store_true", required=False, default=False,
