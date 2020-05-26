@@ -1,5 +1,5 @@
-# All values in this configuration may be replaced using
-# environmental variables in the form of ${VARIABLENAME}
+# All string values in this configuration may be replaced using
+# environmental variables in the form of $VARIABLENAME
 #
 
 #  Path to an existing DOT graph definition as opposed to being built from NiFi
