@@ -7,6 +7,7 @@ A utility to generate [DOT](https://graphviz.org/doc/info/lang.html) files and i
 dotifi is maintained using [poetry](https://python-poetry.org/docs/) for dependency management and packaging.
 
 ### Getting started
+- Install [Graphviz](https://graphviz.org)
 - Clone, fork, or download the [source](https://github.com/palindromicity/dotifi)
 - Install [poetry](https://python-poetry.org/docs/)
 - If required setup [pyenv](https://github.com/pyenv/pyenv) or your preference to get a python 3.8 environment, as poetry will use whatever the current python is.
