@@ -36,10 +36,11 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
                 node.attr[key] = configuration['processors']['proc'][key].get()
 
     for connection in this_flow.process_group_flow.flow.connections:
-        for relationship in connection.component.selected_relationships:
-            subgraph.add_edge(connection.source_id, connection.destination_id)
-            edge = subgraph.get_edge(connection.source_id, connection.destination_id)
-            edge.attr['label'] = relationship
+        if connection.component.selected_relationships is not None:
+            for relationship in connection.component.selected_relationships:
+                subgraph.add_edge(connection.source_id, connection.destination_id)
+                edge = subgraph.get_edge(connection.source_id, connection.destination_id)
+                edge.attr['label'] = relationship
 
     # check and see if we are at the configured depth or that we can keep going
     configured_depth = int(configuration['depth'].get())

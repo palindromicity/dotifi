@@ -9,10 +9,11 @@ def publish(publish_configuration, graph):
     :return:
     """
 
-    dot_name = publish_configuration['output_dot_name'].as_filename()
+    dot_name = publish_configuration['output_dot_file'].as_filename()
     logging.debug("Graph will be written as dot file: %s", dot_name)
 
-    graphic_base_name = publish_configuration['output_graphviz_name'].as_filename()
+    graphic_base_name = publish_configuration['output_graphviz_file'].as_filename()
+    graphic_program = publish_configuration['output_graphviz_program'].get()
     graphviz_fmt = publish_configuration['output_graphviz_format'].as_choice(
         ["canon", "cmap", "cmapx", "cmapx_np", "dia", "dot", "fig", "gd", "gd2", "gif",
          "hpgl", "imap", "imap_np", "ismap", "jpe", "jpeg", "jpg", "mif", "mp", "pcl",
@@ -21,5 +22,7 @@ def publish(publish_configuration, graph):
          "vrml",
          "vtx", "wbmp", "xdot", "xlib"])
 
+    if not graphic_base_name.endswith(graphviz_fmt):
+        graphic_base_name = graphic_base_name + "." + graphviz_fmt
     graph.write(dot_name)
-    graph.draw(graphic_base_name, prog=graphviz_fmt)
+    graph.draw(graphic_base_name, prog=graphic_program, format=graphviz_fmt)

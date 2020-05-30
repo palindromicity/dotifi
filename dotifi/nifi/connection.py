@@ -13,7 +13,7 @@ def configure_nifi_connection(configuration):
 
     if configuration['using_ssl'].exists() and configuration['using_ssl'].get(bool):
         if 'https://' not in configuration['nifi_url'].get():
-            raise Exception("Configured for ssl without an https nifi_url")
+            raise Exception("Configured for ssl without an https nifi-url")
         ca_file = None
         if configuration['ca_file'].exists():
             ca_file = configuration['ca_file'].as_filename()
