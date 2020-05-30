@@ -1,5 +1,13 @@
 import argparse
-from dotifi.util.configuration import load_configuration
+import logging
+from pygraphviz import AGraph
+
+
+from dotifi.nifi.connection import configure_nifi_connection
+from dotifi.nifi import generate
+from dotifi.configuration.load import load_configuration
+from dotifi.publishing.publish import publish
+from confuse import NotFoundError
 
 
 def process():
@@ -10,9 +18,9 @@ def process():
     parser.add_argument("--with-conf-file", "-c", dest="conf_name", required=False,
                         help="Path to the .yaml file with the configuration. All options can be set in the " +
                              "configuration, with ")
-    parser.add_argument("--output-dot-file", "-o", dest="output_dot_name", default="./nifi-canvas.dot", required=False,
+    parser.add_argument("--output-dot-file", "-o", dest="output_dot_name", default="nifi-canvas.dot", required=False,
                         help="Path to the dot file to store the dot results to.")
-    parser.add_argument("--output-graphviz-fmt", "-f", dest="output_graphviz_format", required=False, default="png",
+    parser.add_argument("--output-graphviz-fmt", "-f", dest="output_graphviz_format", required=False, default="dot",
                         help="The format of the graphviz generated file. Formats " +
                              "(not all may be available on every system depending on how Graphviz was built)",
                         choices=["canon", "cmap", "cmapx", "cmapx_np", "dia", "dot", "fig", "gd", "gd2", "gif",
@@ -21,7 +29,7 @@ def process():
                                  "pic", "plain", "plain-ext", "png", "ps", "ps2", "svg", "svgz", "vml", "vmlz",
                                  "vrml",
                                  "vtx", "wbmp", "xdot", "xlib"])
-    parser.add_argument("--output-graphviz-file", "-g", dest="output_graphviz_base_name", default="nifi-canvas",
+    parser.add_argument("--output-graphviz-file", "-g", dest="output_graphviz_name", default="nifi-canvas.png",
                         required=False,
                         help="Path to the dot file to store the graphviz results to. " +
                              "Results will be saved with the extension " +
@@ -34,7 +42,7 @@ def process():
                         help="The depth to descend to within nested process groups.  Note that the top level canvas " +
                              "is the root process group.  As such a depth of 0 will only output items in the root " +
                              "canvas and not any process groups it contains. A value of -1 means unlimited.")
-    parser.add_argument("--nifi-url", "-n", dest="nifi_url", default="http://localhost:8080/nifi", required=False,
+    parser.add_argument("--nifi-url", "-n", dest="nifi_url", default="http://localhost:8080/nifi-api", required=False,
                         help="The url of the NiFi instance to connect to.  This is used if --with-existing is not set."
                         )
     parser.add_argument("--using-ssl", dest="use_ssl", action="store_true", required=False, default=False,
@@ -60,10 +68,36 @@ def process():
                         )
     parser.add_argument("--nifi-user-password", dest="nifi_user_password", required=False,
                         help="The NiFi user password")
+    parser.add_argument("--verbose", "-v", dest="verbose", action='store_true', required=False, default=False)
     args = vars(parser.parse_args())
 
     options = load_configuration(args, args['conf_name'])
-    print("foo")
+
+    if options['verbose'].get():
+        logging.basicConfig(level=logging.DEBUG)
+
+    logging.debug("Configuration:\n%s", options.dump())
+
+    graph = None
+    if options["with-existing-dot-file"].exists():
+        existing_path = options["with-existing-dot-file"].as_filename()
+        logging.debug("Using existing DOT file %s", existing_path)
+        try:
+            graph = AGraph(existing_path)
+            logging.debug("Loaded graph from %s :\n%s", existing_path, graph.string())
+        except FileNotFoundError as e:
+            logging.exception(e)
+            exit(1)
+    else:
+        try:
+            configure_nifi_connection(options)
+            graph = generate.generate_graph(options)
+        except (NotFoundError, Exception, ValueError) as e:
+            logging.exception(e)
+            exit(1)
+
+    # print graph with options
+    publish(options, graph)
 
 
 if __name__ == "__main__":

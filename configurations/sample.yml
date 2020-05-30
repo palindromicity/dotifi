@@ -2,6 +2,8 @@
 # environmental variables in the form of $VARIABLENAME
 #
 
+#  Flag to set logging to verbose ( debugging level )
+verbose:
 #  Path to an existing DOT graph definition as opposed to being built from NiFi
 with-existing-dot-file:
 # Path to the dot file to store the dot results to
@@ -55,8 +57,9 @@ program_groups:
     351b1dbc-0172-1000-056d-ec78a003b493:
         # Path to a dot file the contains the graph definition that sets the properties
         # and attributes at a graph level for this process group and it's descendents
+        # the name MUST start with cluster_.
         template: foo.dot
-# Options for specfic processors, by id
+# Options for specific processors, by id
 processors:
     # the uuid of the processor
     351b1dbc-0172-1000-056d-ec78a003b49:

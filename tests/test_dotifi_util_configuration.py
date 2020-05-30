@@ -1,4 +1,4 @@
-from dotifi.util.configuration import load_configuration
+from dotifi.configuration.load import load_configuration
 import pathlib
 
 SAMPLE = pathlib.Path(__file__).parent.parent.joinpath("configurations/sample.yml")
