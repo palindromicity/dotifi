@@ -34,7 +34,6 @@ String values in the configuration file may be entered as shell environment vari
 
  
 ```bash
-/Users/ottofowler/Library/Caches/pypoetry/virtualenvs/dotifi-bdSYdp08-py3.8/bin/python /Users/ottofowler/src/github/ottobackwards/forks/dotifi/dotifi/dotify.py --help
 usage: dotify.py [-h] [--with-existing-dot-file EXISTING_GRAPH]
                  [--with-conf-file CONF_NAME]
                  [--output-dot-file OUTPUT_DOT_NAME]
