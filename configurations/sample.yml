@@ -5,45 +5,61 @@
 #  Flag to set logging to verbose ( debugging level )
 verbose:
 #  Path to an existing DOT graph definition as opposed to being built from NiFi
-with-existing-dot-file:
+with_existing_dot_file:
 # Path to the dot file to store the dot results to
-output-dot-file:
+output_dot_file:
 
 #  The format of the graphviz generated file. Formats (not all may be available on every system
 #  depending on how Graphviz was built
 #  "canon", "cmap", "cmapx", "cmapx_np", "dia", "dot", "fig", "gd", "gd2", "gif",
 #  "hpgl", "imap", "imap_np", "ismap", "jpe", "jpeg", "jpg", "mif", "mp", "pcl", "pdf",
-#  "pic", "plain", "plain-ext", "png", "ps", "ps2", "svg", "svgz", "vml", "vmlz", "vrml",
+#  "pic", "plain", "plain_ext", "png", "ps", "ps2", "svg", "svgz", "vml", "vmlz", "vrml",
 #  "vtx", "wbmp", "xdot", "xlib"
-output-graphviz-fmt:
+output_graphviz_format:
+
+#  The Graphviz layout to use
+# ‘neato’|’dot’|’twopi’|’circo’|’fdp’|’nop'
+output_graphviz_program:
+
 #  Path to the dot file to store the graphviz results to. Results will be saved with the extension
-#  output-graphviz-format option
-output-graphviz-file:
+#  output_graphviz_format option
+output_graphviz_file:
+
 #  The id of the process group to start at.  This will be a uuid.  When set the output will start
 #  with this process and it's decedents based on the depth setting
-start-at-pg:
+start_at_pg:
+
 #  The depth to descend to within nested process groups.  Note that the top level canvas
 #  is the root process group.  As such a depth of 0 will only output items in the root canvas and
-#  not any process groups it contains.  A value of -1 means unlimited
+#  not any process groups it contains.  A value of _1 means unlimited
 depth:
-# The url of the nifi instance to connect to.  This is used if with-existing is not set
-nifi-url:
+
+# The url of the nifi instance to connect to.  This is used if with_existing is not set
+nifi_url:
+
 # Flag, when specified it signals that the NiFi connection requires SSL
-using-ssl:
+using_ssl:
+
 # Flag, when specified it signals that the NiFi connection requires a username and password
-using-user-pw:
+using_user_pw:
+
 # A PEM file containing certs for the root CA(s) for the NiFi serve
-ca-file:
+ca_file:
+
 # A PEM file containing the public certificates for the user / client identity
-client-cert-file:
-# An encrypted (password -protected PEM file containing the client's secret key
-client-key-file:
+client_cert_file:
+
+# An encrypted (password _protected PEM file containing the client's secret key
+client_key_file:
+
 # The password to decrypt the client_key_file
-client-key-password:
+client_key_password:
+
 # The NiFi user name
-nifi-user-name:
+nifi_user_name:
+
 # The NiFi user password
-nifi-user-password:
+nifi_user_password:
 
 # Options for the entire graph
 graph:
