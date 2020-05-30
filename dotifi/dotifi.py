@@ -68,7 +68,8 @@ def process():
                         )
     parser.add_argument("--nifi-user-password", dest="nifi_user_password", required=False,
                         help="The NiFi user password")
-    parser.add_argument("--verbose", "-v", dest="verbose", action='store_true', required=False, default=False)
+    parser.add_argument("--verbose", "-v", dest="verbose", action='store_true', required=False, default=False,
+                        help="Sets the logging level to verbose")
     args = vars(parser.parse_args())
 
     options = load_configuration(args, args['conf_name'])
