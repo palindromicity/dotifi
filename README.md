@@ -2,6 +2,25 @@
 
 A utility to generate [DOT](https://graphviz.org/doc/info/lang.html) files and images based on [graphviz](https://graphviz.org/documentation/) from the canvas of an [Apache NiFi](https://nifi.apache.org) instance.
 
+dotifi supports
+- connecting to Apache Nifi using [nipyapi](https://nipyapi.readthedocs.io/en/latest/index.html) in the background and generating a graph from the canvas items
+    - Process Groups
+    - Remote Process Groups
+    - Input and Output Ports
+    - Processors
+    - Connections
+- creating [DOT]() files using [Graphviz](https://graphviz.org) and [pygraphviz](http://pygraphviz.github.io/documentation/pygraphviz-1.5/index.html)
+- creating a graphic file in Graphviz supported formats
+- starting with an existing dot file as opposed to building from a live NiFi instance
+- starting from a specific process group
+- controlling the depth of recursion
+- supplying DOT files as templates for configuring
+    - the root graph ( and all children)
+    - Any process group by ID
+- supplying name value pairs ( in yaml configuration file) to override and set [attributes](https://graphviz.gitlab.io/_pages/doc/info/attrs.html)
+    - Processors by id
+    - Remote Process Groups by id
+
 ### poetry
 
 dotifi is maintained using [poetry](https://python-poetry.org/docs/) for dependency management and packaging.
