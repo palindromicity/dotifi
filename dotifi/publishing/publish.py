@@ -24,5 +24,7 @@ def publish(publish_configuration, graph):
 
     if not graphic_base_name.endswith(graphviz_fmt):
         graphic_base_name = graphic_base_name + "." + graphviz_fmt
+    if not dot_name.endswith(".dot"):
+        dot_name = dot_name + ".dot"
     graph.write(dot_name)
     graph.draw(graphic_base_name, prog=graphic_program, format=graphviz_fmt)
