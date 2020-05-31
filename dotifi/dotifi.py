@@ -17,7 +17,7 @@ def process():
     parser.add_argument("--with-conf-file", "-c", required=False,
                         help="Path to the .yaml file with the configuration. All options can be set in the " +
                              "configuration, with ")
-    parser.add_argument("--output-dot-file", "-o", required=False, default="nifi.dot",
+    parser.add_argument("--output-dot-file", "-o", required=False, default="nifi-canvas",
                         help="Path to the dot file to store the dot results to.")
     parser.add_argument("--output-graphviz-format", "-f", default="png",
                         help="The format of the graphviz generated file. Formats " +
@@ -75,7 +75,6 @@ def process():
     args = vars(parser.parse_args())
 
     options = load_configuration(args, args.get('with_conf_file'))
-    print(args)
 
     if options['verbose'].get():
         logging.basicConfig(level=logging.DEBUG)

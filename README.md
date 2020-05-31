@@ -6,7 +6,7 @@ A utility to generate [DOT](https://graphviz.org/doc/info/lang.html) files and i
 
 dotifi is maintained using [poetry](https://python-poetry.org/docs/) for dependency management and packaging.
 
-### Getting started
+### Getting started for development
 - Install [Graphviz](https://graphviz.org)
 - Clone, fork, or download the [source](https://github.com/palindromicity/dotifi)
 - Install [poetry](https://python-poetry.org/docs/)
@@ -14,6 +14,7 @@ dotifi is maintained using [poetry](https://python-poetry.org/docs/) for depende
     - for example setup pyenv local to the project directory
 - In the source route directory run `poetry install`, this will install all the dependencies
 - Run `peotry run pytest -v` to run the tests and ensure things are working
+- Run `poetry build` then `poetry install` then `poetry run dotifi` with any options to run
 
 #### Setting up [Jetbrains PyCharm](https://www.jetbrains.com/pycharm/) with your virtual python environment
 - see [this reddit answer](https://www.reddit.com/r/pycharm/comments/elga2z/using_pycharm_for_poetrybased_projects/fn1ix60?utm_source=share&utm_medium=web2x)
@@ -181,13 +182,21 @@ graph:
     # see https://graphviz.org/documentation/ for information on the dot language
     template: bar.dot
 # Options for specific process groups, by id
-program_groups:
+process_groups:
     # the uuid id of the process group
     351b1dbc-0172-1000-056d-ec78a003b493:
         # Path to a dot file the contains the graph definition that sets the properties
         # and attributes at a graph level for this process group and it's descendents
         # the name MUST start with cluster_.
         template: foo.dot
+# Options for specific remote process groups, by id
+# these values will override or mix in with the defaults
+remote_process_groups:
+    # the uuid of the remote process group
+    35199793-0172-1000-02ea-52da1888a03d:
+        # NODE attributes
+        # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
+        color: grey
 # Options for specific processors, by id
 processors:
     # the uuid of the processor
@@ -195,6 +204,4 @@ processors:
         # NODE attributes
         # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
         color: blue
-
-
 ```
