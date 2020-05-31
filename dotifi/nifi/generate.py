@@ -17,23 +17,52 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
     """
     this_flow = nipyapi.canvas.get_flow(process_group.id)
     # see if the user has configured a DOT template for this process_group
-    if configuration['program_groups'][process_group.id].exists():
-        template_file = configuration['program_groups']['process_group.id'].as_filename()
+    if configuration['process_groups'][process_group.id].exists():
+        template_file = configuration['process_groups']['process_group.id'].as_filename()
         subgraph = pgv.AGraph(template_file)
     else:
         subgraph = parent_graph.add_subgraph(name="cluster_" + process_group.component.name)
         subgraph.graph_attr['label'] = process_group.component.name
+
+    for input_port in nipyapi.canvas.list_all_input_ports(process_group.id, False):
+        subgraph.add_node(input_port.id)
+        input_node = subgraph.get_node(input_port.id)
+        input_node.attr['label'] = input_port.component.name + "\n" + input_port.component.type
+        input_node.attr['pos'] = "{0:f},{0:f}".format(input_port.position.x, input_port.position.y)
+
+    for output_port in nipyapi.canvas.list_all_output_ports(process_group.id, False):
+        subgraph.add_node(output_port.id)
+        output_node = subgraph.get_node(output_port.id)
+        output_node.attr['label'] = output_port.component.name + "\n" + output_port.component.type
+        output_node.attr['pos'] = "{0:f},{0:f}".format(output_port.position.x, output_port.position.y)
 
     for processor in this_flow.process_group_flow.flow.processors:
         subgraph.add_node(processor.id)
         node = subgraph.get_node(processor.id)
         class_full = processor.component.type.split(".")
         node.attr['label'] = processor.component.name + "\n" + class_full[len(class_full) - 1]
+        node.attr['pos'] = "{0:f},{0:f}".format(processor.position.x, processor.position.y)
 
         # see if user has configured a set of attributes for this processor
         if configuration['processors'][processor.id].exists():
             for key in configuration['processors'][processor.id]:
-                node.attr[key] = configuration['processors']['proc'][key].get()
+                node.attr[key] = configuration['processors'][processor.id][key].get()
+
+    for remote_group in this_flow.process_group_flow.flow.remote_process_groups:
+        remote_subgraph = subgraph.add_subgraph(name="cluster_" + remote_group.component.name)
+        remote_subgraph.graph_attr['label'] = remote_group.component.target_uri + "\n" + "Remote Process Group"
+        remote_subgraph.graph_attr['style'] = 'filled'
+        remote_subgraph.graph_attr['color'] = 'blue'
+        remote_subgraph.graph_attr['fontcolor'] = 'white'
+        remote_process_group = nipyapi.canvas.get_remote_process_group(remote_group.id, summary=True)
+        # see if user has configured a set of attributes for this remote process group
+        if configuration['remote_process_groups'][remote_group.id].exists():
+            for key in configuration['remote_process_groups'][remote_group.id]:
+                remote_subgraph.graph_attr[key] = configuration['remote_process_groups'][remote_group.id][key].get()
+        for input_port in remote_process_group['input_ports']:
+            remote_subgraph.add_node(input_port.id)
+            remote_input_port_node = remote_subgraph.get_node(input_port.id)
+            remote_input_port_node.attr['label'] = input_port.name + "\n" + "INPUT_PORT"
 
     for connection in this_flow.process_group_flow.flow.connections:
         if connection.component.selected_relationships is not None:
@@ -41,6 +70,10 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
                 subgraph.add_edge(connection.source_id, connection.destination_id)
                 edge = subgraph.get_edge(connection.source_id, connection.destination_id)
                 edge.attr['label'] = relationship
+        else:
+            subgraph.add_edge(connection.source_id, connection.destination_id)
+            edge = subgraph.get_edge(connection.source_id, connection.destination_id)
+            edge.attr['label'] = connection.component.name
 
     # check and see if we are at the configured depth or that we can keep going
     configured_depth = int(configuration['depth'].get())
@@ -79,8 +112,8 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
         root_id = generate_configuration['starting_pg_id'].get()
         logging.debug("using specified starting_pg_id %s", root_id)
         # since they are being specific, get the specific template if there is one
-        if generate_configuration['program_groups'][root_id].exists():
-            template_file = generate_configuration['program_groups'][root_id].as_filename()
+        if generate_configuration['process_groups'][root_id].exists():
+            template_file = generate_configuration['process_groups'][root_id].as_filename()
             logging.debug("specified starting_pd_id %s has a configured template %s", root_id, template_file)
             _root_graph = pgv.AGraph(template_file)
             logging.debug("root graph based on starting_pg_id and template created")

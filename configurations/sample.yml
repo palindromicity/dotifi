@@ -68,13 +68,21 @@ graph:
     # see https://graphviz.org/documentation/ for information on the dot language
     template: bar.dot
 # Options for specific process groups, by id
-program_groups:
+process_groups:
     # the uuid id of the process group
     351b1dbc-0172-1000-056d-ec78a003b493:
         # Path to a dot file the contains the graph definition that sets the properties
         # and attributes at a graph level for this process group and it's descendents
         # the name MUST start with cluster_.
         template: foo.dot
+# Options for specific remote process groups, by id
+# these values will override or mix in with the defaults
+remote_process_groups:
+    # the uuid of the remote process group
+    35199793-0172-1000-02ea-52da1888a03d:
+        # NODE attributes
+        # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
+        color: grey
 # Options for specific processors, by id
 processors:
     # the uuid of the processor
