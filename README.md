@@ -126,8 +126,8 @@ dotifi is maintained using [poetry](https://python-poetry.org/docs/) for depende
 - see [this reddit answer](https://www.reddit.com/r/pycharm/comments/elga2z/using_pycharm_for_poetrybased_projects/fn1ix60?utm_source=share&utm_medium=web2x)
 
 ## Configuration
-dotify uses [confuse](https://confuse.readthedocs.io/en/latest/) for it's configuration management.
-dotify will take most of its configuration:
+dotifi uses [confuse](https://confuse.readthedocs.io/en/latest/) for it's configuration management.
+dotifi will take most of its configuration:
 
  - from commandline parameters
  - from a yaml configuration file specified with the --with-conf-file parameter
