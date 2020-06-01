@@ -1,9 +1,26 @@
 import nipyapi
 import pygraphviz as pgv
 import logging
-import io
-import json
 import jsonpickle
+
+
+def _add_mock_info(do_mock, mock_info_data, function_name, nifi_id=None, args=None, data=None):
+    if args is None:
+        args = []
+    if do_mock:
+        if nifi_id is None:
+            key = function_name
+        else:
+            key = "{}:{}".format('nipyapi.canvas.get_flow', nifi_id)
+        mock_info_data[key] = {"args": args, "return": data}
+
+
+def _create_port_node(subgraph, port_type, port):
+    subgraph.add_node(port.id)
+    output_node = subgraph.get_node(port.id)
+    output_node.attr['label'] = port.component.name + "\n" + port.component.type
+    output_node.attr['pos'] = "{0:f},{0:f}".format(port.position.x, port.position.y)
+    logging.debug("Generate node for %s_port %s:%s", port_type, port.id, port.component.name)
 
 
 def _handle_group(configuration, current_depth, process_group, parent_graph, do_mock=False, mock_info=None):
@@ -21,12 +38,7 @@ def _handle_group(configuration, current_depth, process_group, parent_graph, do_
     """
     logging.debug("Handling group %s", process_group.id)
     this_flow = nipyapi.canvas.get_flow(process_group.id)
-    if do_mock:
-        mock_info["{}:{}".format('nipyapi.canvas.get_flow', process_group.id)] = \
-            {
-                "arg0": process_group.id,
-                "return": this_flow
-            }
+    _add_mock_info(do_mock, mock_info, 'nipyapi.canvas.get_flow', process_group.id, [process_group.id], this_flow)
 
     # see if the user has configured a DOT template for this process_group
     if configuration['process_groups'][process_group.id].exists():
@@ -38,19 +50,19 @@ def _handle_group(configuration, current_depth, process_group, parent_graph, do_
         subgraph.graph_attr['label'] = process_group.component.name
         logging.debug("Created subgraph %s with label %s", subgraph.name, process_group.component.name)
 
-    for input_port in nipyapi.canvas.list_all_input_ports(process_group.id, False):
-        subgraph.add_node(input_port.id)
-        input_node = subgraph.get_node(input_port.id)
-        input_node.attr['label'] = input_port.component.name + "\n" + input_port.component.type
-        input_node.attr['pos'] = "{0:f},{0:f}".format(input_port.position.x, input_port.position.y)
-        logging.debug("Generate node for input port %s:%s", input_port.id, input_port.component.name)
+    input_ports = nipyapi.canvas.list_all_input_ports(process_group.id, False)
+    _add_mock_info(do_mock, mock_info, 'nipyapi.canvas.list_all_input_ports', process_group.id,
+                   [process_group.id, False], input_ports)
 
-    for output_port in nipyapi.canvas.list_all_output_ports(process_group.id, False):
-        subgraph.add_node(output_port.id)
-        output_node = subgraph.get_node(output_port.id)
-        output_node.attr['label'] = output_port.component.name + "\n" + output_port.component.type
-        output_node.attr['pos'] = "{0:f},{0:f}".format(output_port.position.x, output_port.position.y)
-        logging.debug("Generate node for output port %s:%s", output_port.id, output_port.component.name)
+    for input_port in input_ports:
+        _create_port_node(subgraph, "input", input_port)
+
+    output_ports = nipyapi.canvas.list_all_output_ports(process_group.id, False)
+    _add_mock_info(do_mock, mock_info, 'nipyapi.canvas.list_all_output_ports', process_group.id,
+                   [process_group.id, False], output_ports)
+
+    for output_port in output_ports:
+        _create_port_node(subgraph, "output", output_port)
 
     for processor in this_flow.process_group_flow.flow.processors:
         subgraph.add_node(processor.id)
@@ -73,9 +85,14 @@ def _handle_group(configuration, current_depth, process_group, parent_graph, do_
         remote_subgraph.graph_attr['style'] = 'filled'
         remote_subgraph.graph_attr['color'] = 'blue'
         remote_subgraph.graph_attr['fontcolor'] = 'white'
+
         logging.debug("Generate node for Remote Process Group %s:%s", remote_group.component.name,
                       remote_group.component.target_uri)
+
         remote_process_group = nipyapi.canvas.get_remote_process_group(remote_group.id, summary=True)
+        _add_mock_info(do_mock, mock_info, 'nipyapi.canvas.get_remote_process_group', remote_group.id,
+                       [remote_group.id, True], remote_process_group)
+
         # see if user has configured a set of attributes for this remote process group
         if configuration['remote_process_groups'][remote_group.id].exists():
             logging.debug("Remote Process Group %s has configured attributes", remote_group.component.name)
@@ -108,7 +125,11 @@ def _handle_group(configuration, current_depth, process_group, parent_graph, do_
     next_depth = current_depth + 1
     if (configured_depth == -1) or (next_depth <= configured_depth):
         logging.debug("Moving to depth %d", next_depth)
-        for inner_process_group in nipyapi.nifi.ProcessGroupsApi().get_process_groups(process_group.id).process_groups:
+        inner_process_groups = nipyapi.nifi.ProcessGroupsApi().get_process_groups(process_group.id).process_groups
+        _add_mock_info(do_mock, mock_info, 'nipyapi.nifi.ProcessGroupsApi().get_process_groups', process_group.id,
+                       [process_group.id],
+                       inner_process_groups)
+        for inner_process_group in inner_process_groups:
             _handle_group(configuration, next_depth, inner_process_group, subgraph, do_mock, mock_info)
     else:
         logging.debug("Max depth %d met in Process Group %s, stopping", configured_depth, process_group.id)
@@ -127,9 +148,6 @@ def _generate_default_root_attrs(root_graph):
     root_graph.edge_attr['style'] = 'setlinewidth(2)'
     logging.debug("Generated default ROOT_GRAPH")
     logging.debug(root_graph.string())
-
-
-
 
 
 def generate_graph(generate_configuration) -> pgv.AGraph:
@@ -179,21 +197,16 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
             logging.debug("ROOT GRAPH : \n%s", _root_graph.string())
         root_id = nipyapi.canvas.get_root_pg_id()
 
-    mock = None
-    if do_mock:
-        mock = {}
-        process_groups_list = nipyapi.nifi.ProcessGroupsApi().get_process_groups(root_id).process_groups
-        mock['nipyapi.nifi.ProcessGroupsApi().get_process_groups'] = \
-            {
-                "arg0": root_id,
-                "return": process_groups_list
-            }
-
-    for process_group in nipyapi.nifi.ProcessGroupsApi().get_process_groups(root_id).process_groups:
+    mock = {}
+    process_groups = nipyapi.nifi.ProcessGroupsApi().get_process_groups(root_id).process_groups
+    _add_mock_info(do_mock, mock, 'nipyapi.nifi.ProcessGroupsApi().get_process_groups', root_id, [root_id],
+                   process_groups)
+    for process_group in process_groups:
         _handle_group(generate_configuration, 1, process_group, _root_graph, do_mock, mock)
 
     if do_mock:
         if generate_configuration['mock_data_file'].exists():
             with open(generate_configuration['mock_data_file'].as_filename(), 'w') as mock_data_file:
-                mock_data_file.write(jsonpickle.encode(mock))
+                mock_data_file.write(jsonpickle.encode(mock, make_refs=False))
+
     return _root_graph
