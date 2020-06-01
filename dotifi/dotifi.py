@@ -72,6 +72,10 @@ def process():
                         help="The NiFi user password")
     parser.add_argument("--verbose", "-v", action='store_true', required=False, default=False,
                         help="Sets the logging level to verbose")
+    parser.add_argument("--generate-mock-data", action='store_true', required=False, default=False,
+                        help="Generates mock data")
+    parser.add_argument("--mock-data-file", required=False, default="mock_output.json",
+                        help="When --generate-mock-data is specified, it will be written to this file")
     args = vars(parser.parse_args())
 
     options = load_configuration(args, args.get('with_conf_file'))
