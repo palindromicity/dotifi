@@ -1,12 +1,13 @@
 import argparse
 import logging
+
+from confuse import NotFoundError
 from pygraphviz import AGraph
 
-from dotifi.nifi.connection import configure_nifi_connection
-from dotifi.nifi import generate
 from dotifi.configuration.load import load_configuration
+from dotifi.nifi import generate
+from dotifi.nifi.connection import configure_nifi_connection
 from dotifi.publishing.publish import publish
-from confuse import NotFoundError
 
 
 def process():
