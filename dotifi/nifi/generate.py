@@ -1,22 +1,33 @@
 import nipyapi
 import pygraphviz as pgv
 import logging
+import io
+import json
+import jsonpickle
 
 
-def _handle_group(configuration, current_depth, process_group, parent_graph):
+def _handle_group(configuration, current_depth, process_group, parent_graph, do_mock=False, mock_info=None):
     """
     Generate graph objects for the passed process process_group and add them to the
     parent graph.
     Configuration options will be used to control the depth of the process process_group recursion,
     load templates to overload subgraph settings, and set properties on processors
+    If the mock is not empty, then document nipyapi calls.
     :param configuration: confuse.LazyConfig
     :param current_depth: what level of the recursive decent we are on
     :param process_group: the process process_group we are generating graph objects for
     :param parent_graph: the parent of any graph objects we create
     :return:
     """
-    logging.debug("Handling group %d", process_group.id)
+    logging.debug("Handling group %s", process_group.id)
     this_flow = nipyapi.canvas.get_flow(process_group.id)
+    if do_mock:
+        mock_info["{}:{}".format('nipyapi.canvas.get_flow', process_group.id)] = \
+            {
+                "arg0": process_group.id,
+                "return": this_flow
+            }
+
     # see if the user has configured a DOT template for this process_group
     if configuration['process_groups'][process_group.id].exists():
         template_file = configuration['process_groups']['process_group.id'].as_filename()
@@ -25,7 +36,7 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
     else:
         subgraph = parent_graph.add_subgraph(name="cluster_" + process_group.component.name)
         subgraph.graph_attr['label'] = process_group.component.name
-        logging.debug("Created subgraph %s with label $s", subgraph.name, process_group.component.name)
+        logging.debug("Created subgraph %s with label %s", subgraph.name, process_group.component.name)
 
     for input_port in nipyapi.canvas.list_all_input_ports(process_group.id, False):
         subgraph.add_node(input_port.id)
@@ -98,7 +109,7 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
     if (configured_depth == -1) or (next_depth <= configured_depth):
         logging.debug("Moving to depth %d", next_depth)
         for inner_process_group in nipyapi.nifi.ProcessGroupsApi().get_process_groups(process_group.id).process_groups:
-            _handle_group(configuration, next_depth, inner_process_group, subgraph)
+            _handle_group(configuration, next_depth, inner_process_group, subgraph, do_mock, mock_info)
     else:
         logging.debug("Max depth %d met in Process Group %s, stopping", configured_depth, process_group.id)
 
@@ -118,29 +129,36 @@ def _generate_default_root_attrs(root_graph):
     logging.debug(root_graph.string())
 
 
+
+
+
 def generate_graph(generate_configuration) -> pgv.AGraph:
     """
     Walk a NiFi flow and produce an AGraph.
     Configuration options will be used to control the depth of the process group recursion,
     load templates to overload subgraph settings, and set properties on processors
+    If the generate-mocks flag is set in options, the mock-file will be written with
+    the call data and responses for nipyapi.  This file will be used to create
+    mock instances later.
     :param generate_configuration: confuse.LazyConfig
     :return: PyGraphViz AGraph instance
     """
     _root_graph = None
 
     logging.debug("generating graph")
+    do_mock = generate_configuration['generate_mock_data'].get(bool)
     # check if the user wishes to start somewhere other than the root
-    if generate_configuration['starting_pg_id'].exists():
-        root_id = generate_configuration['starting_pg_id'].get()
-        logging.debug("using specified starting_pg_id %s", root_id)
+    if generate_configuration['start_at_pg'].exists():
+        root_id = generate_configuration['start_at_pgd'].get()
+        logging.debug("using specified start_at_pg %s", root_id)
         # since they are being specific, get the specific template if there is one
         if generate_configuration['process_groups'][root_id].exists():
             template_file = generate_configuration['process_groups'][root_id].as_filename()
-            logging.debug("specified starting_pd_id %s has a configured template %s", root_id, template_file)
+            logging.debug("specified start_at_pg %s has a configured template %s", root_id, template_file)
             _root_graph = pgv.AGraph(template_file)
-            logging.debug("root graph based on starting_pg_id and template created")
+            logging.debug("root graph based on start_at_pg.id and template created")
         else:
-            logging.debug("root graph based on starting_pg_id will be created from defaults")
+            logging.debug("root graph based on start_at_pg will be created from defaults")
             group = nipyapi.canvas.get_process_group(root_id)
             _root_graph = pgv.AGraph(name=group.component.name + " flow", directed='true', rankdir='LR')
             _generate_default_root_attrs(_root_graph)
@@ -161,7 +179,21 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
             logging.debug("ROOT GRAPH : \n%s", _root_graph.string())
         root_id = nipyapi.canvas.get_root_pg_id()
 
-    for process_group in nipyapi.nifi.ProcessGroupsApi().get_process_groups(root_id).process_groups:
-        _handle_group(generate_configuration, 1, process_group, _root_graph)
+    mock = None
+    if do_mock:
+        mock = {}
+        process_groups_list = nipyapi.nifi.ProcessGroupsApi().get_process_groups(root_id).process_groups
+        mock['nipyapi.nifi.ProcessGroupsApi().get_process_groups'] = \
+            {
+                "arg0": root_id,
+                "return": process_groups_list
+            }
 
+    for process_group in nipyapi.nifi.ProcessGroupsApi().get_process_groups(root_id).process_groups:
+        _handle_group(generate_configuration, 1, process_group, _root_graph, do_mock, mock)
+
+    if do_mock:
+        if generate_configuration['mock_data_file'].exists():
+            with open(generate_configuration['mock_data_file'].as_filename(), 'w') as mock_data_file:
+                mock_data_file.write(jsonpickle.encode(mock))
     return _root_graph

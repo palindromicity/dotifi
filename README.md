@@ -127,7 +127,7 @@ dotifi is maintained using [poetry](https://python-poetry.org/docs/) for depende
 
 ## Configuration
 dotify uses [confuse](https://confuse.readthedocs.io/en/latest/) for it's configuration management.
-dotify will take it's configuration:
+dotify will take most of its configuration:
 
  - from commandline parameters
  - from a yaml configuration file specified with the --with-conf-file parameter
@@ -141,20 +141,21 @@ String values in the configuration file may be entered as shell environment vari
 
  
 ```bash
-usage: dotifi [-h] [--with-existing-dot-file WITH_EXISTING_DOT_FILE]
-              [--with-conf-file WITH_CONF_FILE]
-              [--output-dot-file OUTPUT_DOT_FILE]
-              [--output-graphviz-format {canon,cmap,cmapx,cmapx_np,dia,dot,fig,gd,gd2,gif,hpgl,imap,imap_np,ismap,jpe,jpeg,jpg,mif,mp,pcl,pdf,pic,plain,plain-ext,png,ps,ps2,svg,svgz,vml,vmlz,vrml,vtx,wbmp,xdot,xlib}]
-              [--output-graphviz-program {neato,dot,twopi,circo,fdp,nop}]
-              [--output-graphviz-file OUTPUT_GRAPHVIZ_FILE]
-              [--start-at-pg START_AT_PG] [--depth DEPTH]
-              [--nifi-url NIFI_URL] [--using-ssl USING_SSL]
-              [--using-user-pw USING_USER_PW] [--ca-file CA_FILE]
-              [--client-cert-file CLIENT_CERT_FILE]
-              [--client-key-file CLIENT_KEY_FILE]
-              [--client-key-password CLIENT_KEY_PASSWORD]
-              [--nifi-username NIFI_USERNAME]
-              [--nifi-user-password NIFI_USER_PASSWORD] [--verbose]
+usage: dotifi.py [-h] [--with-existing-dot-file WITH_EXISTING_DOT_FILE]
+                 [--with-conf-file WITH_CONF_FILE]
+                 [--output-dot-file OUTPUT_DOT_FILE]
+                 [--output-graphviz-format {canon,cmap,cmapx,cmapx_np,dia,dot,fig,gd,gd2,gif,hpgl,imap,imap_np,ismap,jpe,jpeg,jpg,mif,mp,pcl,pdf,pic,plain,plain-ext,png,ps,ps2,svg,svgz,vml,vmlz,vrml,vtx,wbmp,xdot,xlib}]
+                 [--output-graphviz-program {neato,dot,twopi,circo,fdp,nop}]
+                 [--output-graphviz-file OUTPUT_GRAPHVIZ_FILE]
+                 [--start-at-pg START_AT_PG] [--depth DEPTH]
+                 [--nifi-url NIFI_URL] [--using-ssl USING_SSL]
+                 [--using-user-pw USING_USER_PW] [--ca-file CA_FILE]
+                 [--client-cert-file CLIENT_CERT_FILE]
+                 [--client-key-file CLIENT_KEY_FILE]
+                 [--client-key-password CLIENT_KEY_PASSWORD]
+                 [--nifi-username NIFI_USERNAME]
+                 [--nifi-user-password NIFI_USER_PASSWORD] [--verbose]
+                 [--generate-mock-data] [--mock-data-file MOCK_DATA_FILE]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -211,7 +212,10 @@ optional arguments:
   --nifi-user-password NIFI_USER_PASSWORD
                         The NiFi user password
   --verbose, -v         Sets the logging level to verbose
-
+  --generate-mock-data  Generates mock data
+  --mock-data-file MOCK_DATA_FILE
+                        When --generate-mock-data is specified, it will be
+                        written to this file
 
 ```
 
