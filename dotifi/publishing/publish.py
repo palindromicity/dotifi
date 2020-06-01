@@ -30,4 +30,4 @@ def publish(publish_configuration, graph):
     graph.write(dot_name)
     logging.debug("Wrote %s", dot_name)
     graph.draw(graphic_file_name, prog=graphic_program, format=graphviz_fmt)
-    logging.debug("Wrote $s prog= %s  format=%s", graphic_file_name, graphic_program, graphviz_fmt)
+    logging.debug("Wrote %s prog= %s  format=%s", graphic_file_name, graphic_program, graphviz_fmt)

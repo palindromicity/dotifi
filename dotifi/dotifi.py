@@ -78,6 +78,7 @@ def process():
 
     if options['verbose'].get():
         logging.basicConfig(level=logging.DEBUG)
+        logging.root.setLevel(logging.NOTSET)
 
     logging.debug("Configuration:\n%s", options.dump())
 
