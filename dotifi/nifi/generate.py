@@ -1,7 +1,8 @@
+import logging
+
+import jsonpickle
 import nipyapi
 import pygraphviz as pgv
-import logging
-import jsonpickle
 
 
 def _add_mock_info(do_mock, mock_info_data, function_name, nifi_id=None, args=None, data=None):
@@ -11,7 +12,7 @@ def _add_mock_info(do_mock, mock_info_data, function_name, nifi_id=None, args=No
         if nifi_id is None:
             key = function_name
         else:
-            key = "{}:{}".format('nipyapi.canvas.get_flow', nifi_id)
+            key = "{}:{}".format(function_name, nifi_id)
         mock_info_data[key] = {"args": args, "return": data}
 
 
@@ -125,8 +126,11 @@ def _handle_group(configuration, current_depth, process_group, parent_graph, do_
     next_depth = current_depth + 1
     if (configured_depth == -1) or (next_depth <= configured_depth):
         logging.debug("Moving to depth %d", next_depth)
-        inner_process_groups = nipyapi.nifi.ProcessGroupsApi().get_process_groups(process_group.id).process_groups
-        _add_mock_info(do_mock, mock_info, 'nipyapi.nifi.ProcessGroupsApi().get_process_groups', process_group.id,
+        process_groups_api = nipyapi.nifi.ProcessGroupsApi()
+        _add_mock_info(do_mock, mock_info, 'nipyapi.nifi.ProcessGroupsApi',
+                       data=process_groups_api)
+        inner_process_groups = process_groups_api.get_process_groups(process_group.id).process_groups
+        _add_mock_info(do_mock, mock_info, 'ProcessGroupsApi.get_process_groups', process_group.id,
                        [process_group.id],
                        inner_process_groups)
         for inner_process_group in inner_process_groups:
@@ -198,8 +202,11 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
         root_id = nipyapi.canvas.get_root_pg_id()
 
     mock = {}
-    process_groups = nipyapi.nifi.ProcessGroupsApi().get_process_groups(root_id).process_groups
-    _add_mock_info(do_mock, mock, 'nipyapi.nifi.ProcessGroupsApi().get_process_groups', root_id, [root_id],
+    process_groups_api = nipyapi.nifi.ProcessGroupsApi()
+    _add_mock_info(do_mock, mock, 'nipyapi.nifi.ProcessGroupsApi',
+                   data=process_groups_api)
+    process_groups = process_groups_api.get_process_groups(root_id).process_groups
+    _add_mock_info(do_mock, mock, 'ProcessGroupsApi.get_process_groups', root_id, [root_id],
                    process_groups)
     for process_group in process_groups:
         _handle_group(generate_configuration, 1, process_group, _root_graph, do_mock, mock)
