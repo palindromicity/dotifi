@@ -15,26 +15,31 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
     :param parent_graph: the parent of any graph objects we create
     :return:
     """
+    logging.debug("Handling group %d", process_group.id)
     this_flow = nipyapi.canvas.get_flow(process_group.id)
     # see if the user has configured a DOT template for this process_group
     if configuration['process_groups'][process_group.id].exists():
         template_file = configuration['process_groups']['process_group.id'].as_filename()
+        logging.debug("Using template file %s for %d", template_file, process_group.id)
         subgraph = pgv.AGraph(template_file)
     else:
         subgraph = parent_graph.add_subgraph(name="cluster_" + process_group.component.name)
         subgraph.graph_attr['label'] = process_group.component.name
+        logging.debug("Created subgraph %s with label $s", subgraph.name, process_group.component.name)
 
     for input_port in nipyapi.canvas.list_all_input_ports(process_group.id, False):
         subgraph.add_node(input_port.id)
         input_node = subgraph.get_node(input_port.id)
         input_node.attr['label'] = input_port.component.name + "\n" + input_port.component.type
         input_node.attr['pos'] = "{0:f},{0:f}".format(input_port.position.x, input_port.position.y)
+        logging.debug("Generate node for input port %s:%s", input_port.id, input_port.component.name)
 
     for output_port in nipyapi.canvas.list_all_output_ports(process_group.id, False):
         subgraph.add_node(output_port.id)
         output_node = subgraph.get_node(output_port.id)
         output_node.attr['label'] = output_port.component.name + "\n" + output_port.component.type
         output_node.attr['pos'] = "{0:f},{0:f}".format(output_port.position.x, output_port.position.y)
+        logging.debug("Generate node for output port %s:%s", output_port.id, output_port.component.name)
 
     for processor in this_flow.process_group_flow.flow.processors:
         subgraph.add_node(processor.id)
@@ -42,11 +47,14 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
         class_full = processor.component.type.split(".")
         node.attr['label'] = processor.component.name + "\n" + class_full[len(class_full) - 1]
         node.attr['pos'] = "{0:f},{0:f}".format(processor.position.x, processor.position.y)
+        logging.debug("Generate node for processor %s:%s", processor.id, processor.component.name)
 
         # see if user has configured a set of attributes for this processor
         if configuration['processors'][processor.id].exists():
+            logging.debug("Processor %s has configured attributes", processor.id)
             for key in configuration['processors'][processor.id]:
                 node.attr[key] = configuration['processors'][processor.id][key].get()
+                logging.debug("Set Processor %s configured attribute %s to %s", processor.id, key, node.attr[key])
 
     for remote_group in this_flow.process_group_flow.flow.remote_process_groups:
         remote_subgraph = subgraph.add_subgraph(name="cluster_" + remote_group.component.name)
@@ -54,16 +62,24 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
         remote_subgraph.graph_attr['style'] = 'filled'
         remote_subgraph.graph_attr['color'] = 'blue'
         remote_subgraph.graph_attr['fontcolor'] = 'white'
+        logging.debug("Generate node for Remote Process Group %s:%s", remote_group.component.name,
+                      remote_group.component.target_uri)
         remote_process_group = nipyapi.canvas.get_remote_process_group(remote_group.id, summary=True)
         # see if user has configured a set of attributes for this remote process group
         if configuration['remote_process_groups'][remote_group.id].exists():
+            logging.debug("Remote Process Group %s has configured attributes", remote_group.component.name)
             for key in configuration['remote_process_groups'][remote_group.id]:
                 remote_subgraph.graph_attr[key] = configuration['remote_process_groups'][remote_group.id][key].get()
+                logging.debug("Set Remote Process Group %s configured graph attribute %s to %s",
+                              remote_group.component.name, key, remote_subgraph.graph_attr[key])
         for input_port in remote_process_group['input_ports']:
+            logging.debug("Found Remote Process Group %s input port %s", remote_group.component.name, input_port.id)
             remote_subgraph.add_node(input_port.id)
             remote_input_port_node = remote_subgraph.get_node(input_port.id)
             remote_input_port_node.attr['label'] = input_port.name + "\n" + "INPUT_PORT"
-
+            logging.debug("Generated node for Remote Process Group %s input port %s", remote_group.component.name,
+                          input_port.id)
+    logging.debug("Checking connections for %s flow", process_group.id)
     for connection in this_flow.process_group_flow.flow.connections:
         if connection.component.selected_relationships is not None:
             for relationship in connection.component.selected_relationships:
@@ -74,13 +90,17 @@ def _handle_group(configuration, current_depth, process_group, parent_graph):
             subgraph.add_edge(connection.source_id, connection.destination_id)
             edge = subgraph.get_edge(connection.source_id, connection.destination_id)
             edge.attr['label'] = connection.component.name
+        logging.debug("Generated Edge from %s to %s", connection.source_id, connection.destination_id)
 
     # check and see if we are at the configured depth or that we can keep going
     configured_depth = int(configuration['depth'].get())
     next_depth = current_depth + 1
     if (configured_depth == -1) or (next_depth <= configured_depth):
+        logging.debug("Moving to depth %d", next_depth)
         for inner_process_group in nipyapi.nifi.ProcessGroupsApi().get_process_groups(process_group.id).process_groups:
             _handle_group(configuration, next_depth, inner_process_group, subgraph)
+    else:
+        logging.debug("Max depth %d met in Process Group %s, stopping", configured_depth, process_group.id)
 
 
 def _generate_default_root_attrs(root_graph):
@@ -94,6 +114,8 @@ def _generate_default_root_attrs(root_graph):
     root_graph.graph_attr['ratio'] = '1.0'
     root_graph.edge_attr['color'] = '#1100FF'
     root_graph.edge_attr['style'] = 'setlinewidth(2)'
+    logging.debug("Generated default ROOT_GRAPH")
+    logging.debug(root_graph.string())
 
 
 def generate_graph(generate_configuration) -> pgv.AGraph:
