@@ -3,8 +3,6 @@ import pathlib
 import jsonpickle
 import nipyapi
 
-SAMPLE = pathlib.Path(__file__).parent.parent.joinpath("configurations/sample.yml")
-NO_ENV = pathlib.Path(__file__).parent.joinpath("resources/env.yml")
 
 MOCK_DATA = pathlib.Path(__file__).parent.parent.parent.joinpath("resources/test_mock_data.pickle")
 
