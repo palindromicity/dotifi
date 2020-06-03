@@ -35,6 +35,9 @@ def test_mechanics(mocker):
 
     process_groups_api_get_process_groups.side_effect = get_pgs_sides
 
+    process_groups_api_get_process_groupsd = mocker.patch("nipyapi.nifi.apis.ProcessGroupsApi.get_process_groups")
+    process_groups_api_get_process_groupsd.side_effect = get_pgs_sides
+
     canvas_get_flow = mocker.patch("nipyapi.canvas.get_flow")
 
     def get_flow_sides(*args, **kwargs):
@@ -95,9 +98,8 @@ def test_mechanics(mocker):
         if key.startswith('ProcessGroupsApi.get_process_groups'):
             this_response = nipyapi.nifi.ProcessGroupsApi().get_process_groups(value['args'][0])
             i = 0
-            for pg in this_response.process_groups:
+            for pg in this_response:
                 assert pg.id == value['return'][i].id
-                assert this_response.process_groups[i].id == value['return'][i].id
                 i = i + 1
         if key.startswith("nipyapi.canvas.get_flow"):
             this_response = nipyapi.canvas.get_flow(value['args'][0])

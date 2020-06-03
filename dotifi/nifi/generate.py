@@ -3,6 +3,7 @@ import logging
 import jsonpickle
 import nipyapi
 import pygraphviz as pgv
+from nipyapi.nifi import ProcessGroupsEntity
 
 
 def _add_mock_info(do_mock, mock_info_data, function_name, nifi_id=None, args=None, data=None):
@@ -129,11 +130,16 @@ def _handle_group(configuration, current_depth, process_group, parent_graph, do_
         process_groups_api = nipyapi.nifi.ProcessGroupsApi()
         _add_mock_info(do_mock, mock_info, 'nipyapi.nifi.ProcessGroupsApi',
                        data=process_groups_api)
-        inner_process_groups = process_groups_api.get_process_groups(process_group.id).process_groups
+        inner_process_groups = process_groups_api.get_process_groups(process_group.id)
+        if isinstance(inner_process_groups, ProcessGroupsEntity):
+            inner_process_groups_actual = inner_process_groups.process_groups
+        else:
+            inner_process_groups_actual = inner_process_groups
+
         _add_mock_info(do_mock, mock_info, 'ProcessGroupsApi.get_process_groups', process_group.id,
                        [process_group.id],
-                       inner_process_groups)
-        for inner_process_group in inner_process_groups:
+                       inner_process_groups_actual)
+        for inner_process_group in inner_process_groups_actual:
             _handle_group(configuration, next_depth, inner_process_group, subgraph, do_mock, mock_info)
     else:
         logging.debug("Max depth %d met in Process Group %s, stopping", configured_depth, process_group.id)
@@ -166,6 +172,7 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
     :return: PyGraphViz AGraph instance
     """
     _root_graph = None
+    mock = {}
 
     logging.debug("generating graph")
     do_mock = generate_configuration['generate_mock_data'].get(bool)
@@ -200,15 +207,20 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
         if logging.DEBUG >= logging.root.level:
             logging.debug("ROOT GRAPH : \n%s", _root_graph.string())
         root_id = nipyapi.canvas.get_root_pg_id()
+        _add_mock_info(do_mock, mock, 'nipyapi.canvas.get_root_pg_id', data=root_id)
 
-    mock = {}
     process_groups_api = nipyapi.nifi.ProcessGroupsApi()
     _add_mock_info(do_mock, mock, 'nipyapi.nifi.ProcessGroupsApi',
                    data=process_groups_api)
-    process_groups = process_groups_api.get_process_groups(root_id).process_groups
+    process_groups = process_groups_api.get_process_groups(root_id)
+    if isinstance(process_groups, ProcessGroupsEntity):
+        process_groups_actual = process_groups.process_groups
+    else:
+        process_groups_actual = process_groups
+
     _add_mock_info(do_mock, mock, 'ProcessGroupsApi.get_process_groups', root_id, [root_id],
-                   process_groups)
-    for process_group in process_groups:
+                   process_groups_actual)
+    for process_group in process_groups_actual:
         _handle_group(generate_configuration, 1, process_group, _root_graph, do_mock, mock)
 
     if do_mock:
