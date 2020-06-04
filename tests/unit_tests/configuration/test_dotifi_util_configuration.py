@@ -1,7 +1,10 @@
-from dotifi.configuration.load import load_configuration
 import pathlib
 
-SAMPLE = pathlib.Path(__file__).parent.parent.parent.parent.joinpath("configurations/sample.yml")
+from dotifi.configuration.load import load_configuration
+
+SAMPLE = pathlib.Path(__file__).parent.parent.parent.parent.joinpath(
+    "configurations/sample.yml"
+)
 NO_ENV = pathlib.Path(__file__).parent.parent.parent.joinpath("resources/env.yml")
 
 

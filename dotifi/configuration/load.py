@@ -1,5 +1,6 @@
-from confuse import LazyConfig
 import os.path
+
+from confuse import LazyConfig
 
 
 def load_configuration(args, configuration_file_path) -> LazyConfig:

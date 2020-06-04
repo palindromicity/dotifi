@@ -20,7 +20,7 @@ dotifi supports
 - supplying name value pairs ( in yaml configuration file) to override and set [attributes](https://graphviz.gitlab.io/_pages/doc/info/attrs.html)
     - Processors by id
     - Remote Process Groups by id
-    
+
 ### Sample output
 
 `DOT`
@@ -106,7 +106,7 @@ RouteOnAttribute",
 }
 
 ```
-`PNG` 
+`PNG`
 ![nifi-canvas.png](sample_output/nifi-canvas.png)
 ### poetry
 
@@ -139,7 +139,7 @@ then the commandline is treated as an override for the configuration file.
 String values in the configuration file may be entered as shell environment variables, such as $PATH.  Variables are expanded using
 [os.path.expandvars](https://docs.python.org/3/library/os.path.html#os.path.expandvars).
 
- 
+
 ```bash
 usage: dotifi.py [-h] [--with-existing-dot-file WITH_EXISTING_DOT_FILE]
                  [--with-conf-file WITH_CONF_FILE]
