@@ -1,8 +1,8 @@
 ## Contributing
 
-First fork this project.  
+First fork this project.
 
-* git clone https://github.com/YOURNAMEHERE/dotifi 
+* git clone https://github.com/YOURNAMEHERE/dotifi
 - Install [Graphviz](https://graphviz.org)
 - Clone, fork, or download the [source](https://github.com/palindromicity/dotifi)
 - Install [poetry](https://python-poetry.org/docs/)
