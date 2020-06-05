@@ -26,7 +26,7 @@ def test_happy_path(default_args):
     This function loads our pickled results from live
     calls, and mocks the calls and returns to the parameters,
     which are mainly uuid strings
-    :param args the args fixture
+    :param default_args the default_args fixture
     """
 
     options = load_configuration(default_args, None)
@@ -43,11 +43,9 @@ def test_happy_path(default_args):
 @pytest.mark.parametrize("path_arg", [START_AT_MOCK_DATA])
 def test_start_pg(pg_start_args):
     """
-        Test the basic setup of our mocking
-        This function loads our pickled results from live
-        calls, and mocks the calls and returns to the parameters,
-        which are mainly uuid strings
-        :param args the args fixture
+        Test outputing a subset of a canvas by specifying
+        the process group to start at
+        :param pg_start_args the pg_start_args fixture
         """
 
     options = load_configuration(pg_start_args, None)
@@ -65,7 +63,7 @@ def test_rpg_attribute_override(default_args):
     """
     Test overriding the graph_attr of a specific remote program group
     using the yaml configuration
-    :param args the args fixture
+    :param default_args the default_args fixture
     """
 
     options = load_configuration(default_args, RPG_CONFIG.as_posix())
