@@ -3,6 +3,532 @@
     "args": [],
     "return": "35199793-0172-1000-02ea-52da1888a03d"
   },
+  "nipyapi.canvas.get_process_group": {
+    "args": [
+      "35199793-0172-1000-02ea-52da1888a03d",
+      "id"
+    ],
+    "return": {
+      "py/object": "nipyapi.nifi.models.process_group_entity.ProcessGroupEntity",
+      "_revision": {
+        "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+        "_client_id": null,
+        "_version": 0,
+        "_last_modifier": null
+      },
+      "_id": "35199793-0172-1000-02ea-52da1888a03d",
+      "_uri": "http://localhost:8080/nifi-api/process-groups/35199793-0172-1000-02ea-52da1888a03d",
+      "_position": {
+        "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+        "_x": 0.0,
+        "_y": 0.0
+      },
+      "_permissions": {
+        "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+        "_can_read": true,
+        "_can_write": true
+      },
+      "_bulletins": [
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 8,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "09:58:38 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 8,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "09:58:38 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 7,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "09:58:33 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 7,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "09:58:33 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 6,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "09:58:28 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 6,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "09:58:28 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 5,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "09:58:23 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 5,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "09:58:23 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 4,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "09:58:18 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 4,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "09:58:18 EDT"
+          }
+        }
+      ],
+      "_disconnected_node_acknowledged": null,
+      "_component": {
+        "py/object": "nipyapi.nifi.models.process_group_dto.ProcessGroupDTO",
+        "_id": "35199793-0172-1000-02ea-52da1888a03d",
+        "_versioned_component_id": null,
+        "_parent_group_id": null,
+        "_position": {
+          "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+          "_x": 0.0,
+          "_y": 0.0
+        },
+        "_name": "NiFi Flow",
+        "_comments": "",
+        "_variables": {},
+        "_version_control_information": null,
+        "_parameter_context": null,
+        "_running_count": 0,
+        "_stopped_count": 11,
+        "_invalid_count": 3,
+        "_disabled_count": 0,
+        "_active_remote_port_count": 1,
+        "_inactive_remote_port_count": 0,
+        "_up_to_date_count": 0,
+        "_locally_modified_count": 0,
+        "_stale_count": 0,
+        "_locally_modified_and_stale_count": 0,
+        "_sync_failure_count": 0,
+        "_local_input_port_count": 0,
+        "_local_output_port_count": 0,
+        "_public_input_port_count": 0,
+        "_public_output_port_count": 0,
+        "_contents": null,
+        "_input_port_count": 0,
+        "_output_port_count": 0
+      },
+      "_status": {
+        "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
+        "_id": "35199793-0172-1000-02ea-52da1888a03d",
+        "_name": "NiFi Flow",
+        "_stats_last_refreshed": "09:58:40 EDT",
+        "_aggregate_snapshot": {
+          "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
+          "_id": "35199793-0172-1000-02ea-52da1888a03d",
+          "_name": "NiFi Flow",
+          "_connection_status_snapshots": null,
+          "_processor_status_snapshots": null,
+          "_process_group_status_snapshots": null,
+          "_remote_process_group_status_snapshots": null,
+          "_input_port_status_snapshots": null,
+          "_output_port_status_snapshots": null,
+          "_versioned_flow_state": null,
+          "_flow_files_in": 0,
+          "_bytes_in": 0,
+          "_input": "0 (0 bytes)",
+          "_flow_files_queued": 0,
+          "_bytes_queued": 0,
+          "_queued": "0 (0 bytes)",
+          "_queued_count": "0",
+          "_queued_size": "0 bytes",
+          "_bytes_read": 0,
+          "_read": "0 bytes",
+          "_bytes_written": 0,
+          "_written": "0 bytes",
+          "_flow_files_out": 0,
+          "_bytes_out": 0,
+          "_output": "0 (0 bytes)",
+          "_flow_files_transferred": 0,
+          "_bytes_transferred": 0,
+          "_transferred": "0 (0 bytes)",
+          "_bytes_received": 0,
+          "_flow_files_received": 0,
+          "_received": "0 (0 bytes)",
+          "_bytes_sent": 0,
+          "_flow_files_sent": 0,
+          "_sent": "0 (0 bytes)",
+          "_active_thread_count": 0,
+          "_terminated_thread_count": 0
+        },
+        "_node_snapshots": null
+      },
+      "_versioned_flow_snapshot": null,
+      "_running_count": 0,
+      "_stopped_count": 11,
+      "_invalid_count": 3,
+      "_disabled_count": 0,
+      "_active_remote_port_count": 1,
+      "_inactive_remote_port_count": 0,
+      "_versioned_flow_state": null,
+      "_up_to_date_count": 0,
+      "_locally_modified_count": 0,
+      "_stale_count": 0,
+      "_locally_modified_and_stale_count": 0,
+      "_sync_failure_count": 0,
+      "_local_input_port_count": 0,
+      "_local_output_port_count": 0,
+      "_public_input_port_count": 0,
+      "_public_output_port_count": 0,
+      "_parameter_context": null,
+      "_input_port_count": 0,
+      "_output_port_count": 0
+    }
+  },
+  "nipyapi.canvas.get_flow:35199793-0172-1000-02ea-52da1888a03d": {
+    "args": [
+      "35199793-0172-1000-02ea-52da1888a03d"
+    ],
+    "return": {
+      "py/object": "nipyapi.nifi.models.process_group_flow_entity.ProcessGroupFlowEntity",
+      "_permissions": {
+        "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+        "_can_read": true,
+        "_can_write": true
+      },
+      "_process_group_flow": {
+        "py/object": "nipyapi.nifi.models.process_group_flow_dto.ProcessGroupFlowDTO",
+        "_id": "35199793-0172-1000-02ea-52da1888a03d",
+        "_uri": "http://localhost:8080/nifi-api/flow/process-groups/35199793-0172-1000-02ea-52da1888a03d",
+        "_parent_group_id": null,
+        "_parameter_context": null,
+        "_breadcrumb": {
+          "py/object": "nipyapi.nifi.models.flow_breadcrumb_entity.FlowBreadcrumbEntity",
+          "_id": "35199793-0172-1000-02ea-52da1888a03d",
+          "_permissions": {
+            "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+            "_can_read": true,
+            "_can_write": true
+          },
+          "_versioned_flow_state": null,
+          "_breadcrumb": {
+            "py/object": "nipyapi.nifi.models.flow_breadcrumb_dto.FlowBreadcrumbDTO",
+            "_id": "35199793-0172-1000-02ea-52da1888a03d",
+            "_name": "NiFi Flow",
+            "_version_control_information": null
+          },
+          "_parent_breadcrumb": null
+        },
+        "_flow": {
+          "py/object": "nipyapi.nifi.models.flow_dto.FlowDTO",
+          "_process_groups": [
+            {
+              "py/object": "nipyapi.nifi.models.process_group_entity.ProcessGroupEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+              "_uri": "http://localhost:8080/nifi-api/process-groups/351b1dbc-0172-1000-056d-ec78a003b493",
+              "_position": {
+                "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                "_x": 592.0,
+                "_y": 264.0
+              },
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": [
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 8,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "09:58:38 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 8,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:38 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 7,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "09:58:33 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 7,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:33 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 6,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "09:58:28 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 6,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:28 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 5,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "09:58:23 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 5,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:23 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 4,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "09:58:18 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 4,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:18 EDT"
+                  }
+                }
+              ],
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.process_group_dto.ProcessGroupDTO",
+                "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+                "_versioned_component_id": null,
+                "_parent_group_id": "35199793-0172-1000-02ea-52da1888a03d",
+                "_position": {
+                  "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                  "_x": 592.0,
+                  "_y": 264.0
+                },
+                "_name": "root_1",
+                "_comments": "",
+                "_variables": {},
+                "_version_control_information": null,
+                "_parameter_context": null,
+                "_running_count": 0,
+                "_stopped_count": 11,
+                "_invalid_count": 2,
+                "_disabled_count": 0,
+                "_active_remote_port_count": 1,
+                "_inactive_remote_port_count": 0,
+                "_up_to_date_count": 0,
+                "_locally_modified_count": 0,
+                "_stale_count": 0,
+                "_locally_modified_and_stale_count": 0,
+                "_sync_failure_count": 0,
+                "_local_input_port_count": 0,
+                "_local_output_port_count": 0,
+                "_public_input_port_count": 0,
+                "_public_output_port_count": 0,
+                "_contents": null,
+                "_input_port_count": 0,
+                "_output_port_count": 0
+              },
+              "_status": {
+                "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
+                "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+                "_name": "root_1",
+                "_stats_last_refreshed": "09:58:40 EDT",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
+                  "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+                  "_name": "root_1",
+                  "_connection_status_snapshots": null,
+                  "_processor_status_snapshots": null,
+                  "_process_group_status_snapshots": null,
+                  "_remote_process_group_status_snapshots": null,
+                  "_input_port_status_snapshots": null,
+                  "_output_port_status_snapshots": null,
+                  "_versioned_flow_state": null,
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_queued": 0,
+                  "_bytes_queued": 0,
+                  "_queued": "0 (0 bytes)",
+                  "_queued_count": "0",
+                  "_queued_size": "0 bytes",
+                  "_bytes_read": 0,
+                  "_read": "0 bytes",
+                  "_bytes_written": 0,
+                  "_written": "0 bytes",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_flow_files_transferred": 0,
+                  "_bytes_transferred": 0,
+                  "_transferred": "0 (0 bytes)",
+                  "_bytes_received": 0,
+                  "_flow_files_received": 0,
+                  "_received": "0 (0 bytes)",
+                  "_bytes_sent": 0,
+                  "_flow_files_sent": 0,
+                  "_sent": "0 (0 bytes)",
+                  "_active_thread_count": 0,
+                  "_terminated_thread_count": 0
+                },
+                "_node_snapshots": null
+              },
+              "_versioned_flow_snapshot": null,
+              "_running_count": 0,
+              "_stopped_count": 11,
+              "_invalid_count": 2,
+              "_disabled_count": 0,
+              "_active_remote_port_count": 1,
+              "_inactive_remote_port_count": 0,
+              "_versioned_flow_state": null,
+              "_up_to_date_count": 0,
+              "_locally_modified_count": 0,
+              "_stale_count": 0,
+              "_locally_modified_and_stale_count": 0,
+              "_sync_failure_count": 0,
+              "_local_input_port_count": 0,
+              "_local_output_port_count": 0,
+              "_public_input_port_count": 0,
+              "_public_output_port_count": 0,
+              "_parameter_context": null,
+              "_input_port_count": 0,
+              "_output_port_count": 0
+            }
+          ],
+          "_remote_process_groups": [],
+          "_processors": [],
+          "_input_ports": [],
+          "_output_ports": [],
+          "_connections": [],
+          "_labels": [],
+          "_funnels": []
+        },
+        "_last_refreshed": "09:58:40 EDT"
+      }
+    }
+  },
+  "nipyapi.canvas.list_all_input_ports:35199793-0172-1000-02ea-52da1888a03d": {
+    "args": [
+      "35199793-0172-1000-02ea-52da1888a03d",
+      false
+    ],
+    "return": []
+  },
+  "nipyapi.canvas.list_all_output_ports:35199793-0172-1000-02ea-52da1888a03d": {
+    "args": [
+      "35199793-0172-1000-02ea-52da1888a03d",
+      false
+    ],
+    "return": []
+  },
   "nipyapi.nifi.ProcessGroupsApi": {
     "args": [],
     "return": {
@@ -122,7 +648,7 @@
                               "_connect": {
                                 "py/object": "builtins.object"
                               },
-                              "_read": "<object object at 0x10c531470>",
+                              "_read": "<object object at 0x1075b63f0>",
                               "total": null,
                               "_start_connect": null
                             },
@@ -144,12 +670,12 @@
                                   {
                                     "py/tuple": [
                                       [
-                                        "GET",
                                         "HEAD",
-                                        "DELETE",
-                                        "PUT",
                                         "OPTIONS",
-                                        "TRACE"
+                                        "TRACE",
+                                        "DELETE",
+                                        "GET",
+                                        "PUT"
                                       ]
                                     ]
                                   }
@@ -224,7 +750,7 @@
                                               {
                                                 "py/tuple": [
                                                   "Date",
-                                                  "Wed, 03 Jun 2020 21:05:08 GMT"
+                                                  "Fri, 05 Jun 2020 13:58:40 GMT"
                                                 ]
                                               },
                                               {
@@ -290,7 +816,7 @@
                                             "defects": [],
                                             "_default_type": "text/plain"
                                           },
-                                          "msg": "<http.client.HTTPMessage object at 0x11033d820>",
+                                          "msg": "<http.client.HTTPMessage object at 0x10b3c5700>",
                                           "version": 11,
                                           "status": 200,
                                           "reason": "OK",
@@ -321,7 +847,7 @@
                               },
                               "not_empty": {
                                 "py/object": "threading.Condition",
-                                "_lock": "<unlocked _thread.lock object at 0x11022d720>",
+                                "_lock": "<unlocked _thread.lock object at 0x10b26d7e0>",
                                 "acquire": {
                                   "py/function": "None.lock.acquire"
                                 },
@@ -345,7 +871,7 @@
                               },
                               "not_full": {
                                 "py/object": "threading.Condition",
-                                "_lock": "<unlocked _thread.lock object at 0x11022d720>",
+                                "_lock": "<unlocked _thread.lock object at 0x10b26d7e0>",
                                 "acquire": {
                                   "py/function": "None.lock.acquire"
                                 },
@@ -369,7 +895,7 @@
                               },
                               "all_tasks_done": {
                                 "py/object": "threading.Condition",
-                                "_lock": "<unlocked _thread.lock object at 0x11022d720>",
+                                "_lock": "<unlocked _thread.lock object at 0x10b26d7e0>",
                                 "acquire": {
                                   "py/function": "None.lock.acquire"
                                 },
@@ -391,13 +917,13 @@
                                   ]
                                 }
                               },
-                              "unfinished_tasks": 25
+                              "unfinished_tasks": 31
                             },
                             "block": false,
                             "proxy": null,
                             "proxy_headers": {},
                             "num_connections": 1,
-                            "num_requests": 21,
+                            "num_requests": 27,
                             "conn_kw": {}
                           }
                         ]
@@ -510,7 +1036,7 @@
                           "date",
                           [
                             "Date",
-                            "Wed, 03 Jun 2020 21:05:08 GMT"
+                            "Fri, 05 Jun 2020 13:58:40 GMT"
                           ]
                         ]
                       },
@@ -604,12 +1130,12 @@
             "_body": {
               "py/b64": "eyJwcm9jZXNzR3JvdXBzIjpbXX0="
             },
-            "_fp": "<http.client.HTTPResponse object at 0x11033d610>",
-            "_original_response": "<http.client.HTTPResponse object at 0x11033d610>",
+            "_fp": "<http.client.HTTPResponse object at 0x10b3c54f0>",
+            "_original_response": "<http.client.HTTPResponse object at 0x10b3c54f0>",
             "_fp_bytes_read": 20,
             "msg": null,
             "_request_url": "http://localhost:8080/nifi-api/process-groups/65f57b35-0172-1000-d805-dec5391bee7e/process-groups",
-            "_pool": "<urllib3.connectionpool.HTTPConnectionPool object at 0x11022dc70>",
+            "_pool": "<urllib3.connectionpool.HTTPConnectionPool object at 0x10b26dd00>",
             "_connection": null,
             "chunked": false,
             "chunk_left": null,
@@ -650,86 +1176,107 @@
         "_bulletins": [
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 3,
+            "_id": 8,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:05:05 EDT",
+            "_timestamp": "09:58:38 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 3,
+              "_id": 8,
               "_node_address": null,
               "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-              "_timestamp": "17:05:05 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:38 EDT"
             }
           },
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 2,
+            "_id": 7,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:05:00 EDT",
+            "_timestamp": "09:58:33 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 2,
+              "_id": 7,
               "_node_address": null,
               "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-              "_timestamp": "17:05:00 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:33 EDT"
             }
           },
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 1,
+            "_id": 6,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:04:55 EDT",
+            "_timestamp": "09:58:28 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 1,
+              "_id": 6,
               "_node_address": null,
               "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-              "_timestamp": "17:04:55 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:28 EDT"
             }
           },
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 0,
+            "_id": 5,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:04:54 EDT",
+            "_timestamp": "09:58:23 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 0,
+              "_id": 5,
               "_node_address": null,
-              "_category": "Site to Site",
+              "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "Unable to connect to http://localhost:8080/nifi due to org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-              "_timestamp": "17:04:54 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:23 EDT"
+            }
+          },
+          {
+            "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+            "_id": 4,
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_timestamp": "09:58:18 EDT",
+            "_node_address": null,
+            "_can_read": true,
+            "_bulletin": {
+              "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+              "_id": 4,
+              "_node_address": null,
+              "_category": "Site-to-Site",
+              "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+              "_source_name": "NiFi Flow",
+              "_level": "WARNING",
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:18 EDT"
             }
           }
         ],
@@ -772,7 +1319,7 @@
           "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
           "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
           "_name": "root_1",
-          "_stats_last_refreshed": "17:05:08 EDT",
+          "_stats_last_refreshed": "09:58:40 EDT",
           "_aggregate_snapshot": {
             "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
             "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
@@ -949,7 +1496,7 @@
                 "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
                 "_id": "65f57b35-0172-1000-d805-dec5391bee7e",
                 "_name": "remote_target",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
                   "_id": "65f57b35-0172-1000-d805-dec5391bee7e",
@@ -1034,86 +1581,107 @@
               "_bulletins": [
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 3,
+                  "_id": 8,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:05:05 EDT",
+                  "_timestamp": "09:58:38 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 3,
+                    "_id": 8,
                     "_node_address": null,
                     "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-                    "_timestamp": "17:05:05 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:38 EDT"
                   }
                 },
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 2,
+                  "_id": 7,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:05:00 EDT",
+                  "_timestamp": "09:58:33 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 2,
+                    "_id": 7,
                     "_node_address": null,
                     "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-                    "_timestamp": "17:05:00 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:33 EDT"
                   }
                 },
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 1,
+                  "_id": 6,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:04:55 EDT",
+                  "_timestamp": "09:58:28 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 1,
+                    "_id": 6,
                     "_node_address": null,
                     "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-                    "_timestamp": "17:04:55 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:28 EDT"
                   }
                 },
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 0,
+                  "_id": 5,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:04:54 EDT",
+                  "_timestamp": "09:58:23 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 0,
+                    "_id": 5,
                     "_node_address": null,
-                    "_category": "Site to Site",
+                    "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "Unable to connect to http://localhost:8080/nifi due to org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-                    "_timestamp": "17:04:54 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:23 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 4,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "09:58:18 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 4,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:18 EDT"
                   }
                 }
               ],
@@ -1156,7 +1724,7 @@
                 "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
                 "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                 "_name": "root_1_1",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
                   "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
@@ -1423,7 +1991,7 @@
                 "_name": "q=nifi",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "719d5fb9-cd96-4491-fe7c-e81b3f3bb555",
@@ -1712,7 +2280,7 @@
                 "_name": "Source",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "f96be8b1-78b2-42f2-6ba5-2579f4f6c411",
@@ -2586,7 +3154,7 @@
                 "_name": "HashContent",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "83ca901a-efe0-4d97-dbca-5c557cefbe6f",
@@ -2790,7 +3358,7 @@
                 "_name": "Route On Status Code",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "ffcc8819-75f5-4811-e906-434e71a31f26",
@@ -3670,7 +4238,7 @@
                 "_name": "Search Google",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "e829b880-ef17-432a-7c5c-1e3ecdcd690d",
@@ -3784,7 +4352,7 @@
                 "_id": "f944d7d5-626a-4100-abb6-2f91a4b3b821",
                 "_group_id": "351b1dbc-0172-1000-056d-ec78a003b493",
                 "_name": "Original",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "e829b880-ef17-432a-7c5c-1e3ecdcd690d",
                 "_source_name": "Search Google",
                 "_destination_id": "ffcc8819-75f5-4811-e906-434e71a31f26",
@@ -3897,7 +4465,7 @@
                 "_id": "0352020c-9fdf-4388-6606-a0b9726f64dd",
                 "_group_id": "351b1dbc-0172-1000-056d-ec78a003b493",
                 "_name": "success",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "719d5fb9-cd96-4491-fe7c-e81b3f3bb555",
                 "_source_name": "q=nifi",
                 "_destination_id": "e829b880-ef17-432a-7c5c-1e3ecdcd690d",
@@ -4026,7 +4594,7 @@
                 "_id": "f06a2356-c839-4272-1c11-585f7da33fa0",
                 "_group_id": "351b1dbc-0172-1000-056d-ec78a003b493",
                 "_name": "Retry, Failure",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "e829b880-ef17-432a-7c5c-1e3ecdcd690d",
                 "_source_name": "Search Google",
                 "_destination_id": "e829b880-ef17-432a-7c5c-1e3ecdcd690d",
@@ -4150,7 +4718,7 @@
                 "_id": "9d1b23ac-05e2-47a4-a363-8d7875e6746f",
                 "_group_id": "351b1dbc-0172-1000-056d-ec78a003b493",
                 "_name": "success",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "f96be8b1-78b2-42f2-6ba5-2579f4f6c411",
                 "_source_name": "Source",
                 "_destination_id": "719d5fb9-cd96-4491-fe7c-e81b3f3bb555",
@@ -4264,7 +4832,7 @@
                 "_id": "b4e79c52-4342-4215-9677-bdda676e22c9",
                 "_group_id": "351b1dbc-0172-1000-056d-ec78a003b493",
                 "_name": "200",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "ffcc8819-75f5-4811-e906-434e71a31f26",
                 "_source_name": "Route On Status Code",
                 "_destination_id": "83ca901a-efe0-4d97-dbca-5c557cefbe6f",
@@ -4309,7 +4877,7 @@
           "_labels": [],
           "_funnels": []
         },
-        "_last_refreshed": "17:05:08 EDT"
+        "_last_refreshed": "09:58:40 EDT"
       }
     }
   },
@@ -4355,86 +4923,107 @@
         "_bulletins": [
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 3,
+            "_id": 8,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:05:05 EDT",
+            "_timestamp": "09:58:38 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 3,
+              "_id": 8,
               "_node_address": null,
               "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-              "_timestamp": "17:05:05 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:38 EDT"
             }
           },
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 2,
+            "_id": 7,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:05:00 EDT",
+            "_timestamp": "09:58:33 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 2,
+              "_id": 7,
               "_node_address": null,
               "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-              "_timestamp": "17:05:00 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:33 EDT"
             }
           },
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 1,
+            "_id": 6,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:04:55 EDT",
+            "_timestamp": "09:58:28 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 1,
+              "_id": 6,
               "_node_address": null,
               "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-              "_timestamp": "17:04:55 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:28 EDT"
             }
           },
           {
             "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-            "_id": 0,
+            "_id": 5,
             "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
             "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-            "_timestamp": "17:04:54 EDT",
+            "_timestamp": "09:58:23 EDT",
             "_node_address": null,
             "_can_read": true,
             "_bulletin": {
               "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-              "_id": 0,
+              "_id": 5,
               "_node_address": null,
-              "_category": "Site to Site",
+              "_category": "Site-to-Site",
               "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
               "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
               "_source_name": "NiFi Flow",
               "_level": "WARNING",
-              "_message": "Unable to connect to http://localhost:8080/nifi due to org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-              "_timestamp": "17:04:54 EDT"
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:23 EDT"
+            }
+          },
+          {
+            "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+            "_id": 4,
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_timestamp": "09:58:18 EDT",
+            "_node_address": null,
+            "_can_read": true,
+            "_bulletin": {
+              "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+              "_id": 4,
+              "_node_address": null,
+              "_category": "Site-to-Site",
+              "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+              "_source_name": "NiFi Flow",
+              "_level": "WARNING",
+              "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+              "_timestamp": "09:58:18 EDT"
             }
           }
         ],
@@ -4477,7 +5066,7 @@
           "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
           "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
           "_name": "root_1_1",
-          "_stats_last_refreshed": "17:05:08 EDT",
+          "_stats_last_refreshed": "09:58:40 EDT",
           "_aggregate_snapshot": {
             "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
             "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
@@ -4599,7 +5188,7 @@
           "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
           "_id": "65f57b35-0172-1000-d805-dec5391bee7e",
           "_name": "remote_target",
-          "_stats_last_refreshed": "17:05:08 EDT",
+          "_stats_last_refreshed": "09:58:40 EDT",
           "_aggregate_snapshot": {
             "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
             "_id": "65f57b35-0172-1000-d805-dec5391bee7e",
@@ -4756,86 +5345,107 @@
               "_bulletins": [
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 3,
+                  "_id": 8,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:05:05 EDT",
+                  "_timestamp": "09:58:38 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 3,
+                    "_id": 8,
                     "_node_address": null,
                     "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-                    "_timestamp": "17:05:05 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:38 EDT"
                   }
                 },
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 2,
+                  "_id": 7,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:05:00 EDT",
+                  "_timestamp": "09:58:33 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 2,
+                    "_id": 7,
                     "_node_address": null,
                     "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
-                    "_timestamp": "17:05:00 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:33 EDT"
                   }
                 },
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 1,
+                  "_id": 6,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:04:55 EDT",
+                  "_timestamp": "09:58:28 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 1,
+                    "_id": 6,
                     "_node_address": null,
                     "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "org.apache.nifi.remote.client.PeerSelector@201c4031 Unable to refresh Remote Group's peers due to Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-                    "_timestamp": "17:04:55 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:28 EDT"
                   }
                 },
                 {
                   "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
-                  "_id": 0,
+                  "_id": 5,
                   "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                   "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
-                  "_timestamp": "17:04:54 EDT",
+                  "_timestamp": "09:58:23 EDT",
                   "_node_address": null,
                   "_can_read": true,
                   "_bulletin": {
                     "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
-                    "_id": 0,
+                    "_id": 5,
                     "_node_address": null,
-                    "_category": "Site to Site",
+                    "_category": "Site-to-Site",
                     "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                     "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                     "_source_name": "NiFi Flow",
                     "_level": "WARNING",
-                    "_message": "Unable to connect to http://localhost:8080/nifi due to org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused (Connection refused)",
-                    "_timestamp": "17:04:54 EDT"
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:23 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 4,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "09:58:18 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 4,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@56bdace5 Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "09:58:18 EDT"
                   }
                 }
               ],
@@ -4852,7 +5462,7 @@
                 },
                 "_target_uri": "http://localhost:8080/nifi",
                 "_target_uris": "http://localhost:8080/nifi",
-                "_target_secure": null,
+                "_target_secure": false,
                 "_name": "NiFi Flow",
                 "_comments": "",
                 "_communications_timeout": "30 sec",
@@ -4868,13 +5478,13 @@
                 ],
                 "_validation_errors": null,
                 "_transmitting": true,
-                "_input_port_count": 0,
+                "_input_port_count": 1,
                 "_output_port_count": 0,
                 "_active_remote_input_port_count": 1,
                 "_inactive_remote_input_port_count": 0,
                 "_active_remote_output_port_count": 0,
                 "_inactive_remote_output_port_count": 0,
-                "_flow_refreshed": null,
+                "_flow_refreshed": "06/05/2020 09:58:32 EDT",
                 "_contents": {
                   "py/object": "nipyapi.nifi.models.remote_process_group_contents_dto.RemoteProcessGroupContentsDTO",
                   "_input_ports": [
@@ -4890,7 +5500,7 @@
                       "_transmitting": true,
                       "_use_compression": false,
                       "_exists": true,
-                      "_target_running": true,
+                      "_target_running": false,
                       "_connected": true,
                       "_batch_settings": {
                         "py/object": "nipyapi.nifi.models.batch_settings_dto.BatchSettingsDTO",
@@ -4910,7 +5520,7 @@
                 "_name": "NiFi Flow",
                 "_target_uri": "http://localhost:8080/nifi",
                 "_transmission_status": "Transmitting",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_validation_status": "INVALID",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.remote_process_group_status_snapshot_dto.RemoteProcessGroupStatusSnapshotDTO",
@@ -4929,7 +5539,7 @@
                 },
                 "_node_snapshots": null
               },
-              "_input_port_count": 0,
+              "_input_port_count": 1,
               "_output_port_count": 0,
               "_operate_permissions": {
                 "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
@@ -5281,7 +5891,7 @@
                 "_name": "Reformat Date Column",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
@@ -5657,7 +6267,7 @@
                 "_name": "Set CSV Content",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "67626c71-910a-4342-627d-e38cfcbcb924",
@@ -5946,7 +6556,7 @@
                 "_name": "Generate Empty File",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
@@ -6166,7 +6776,7 @@
                 "_name": "No-Op Termination",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "25b139c3-db89-4272-59c3-774ce58f0973",
@@ -6276,7 +6886,7 @@
                 "_id": "53cf55eb-3478-47be-c4a2-572f6427077a",
                 "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                 "_name": "success",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
                 "_source_name": "Generate Empty File",
                 "_destination_id": "67626c71-910a-4342-627d-e38cfcbcb924",
@@ -6390,7 +7000,7 @@
                 "_id": "86c736a2-6434-4d3a-90a2-e9acbdd5de17",
                 "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                 "_name": "success",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "b268f335-2a91-44e8-b567-c676c292fd55",
                 "_source_name": "Reformat Date Column",
                 "_destination_id": "25b139c3-db89-4272-59c3-774ce58f0973",
@@ -6504,7 +7114,7 @@
                 "_id": "80eab842-9376-44d9-3d7c-c4058f1933d2",
                 "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                 "_name": "success",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "67626c71-910a-4342-627d-e38cfcbcb924",
                 "_source_name": "Set CSV Content",
                 "_destination_id": "b268f335-2a91-44e8-b567-c676c292fd55",
@@ -6588,7 +7198,7 @@
                   "_type": "REMOTE_INPUT_PORT",
                   "_group_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
                   "_name": "Input 1",
-                  "_running": true,
+                  "_running": false,
                   "_transmitting": true,
                   "_exists": true,
                   "_comments": ""
@@ -6618,7 +7228,7 @@
                 "_id": "65f9bc10-0172-1000-b685-86689d92e7e1",
                 "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
                 "_name": "success",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "b268f335-2a91-44e8-b567-c676c292fd55",
                 "_source_name": "Reformat Date Column",
                 "_destination_id": "37b065f7-232b-30b9-a282-3ea28f75a2a2",
@@ -6663,7 +7273,7 @@
           "_labels": [],
           "_funnels": []
         },
-        "_last_refreshed": "17:05:08 EDT"
+        "_last_refreshed": "09:58:40 EDT"
       }
     }
   },
@@ -6701,7 +7311,7 @@
           "_transmitting": true,
           "_use_compression": false,
           "_exists": true,
-          "_target_running": true,
+          "_target_running": false,
           "_connected": true,
           "_batch_settings": {
             "py/object": "nipyapi.nifi.models.batch_settings_dto.BatchSettingsDTO",
@@ -7092,7 +7702,7 @@
                 "_name": "log_remote_attributes",
                 "_type": null,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
                   "_id": "65f629b8-0172-1000-4ced-efa192c35536",
@@ -7178,7 +7788,7 @@
                 "_name": "Input 1",
                 "_transmitting": false,
                 "_run_status": "Stopped",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_aggregate_snapshot": {
                   "py/object": "nipyapi.nifi.models.port_status_snapshot_dto.PortStatusSnapshotDTO",
                   "_id": "65f5b8db-0172-1000-407f-93e85d1d9f94",
@@ -7275,7 +7885,7 @@
                 "_id": "65f63e92-0172-1000-45b7-875a0b74b26a",
                 "_group_id": "65f57b35-0172-1000-d805-dec5391bee7e",
                 "_name": "Input to Processor",
-                "_stats_last_refreshed": "17:05:08 EDT",
+                "_stats_last_refreshed": "09:58:40 EDT",
                 "_source_id": "65f5b8db-0172-1000-407f-93e85d1d9f94",
                 "_source_name": "Input 1",
                 "_destination_id": "65f629b8-0172-1000-4ced-efa192c35536",
@@ -7320,7 +7930,7 @@
           "_labels": [],
           "_funnels": []
         },
-        "_last_refreshed": "17:05:08 EDT"
+        "_last_refreshed": "09:58:40 EDT"
       }
     }
   },
@@ -7380,7 +7990,7 @@
           "_name": "Input 1",
           "_transmitting": false,
           "_run_status": "Stopped",
-          "_stats_last_refreshed": "17:05:08 EDT",
+          "_stats_last_refreshed": "09:58:40 EDT",
           "_aggregate_snapshot": {
             "py/object": "nipyapi.nifi.models.port_status_snapshot_dto.PortStatusSnapshotDTO",
             "_id": "65f5b8db-0172-1000-407f-93e85d1d9f94",

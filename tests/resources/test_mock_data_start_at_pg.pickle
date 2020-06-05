@@ -1,0 +1,2933 @@
+{
+  "nipyapi.canvas.get_process_group": {
+    "args": [
+      "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+      "id"
+    ],
+    "return": {
+      "py/object": "nipyapi.nifi.models.process_group_entity.ProcessGroupEntity",
+      "_revision": {
+        "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+        "_client_id": null,
+        "_version": 0,
+        "_last_modifier": null
+      },
+      "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+      "_uri": "http://localhost:8080/nifi-api/process-groups/351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+      "_position": {
+        "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+        "_x": 160.0,
+        "_y": -48.0
+      },
+      "_permissions": {
+        "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+        "_can_read": true,
+        "_can_write": true
+      },
+      "_bulletins": [
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 34,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "10:08:03 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 34,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "10:08:03 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 33,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "10:07:58 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 33,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "10:07:58 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 32,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "10:07:53 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 32,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "10:07:53 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 31,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "10:07:48 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 31,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "10:07:48 EDT"
+          }
+        },
+        {
+          "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+          "_id": 30,
+          "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_timestamp": "10:07:43 EDT",
+          "_node_address": null,
+          "_can_read": true,
+          "_bulletin": {
+            "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+            "_id": 30,
+            "_node_address": null,
+            "_category": "Site-to-Site",
+            "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+            "_source_name": "NiFi Flow",
+            "_level": "WARNING",
+            "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+            "_timestamp": "10:07:43 EDT"
+          }
+        }
+      ],
+      "_disconnected_node_acknowledged": null,
+      "_component": {
+        "py/object": "nipyapi.nifi.models.process_group_dto.ProcessGroupDTO",
+        "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+        "_versioned_component_id": null,
+        "_parent_group_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+        "_position": {
+          "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+          "_x": 160.0,
+          "_y": -48.0
+        },
+        "_name": "root_1_1",
+        "_comments": "",
+        "_variables": {},
+        "_version_control_information": null,
+        "_parameter_context": null,
+        "_running_count": 0,
+        "_stopped_count": 4,
+        "_invalid_count": 1,
+        "_disabled_count": 0,
+        "_active_remote_port_count": 1,
+        "_inactive_remote_port_count": 0,
+        "_up_to_date_count": 0,
+        "_locally_modified_count": 0,
+        "_stale_count": 0,
+        "_locally_modified_and_stale_count": 0,
+        "_sync_failure_count": 0,
+        "_local_input_port_count": 0,
+        "_local_output_port_count": 0,
+        "_public_input_port_count": 0,
+        "_public_output_port_count": 0,
+        "_contents": null,
+        "_input_port_count": 0,
+        "_output_port_count": 0
+      },
+      "_status": {
+        "py/object": "nipyapi.nifi.models.process_group_status_dto.ProcessGroupStatusDTO",
+        "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+        "_name": "root_1_1",
+        "_stats_last_refreshed": "10:08:08 EDT",
+        "_aggregate_snapshot": {
+          "py/object": "nipyapi.nifi.models.process_group_status_snapshot_dto.ProcessGroupStatusSnapshotDTO",
+          "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_name": "root_1_1",
+          "_connection_status_snapshots": null,
+          "_processor_status_snapshots": null,
+          "_process_group_status_snapshots": null,
+          "_remote_process_group_status_snapshots": null,
+          "_input_port_status_snapshots": null,
+          "_output_port_status_snapshots": null,
+          "_versioned_flow_state": null,
+          "_flow_files_in": 0,
+          "_bytes_in": 0,
+          "_input": "0 (0 bytes)",
+          "_flow_files_queued": 0,
+          "_bytes_queued": 0,
+          "_queued": "0 (0 bytes)",
+          "_queued_count": "0",
+          "_queued_size": "0 bytes",
+          "_bytes_read": 0,
+          "_read": "0 bytes",
+          "_bytes_written": 0,
+          "_written": "0 bytes",
+          "_flow_files_out": 0,
+          "_bytes_out": 0,
+          "_output": "0 (0 bytes)",
+          "_flow_files_transferred": 0,
+          "_bytes_transferred": 0,
+          "_transferred": "0 (0 bytes)",
+          "_bytes_received": 0,
+          "_flow_files_received": 0,
+          "_received": "0 (0 bytes)",
+          "_bytes_sent": 0,
+          "_flow_files_sent": 0,
+          "_sent": "0 (0 bytes)",
+          "_active_thread_count": 0,
+          "_terminated_thread_count": 0
+        },
+        "_node_snapshots": null
+      },
+      "_versioned_flow_snapshot": null,
+      "_running_count": 0,
+      "_stopped_count": 4,
+      "_invalid_count": 1,
+      "_disabled_count": 0,
+      "_active_remote_port_count": 1,
+      "_inactive_remote_port_count": 0,
+      "_versioned_flow_state": null,
+      "_up_to_date_count": 0,
+      "_locally_modified_count": 0,
+      "_stale_count": 0,
+      "_locally_modified_and_stale_count": 0,
+      "_sync_failure_count": 0,
+      "_local_input_port_count": 0,
+      "_local_output_port_count": 0,
+      "_public_input_port_count": 0,
+      "_public_output_port_count": 0,
+      "_parameter_context": null,
+      "_input_port_count": 0,
+      "_output_port_count": 0
+    }
+  },
+  "nipyapi.canvas.get_flow:351dbb56-0172-1000-21fa-a4af9fc0dbb1": {
+    "args": [
+      "351dbb56-0172-1000-21fa-a4af9fc0dbb1"
+    ],
+    "return": {
+      "py/object": "nipyapi.nifi.models.process_group_flow_entity.ProcessGroupFlowEntity",
+      "_permissions": {
+        "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+        "_can_read": true,
+        "_can_write": true
+      },
+      "_process_group_flow": {
+        "py/object": "nipyapi.nifi.models.process_group_flow_dto.ProcessGroupFlowDTO",
+        "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+        "_uri": "http://localhost:8080/nifi-api/flow/process-groups/351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+        "_parent_group_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+        "_parameter_context": null,
+        "_breadcrumb": {
+          "py/object": "nipyapi.nifi.models.flow_breadcrumb_entity.FlowBreadcrumbEntity",
+          "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+          "_permissions": {
+            "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+            "_can_read": true,
+            "_can_write": true
+          },
+          "_versioned_flow_state": null,
+          "_breadcrumb": {
+            "py/object": "nipyapi.nifi.models.flow_breadcrumb_dto.FlowBreadcrumbDTO",
+            "_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+            "_name": "root_1_1",
+            "_version_control_information": null
+          },
+          "_parent_breadcrumb": {
+            "py/object": "nipyapi.nifi.models.flow_breadcrumb_entity.FlowBreadcrumbEntity",
+            "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+            "_permissions": {
+              "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+              "_can_read": true,
+              "_can_write": true
+            },
+            "_versioned_flow_state": null,
+            "_breadcrumb": {
+              "py/object": "nipyapi.nifi.models.flow_breadcrumb_dto.FlowBreadcrumbDTO",
+              "_id": "351b1dbc-0172-1000-056d-ec78a003b493",
+              "_name": "root_1",
+              "_version_control_information": null
+            },
+            "_parent_breadcrumb": {
+              "py/object": "nipyapi.nifi.models.flow_breadcrumb_entity.FlowBreadcrumbEntity",
+              "_id": "35199793-0172-1000-02ea-52da1888a03d",
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_versioned_flow_state": null,
+              "_breadcrumb": {
+                "py/object": "nipyapi.nifi.models.flow_breadcrumb_dto.FlowBreadcrumbDTO",
+                "_id": "35199793-0172-1000-02ea-52da1888a03d",
+                "_name": "NiFi Flow",
+                "_version_control_information": null
+              },
+              "_parent_breadcrumb": null
+            }
+          }
+        },
+        "_flow": {
+          "py/object": "nipyapi.nifi.models.flow_dto.FlowDTO",
+          "_process_groups": [],
+          "_remote_process_groups": [
+            {
+              "py/object": "nipyapi.nifi.models.remote_process_group_entity.RemoteProcessGroupEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+              "_uri": "http://localhost:8080/nifi-api/remote-process-groups/65f8c7d5-0172-1000-a916-0e5562295e08",
+              "_position": {
+                "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                "_x": 800.0,
+                "_y": 32.0
+              },
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": [
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 34,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "10:08:03 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 34,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "10:08:03 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 33,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "10:07:58 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 33,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "10:07:58 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 32,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "10:07:53 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 32,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "10:07:53 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 31,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "10:07:48 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 31,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "10:07:48 EDT"
+                  }
+                },
+                {
+                  "py/object": "nipyapi.nifi.models.bulletin_entity.BulletinEntity",
+                  "_id": 30,
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_timestamp": "10:07:43 EDT",
+                  "_node_address": null,
+                  "_can_read": true,
+                  "_bulletin": {
+                    "py/object": "nipyapi.nifi.models.bulletin_dto.BulletinDTO",
+                    "_id": 30,
+                    "_node_address": null,
+                    "_category": "Site-to-Site",
+                    "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                    "_source_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                    "_source_name": "NiFi Flow",
+                    "_level": "WARNING",
+                    "_message": "org.apache.nifi.remote.client.PeerSelector@e3ec43a Unable to refresh Remote Group's peers due to Remote instance of NiFi is not configured to allow RAW Socket site-to-site communications",
+                    "_timestamp": "10:07:43 EDT"
+                  }
+                }
+              ],
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.remote_process_group_dto.RemoteProcessGroupDTO",
+                "_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": {
+                  "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                  "_x": 800.0,
+                  "_y": 32.0
+                },
+                "_target_uri": "http://localhost:8080/nifi",
+                "_target_uris": "http://localhost:8080/nifi",
+                "_target_secure": false,
+                "_name": "NiFi Flow",
+                "_comments": "",
+                "_communications_timeout": "30 sec",
+                "_yield_duration": "10 sec",
+                "_transport_protocol": "RAW",
+                "_local_network_interface": null,
+                "_proxy_host": "",
+                "_proxy_port": null,
+                "_proxy_user": "",
+                "_proxy_password": null,
+                "_authorization_issues": [
+                  "Remote instance is not configured to allow RAW Site-to-Site communications at this time."
+                ],
+                "_validation_errors": null,
+                "_transmitting": true,
+                "_input_port_count": 1,
+                "_output_port_count": 0,
+                "_active_remote_input_port_count": 1,
+                "_inactive_remote_input_port_count": 0,
+                "_active_remote_output_port_count": 0,
+                "_inactive_remote_output_port_count": 0,
+                "_flow_refreshed": "06/05/2020 10:07:47 EDT",
+                "_contents": {
+                  "py/object": "nipyapi.nifi.models.remote_process_group_contents_dto.RemoteProcessGroupContentsDTO",
+                  "_input_ports": [
+                    {
+                      "py/object": "nipyapi.nifi.models.remote_process_group_port_dto.RemoteProcessGroupPortDTO",
+                      "_id": "37b065f7-232b-30b9-a282-3ea28f75a2a2",
+                      "_target_id": "65f5b8db-0172-1000-407f-93e85d1d9f94",
+                      "_versioned_component_id": null,
+                      "_group_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                      "_name": "Input 1",
+                      "_comments": "",
+                      "_concurrently_schedulable_task_count": 1,
+                      "_transmitting": true,
+                      "_use_compression": false,
+                      "_exists": true,
+                      "_target_running": false,
+                      "_connected": true,
+                      "_batch_settings": {
+                        "py/object": "nipyapi.nifi.models.batch_settings_dto.BatchSettingsDTO",
+                        "_count": null,
+                        "_size": null,
+                        "_duration": null
+                      }
+                    }
+                  ],
+                  "_output_ports": []
+                }
+              },
+              "_status": {
+                "py/object": "nipyapi.nifi.models.remote_process_group_status_dto.RemoteProcessGroupStatusDTO",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                "_name": "NiFi Flow",
+                "_target_uri": "http://localhost:8080/nifi",
+                "_transmission_status": "Transmitting",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_validation_status": "INVALID",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.remote_process_group_status_snapshot_dto.RemoteProcessGroupStatusSnapshotDTO",
+                  "_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "NiFi Flow",
+                  "_target_uri": "http://localhost:8080/nifi",
+                  "_transmission_status": "Transmitting",
+                  "_active_thread_count": 0,
+                  "_flow_files_sent": 0,
+                  "_bytes_sent": 0,
+                  "_sent": "0 (0 bytes)",
+                  "_flow_files_received": 0,
+                  "_bytes_received": 0,
+                  "_received": "0 (0 bytes)"
+                },
+                "_node_snapshots": null
+              },
+              "_input_port_count": 1,
+              "_output_port_count": 0,
+              "_operate_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              }
+            }
+          ],
+          "_processors": [
+            {
+              "py/object": "nipyapi.nifi.models.processor_entity.ProcessorEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+              "_uri": "http://localhost:8080/nifi-api/processors/b268f335-2a91-44e8-b567-c676c292fd55",
+              "_position": {
+                "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                "_x": 1259.0091645997952,
+                "_y": 434.3040808061467
+              },
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": [],
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.processor_dto.ProcessorDTO",
+                "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": {
+                  "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                  "_x": 1259.0091645997952,
+                  "_y": 434.3040808061467
+                },
+                "_name": "Reformat Date Column",
+                "_type": "org.apache.nifi.processors.standard.ReplaceText",
+                "_bundle": {
+                  "py/object": "nipyapi.nifi.models.bundle_dto.BundleDTO",
+                  "_group": "org.apache.nifi",
+                  "_artifact": "nifi-standard-nar",
+                  "_version": "1.12.0-SNAPSHOT"
+                },
+                "_state": "STOPPED",
+                "_style": {},
+                "_relationships": [
+                  {
+                    "py/object": "nipyapi.nifi.models.relationship_dto.RelationshipDTO",
+                    "_name": "failure",
+                    "_description": "FlowFiles that could not be updated are routed to this relationship",
+                    "_auto_terminate": true
+                  },
+                  {
+                    "py/object": "nipyapi.nifi.models.relationship_dto.RelationshipDTO",
+                    "_name": "success",
+                    "_description": "FlowFiles that have been successfully processed are routed to this relationship. This includes both FlowFiles that had text replaced and those that did not.",
+                    "_auto_terminate": false
+                  }
+                ],
+                "_description": null,
+                "_supports_parallel_processing": true,
+                "_supports_event_driven": true,
+                "_supports_batching": true,
+                "_persists_state": false,
+                "_restricted": false,
+                "_deprecated": false,
+                "_execution_node_restricted": false,
+                "_multiple_versions_available": false,
+                "_input_requirement": "INPUT_REQUIRED",
+                "_config": {
+                  "py/object": "nipyapi.nifi.models.processor_config_dto.ProcessorConfigDTO",
+                  "_properties": {
+                    "Regular Expression": "(.*?),(.*?),(\\d+.*)",
+                    "Replacement Value": "$1,$2,${ '$3':toDate('ddMMMyyyy'):format('yyyy/MM/dd') }",
+                    "Character Set": "UTF-8",
+                    "Maximum Buffer Size": "1 MB",
+                    "Replacement Strategy": "Regex Replace",
+                    "Evaluation Mode": "Line-by-Line",
+                    "Line-by-Line Evaluation Mode": "All"
+                  },
+                  "_descriptors": {
+                    "Regular Expression": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Regular Expression",
+                      "_display_name": "Search Value",
+                      "_description": "The Search Value to search for in the FlowFile content. Only used for 'Literal Replace' and 'Regex Replace' matching strategies",
+                      "_default_value": "(?s)(^.*$)",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": true,
+                      "_expression_language_scope": "Variable Registry and FlowFile Attributes",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Replacement Value": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Replacement Value",
+                      "_display_name": "Replacement Value",
+                      "_description": "The value to insert using the 'Replacement Strategy'. Using \"Regex Replace\" back-references to Regular Expression capturing groups are supported, but back-references that reference capturing groups that do not exist in the regular expression will be treated as literal value. Back References may also be referenced using the Expression Language, as '$1', '$2', etc. The single-tick marks MUST be included, as these variables are not \"Standard\" attribute names (attribute names must be quoted unless they contain only numbers, letters, and _).",
+                      "_default_value": "$1",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": true,
+                      "_expression_language_scope": "Variable Registry and FlowFile Attributes",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Character Set": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Character Set",
+                      "_display_name": "Character Set",
+                      "_description": "The Character Set in which the file is encoded",
+                      "_default_value": "UTF-8",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Maximum Buffer Size": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Maximum Buffer Size",
+                      "_display_name": "Maximum Buffer Size",
+                      "_description": "Specifies the maximum amount of data to buffer (per file or per line, depending on the Evaluation Mode) in order to apply the replacement. If 'Entire Text' (in Evaluation Mode) is selected and the FlowFile is larger than this value, the FlowFile will be routed to 'failure'. In 'Line-by-Line' Mode, if a single line is larger than this value, the FlowFile will be routed to 'failure'. A default value of 1 MB is provided, primarily for 'Entire Text' mode. In 'Line-by-Line' Mode, a value such as 8 KB or 16 KB is suggested. This value is ignored if the <Replacement Strategy> property is set to one of: Append, Prepend, Always Replace",
+                      "_default_value": "1 MB",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Replacement Strategy": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Replacement Strategy",
+                      "_display_name": "Replacement Strategy",
+                      "_description": "The strategy for how and what to replace within the FlowFile's text content.",
+                      "_default_value": "Regex Replace",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Prepend",
+                            "_value": "Prepend",
+                            "_description": "Insert the Replacement Value at the beginning of the FlowFile or the beginning of each line (depending on the Evaluation Mode). For \"Line-by-Line\" Evaluation Mode, the value will be prepended to each line. Similarly, for \"First-Line\", \"Last-Line\", \"Except-Last-Line\" and \"Except-First-Line\" Evaluation Modes,the value will be prepended to header alone, footer alone, all lines except header and all lines except footer respectively. For \"Entire Text\" evaluation mode,the value will be prepended to the entire text."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Append",
+                            "_value": "Append",
+                            "_description": "Insert the Replacement Value at the end of the FlowFile or the end of each line (depending on the Evaluation Mode). For \"Line-by-Line\" Evaluation Mode, the value will be appended to each line. Similarly, for \"First-Line\", \"Last-Line\", \"Except-Last-Line\" and \"Except-First-Line\" Evaluation Modes,the value will be appended to header alone, footer alone, all lines except header and all lines except footer respectively. For \"Entire Text\" evaluation mode,the value will be appended to the entire text."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Regex Replace",
+                            "_value": "Regex Replace",
+                            "_description": "Interpret the Search Value as a Regular Expression and replace all matches with the Replacement Value. The Replacement Value may reference Capturing Groups used in the Search Value by using a dollar-sign followed by the Capturing Group number, such as $1 or $2. If the Search Value is set to .* then everything is replaced without even evaluating the Regular Expression."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Literal Replace",
+                            "_value": "Literal Replace",
+                            "_description": "Search for all instances of the Search Value and replace the matches with the Replacement Value."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Always Replace",
+                            "_value": "Always Replace",
+                            "_description": "Always replaces the entire line or the entire contents of the FlowFile (depending on the value of the <Evaluation Mode> property) and does not bother searching for any value. When this strategy is chosen, the <Search Value> property is ignored."
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Evaluation Mode": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Evaluation Mode",
+                      "_display_name": "Evaluation Mode",
+                      "_description": "Run the 'Replacement Strategy' against each line separately (Line-by-Line) or buffer the entire file into memory (Entire Text) and run against that.",
+                      "_default_value": "Entire text",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Line-by-Line",
+                            "_value": "Line-by-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Entire text",
+                            "_value": "Entire text",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Line-by-Line Evaluation Mode": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Line-by-Line Evaluation Mode",
+                      "_display_name": "Line-by-Line Evaluation Mode",
+                      "_description": "Run the 'Replacement Strategy' against each line separately (Line-by-Line) for all lines in the FlowFile, First Line (Header) alone, Last Line (Footer) alone, Except the First Line (Header) or Except the Last Line (Footer).",
+                      "_default_value": "All",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "All",
+                            "_value": "All",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "First-Line",
+                            "_value": "First-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Last-Line",
+                            "_value": "Last-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Except-First-Line",
+                            "_value": "Except-First-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Except-Last-Line",
+                            "_value": "Except-Last-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": false,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    }
+                  },
+                  "_scheduling_period": "0 sec",
+                  "_scheduling_strategy": "TIMER_DRIVEN",
+                  "_execution_node": "ALL",
+                  "_penalty_duration": "30 sec",
+                  "_yield_duration": "1 sec",
+                  "_bulletin_level": "WARN",
+                  "_run_duration_millis": 0,
+                  "_concurrently_schedulable_task_count": 1,
+                  "_auto_terminated_relationships": null,
+                  "_comments": "",
+                  "_custom_ui_url": null,
+                  "_loss_tolerant": false,
+                  "_annotation_data": null,
+                  "_default_concurrent_tasks": {
+                    "TIMER_DRIVEN": "1",
+                    "EVENT_DRIVEN": "0",
+                    "CRON_DRIVEN": "1"
+                  },
+                  "_default_scheduling_period": {
+                    "TIMER_DRIVEN": "0 sec",
+                    "CRON_DRIVEN": "* * * * * ?"
+                  }
+                },
+                "_validation_errors": null,
+                "_validation_status": "VALID",
+                "_extension_missing": false
+              },
+              "_input_requirement": "INPUT_REQUIRED",
+              "_status": {
+                "py/object": "nipyapi.nifi.models.processor_status_dto.ProcessorStatusDTO",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                "_name": "Reformat Date Column",
+                "_type": null,
+                "_run_status": "Stopped",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
+                  "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Reformat Date Column",
+                  "_type": "ReplaceText",
+                  "_run_status": "Stopped",
+                  "_execution_node": "ALL",
+                  "_bytes_read": 0,
+                  "_bytes_written": 0,
+                  "_read": "0 bytes",
+                  "_written": "0 bytes",
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_task_count": 0,
+                  "_tasks_duration_nanos": 0,
+                  "_tasks": "0",
+                  "_tasks_duration": "00:00:00.000",
+                  "_active_thread_count": 0,
+                  "_terminated_thread_count": 0
+                },
+                "_node_snapshots": null
+              },
+              "_operate_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              }
+            },
+            {
+              "py/object": "nipyapi.nifi.models.processor_entity.ProcessorEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+              "_uri": "http://localhost:8080/nifi-api/processors/67626c71-910a-4342-627d-e38cfcbcb924",
+              "_position": {
+                "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                "_x": 408.0,
+                "_y": 392.0
+              },
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": [],
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.processor_dto.ProcessorDTO",
+                "_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": {
+                  "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                  "_x": 408.0,
+                  "_y": 392.0
+                },
+                "_name": "Set CSV Content",
+                "_type": "org.apache.nifi.processors.standard.ReplaceText",
+                "_bundle": {
+                  "py/object": "nipyapi.nifi.models.bundle_dto.BundleDTO",
+                  "_group": "org.apache.nifi",
+                  "_artifact": "nifi-standard-nar",
+                  "_version": "1.12.0-SNAPSHOT"
+                },
+                "_state": "STOPPED",
+                "_style": {},
+                "_relationships": [
+                  {
+                    "py/object": "nipyapi.nifi.models.relationship_dto.RelationshipDTO",
+                    "_name": "failure",
+                    "_description": "FlowFiles that could not be updated are routed to this relationship",
+                    "_auto_terminate": true
+                  },
+                  {
+                    "py/object": "nipyapi.nifi.models.relationship_dto.RelationshipDTO",
+                    "_name": "success",
+                    "_description": "FlowFiles that have been successfully processed are routed to this relationship. This includes both FlowFiles that had text replaced and those that did not.",
+                    "_auto_terminate": false
+                  }
+                ],
+                "_description": null,
+                "_supports_parallel_processing": true,
+                "_supports_event_driven": true,
+                "_supports_batching": true,
+                "_persists_state": false,
+                "_restricted": false,
+                "_deprecated": false,
+                "_execution_node_restricted": false,
+                "_multiple_versions_available": false,
+                "_input_requirement": "INPUT_REQUIRED",
+                "_config": {
+                  "py/object": "nipyapi.nifi.models.processor_config_dto.ProcessorConfigDTO",
+                  "_properties": {
+                    "Regular Expression": "(?s)(^.*$)",
+                    "Replacement Value": "2006,10-01-2004,10may2004\n2007,15-05-2006,10jun2005\n2009,8-8-2008,10aug2008",
+                    "Character Set": "UTF-8",
+                    "Maximum Buffer Size": "1 MB",
+                    "Replacement Strategy": "Regex Replace",
+                    "Evaluation Mode": "Entire text",
+                    "Line-by-Line Evaluation Mode": "All"
+                  },
+                  "_descriptors": {
+                    "Regular Expression": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Regular Expression",
+                      "_display_name": "Search Value",
+                      "_description": "The Search Value to search for in the FlowFile content. Only used for 'Literal Replace' and 'Regex Replace' matching strategies",
+                      "_default_value": "(?s)(^.*$)",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": true,
+                      "_expression_language_scope": "Variable Registry and FlowFile Attributes",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Replacement Value": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Replacement Value",
+                      "_display_name": "Replacement Value",
+                      "_description": "The value to insert using the 'Replacement Strategy'. Using \"Regex Replace\" back-references to Regular Expression capturing groups are supported, but back-references that reference capturing groups that do not exist in the regular expression will be treated as literal value. Back References may also be referenced using the Expression Language, as '$1', '$2', etc. The single-tick marks MUST be included, as these variables are not \"Standard\" attribute names (attribute names must be quoted unless they contain only numbers, letters, and _).",
+                      "_default_value": "$1",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": true,
+                      "_expression_language_scope": "Variable Registry and FlowFile Attributes",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Character Set": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Character Set",
+                      "_display_name": "Character Set",
+                      "_description": "The Character Set in which the file is encoded",
+                      "_default_value": "UTF-8",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Maximum Buffer Size": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Maximum Buffer Size",
+                      "_display_name": "Maximum Buffer Size",
+                      "_description": "Specifies the maximum amount of data to buffer (per file or per line, depending on the Evaluation Mode) in order to apply the replacement. If 'Entire Text' (in Evaluation Mode) is selected and the FlowFile is larger than this value, the FlowFile will be routed to 'failure'. In 'Line-by-Line' Mode, if a single line is larger than this value, the FlowFile will be routed to 'failure'. A default value of 1 MB is provided, primarily for 'Entire Text' mode. In 'Line-by-Line' Mode, a value such as 8 KB or 16 KB is suggested. This value is ignored if the <Replacement Strategy> property is set to one of: Append, Prepend, Always Replace",
+                      "_default_value": "1 MB",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Replacement Strategy": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Replacement Strategy",
+                      "_display_name": "Replacement Strategy",
+                      "_description": "The strategy for how and what to replace within the FlowFile's text content.",
+                      "_default_value": "Regex Replace",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Prepend",
+                            "_value": "Prepend",
+                            "_description": "Insert the Replacement Value at the beginning of the FlowFile or the beginning of each line (depending on the Evaluation Mode). For \"Line-by-Line\" Evaluation Mode, the value will be prepended to each line. Similarly, for \"First-Line\", \"Last-Line\", \"Except-Last-Line\" and \"Except-First-Line\" Evaluation Modes,the value will be prepended to header alone, footer alone, all lines except header and all lines except footer respectively. For \"Entire Text\" evaluation mode,the value will be prepended to the entire text."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Append",
+                            "_value": "Append",
+                            "_description": "Insert the Replacement Value at the end of the FlowFile or the end of each line (depending on the Evaluation Mode). For \"Line-by-Line\" Evaluation Mode, the value will be appended to each line. Similarly, for \"First-Line\", \"Last-Line\", \"Except-Last-Line\" and \"Except-First-Line\" Evaluation Modes,the value will be appended to header alone, footer alone, all lines except header and all lines except footer respectively. For \"Entire Text\" evaluation mode,the value will be appended to the entire text."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Regex Replace",
+                            "_value": "Regex Replace",
+                            "_description": "Interpret the Search Value as a Regular Expression and replace all matches with the Replacement Value. The Replacement Value may reference Capturing Groups used in the Search Value by using a dollar-sign followed by the Capturing Group number, such as $1 or $2. If the Search Value is set to .* then everything is replaced without even evaluating the Regular Expression."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Literal Replace",
+                            "_value": "Literal Replace",
+                            "_description": "Search for all instances of the Search Value and replace the matches with the Replacement Value."
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Always Replace",
+                            "_value": "Always Replace",
+                            "_description": "Always replaces the entire line or the entire contents of the FlowFile (depending on the value of the <Evaluation Mode> property) and does not bother searching for any value. When this strategy is chosen, the <Search Value> property is ignored."
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Evaluation Mode": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Evaluation Mode",
+                      "_display_name": "Evaluation Mode",
+                      "_description": "Run the 'Replacement Strategy' against each line separately (Line-by-Line) or buffer the entire file into memory (Entire Text) and run against that.",
+                      "_default_value": "Entire text",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Line-by-Line",
+                            "_value": "Line-by-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Entire text",
+                            "_value": "Entire text",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Line-by-Line Evaluation Mode": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Line-by-Line Evaluation Mode",
+                      "_display_name": "Line-by-Line Evaluation Mode",
+                      "_description": "Run the 'Replacement Strategy' against each line separately (Line-by-Line) for all lines in the FlowFile, First Line (Header) alone, Last Line (Footer) alone, Except the First Line (Header) or Except the Last Line (Footer).",
+                      "_default_value": "All",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "All",
+                            "_value": "All",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "First-Line",
+                            "_value": "First-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Last-Line",
+                            "_value": "Last-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Except-First-Line",
+                            "_value": "Except-First-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Except-Last-Line",
+                            "_value": "Except-Last-Line",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": false,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    }
+                  },
+                  "_scheduling_period": "0 sec",
+                  "_scheduling_strategy": "TIMER_DRIVEN",
+                  "_execution_node": "ALL",
+                  "_penalty_duration": "30 sec",
+                  "_yield_duration": "1 sec",
+                  "_bulletin_level": "WARN",
+                  "_run_duration_millis": 0,
+                  "_concurrently_schedulable_task_count": 1,
+                  "_auto_terminated_relationships": null,
+                  "_comments": "",
+                  "_custom_ui_url": null,
+                  "_loss_tolerant": false,
+                  "_annotation_data": null,
+                  "_default_concurrent_tasks": {
+                    "TIMER_DRIVEN": "1",
+                    "EVENT_DRIVEN": "0",
+                    "CRON_DRIVEN": "1"
+                  },
+                  "_default_scheduling_period": {
+                    "TIMER_DRIVEN": "0 sec",
+                    "CRON_DRIVEN": "* * * * * ?"
+                  }
+                },
+                "_validation_errors": null,
+                "_validation_status": "VALID",
+                "_extension_missing": false
+              },
+              "_input_requirement": "INPUT_REQUIRED",
+              "_status": {
+                "py/object": "nipyapi.nifi.models.processor_status_dto.ProcessorStatusDTO",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+                "_name": "Set CSV Content",
+                "_type": null,
+                "_run_status": "Stopped",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
+                  "_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Set CSV Content",
+                  "_type": "ReplaceText",
+                  "_run_status": "Stopped",
+                  "_execution_node": "ALL",
+                  "_bytes_read": 0,
+                  "_bytes_written": 0,
+                  "_read": "0 bytes",
+                  "_written": "0 bytes",
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_task_count": 0,
+                  "_tasks_duration_nanos": 0,
+                  "_tasks": "0",
+                  "_tasks_duration": "00:00:00.000",
+                  "_active_thread_count": 0,
+                  "_terminated_thread_count": 0
+                },
+                "_node_snapshots": null
+              },
+              "_operate_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              }
+            },
+            {
+              "py/object": "nipyapi.nifi.models.processor_entity.ProcessorEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
+              "_uri": "http://localhost:8080/nifi-api/processors/bc3ad300-c93c-430b-fc94-3a32c3020f53",
+              "_position": {
+                "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                "_x": 356.00916459979516,
+                "_y": 100.64408080614675
+              },
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": [],
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.processor_dto.ProcessorDTO",
+                "_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": {
+                  "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                  "_x": 356.00916459979516,
+                  "_y": 100.64408080614675
+                },
+                "_name": "Generate Empty File",
+                "_type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+                "_bundle": {
+                  "py/object": "nipyapi.nifi.models.bundle_dto.BundleDTO",
+                  "_group": "org.apache.nifi",
+                  "_artifact": "nifi-standard-nar",
+                  "_version": "1.12.0-SNAPSHOT"
+                },
+                "_state": "STOPPED",
+                "_style": {},
+                "_relationships": [
+                  {
+                    "py/object": "nipyapi.nifi.models.relationship_dto.RelationshipDTO",
+                    "_name": "success",
+                    "_description": "",
+                    "_auto_terminate": false
+                  }
+                ],
+                "_description": null,
+                "_supports_parallel_processing": true,
+                "_supports_event_driven": false,
+                "_supports_batching": true,
+                "_persists_state": false,
+                "_restricted": false,
+                "_deprecated": false,
+                "_execution_node_restricted": false,
+                "_multiple_versions_available": false,
+                "_input_requirement": "INPUT_FORBIDDEN",
+                "_config": {
+                  "py/object": "nipyapi.nifi.models.processor_config_dto.ProcessorConfigDTO",
+                  "_properties": {
+                    "File Size": "0b",
+                    "Batch Size": "1",
+                    "Data Format": "Text",
+                    "Unique FlowFiles": "false",
+                    "generate-ff-custom-text": null,
+                    "character-set": "UTF-8",
+                    "mime-type": null
+                  },
+                  "_descriptors": {
+                    "File Size": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "File Size",
+                      "_display_name": "File Size",
+                      "_description": "The size of the file that will be used",
+                      "_default_value": "0B",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Batch Size": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Batch Size",
+                      "_display_name": "Batch Size",
+                      "_description": "The number of FlowFiles to be transferred in each invocation",
+                      "_default_value": "1",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Data Format": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Data Format",
+                      "_display_name": "Data Format",
+                      "_description": "Specifies whether the data should be Text or Binary",
+                      "_default_value": "Text",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Binary",
+                            "_value": "Binary",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Text",
+                            "_value": "Text",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Unique FlowFiles": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Unique FlowFiles",
+                      "_display_name": "Unique FlowFiles",
+                      "_description": "If true, each FlowFile that is generated will be unique. If false, a random value will be generated and all FlowFiles will get the same content but this offers much higher throughput",
+                      "_default_value": "false",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "true",
+                            "_value": "true",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "false",
+                            "_value": "false",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "generate-ff-custom-text": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "generate-ff-custom-text",
+                      "_display_name": "Custom Text",
+                      "_description": "If Data Format is text and if Unique FlowFiles is false, then this custom text will be used as content of the generated FlowFiles and the File Size will be ignored. Finally, if Expression Language is used, evaluation will be performed only once per batch of generated FlowFiles",
+                      "_default_value": null,
+                      "_allowable_values": null,
+                      "_required": false,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": true,
+                      "_expression_language_scope": "Variable Registry Only",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "character-set": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "character-set",
+                      "_display_name": "Character Set",
+                      "_description": "Specifies the character set to use when writing the bytes of Custom Text to a flow file.",
+                      "_default_value": "UTF-8",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "mime-type": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "mime-type",
+                      "_display_name": "Mime Type",
+                      "_description": "Specifies the value to set for the \"mime.type\" attribute.",
+                      "_default_value": null,
+                      "_allowable_values": null,
+                      "_required": false,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    }
+                  },
+                  "_scheduling_period": "3 sec",
+                  "_scheduling_strategy": "TIMER_DRIVEN",
+                  "_execution_node": "ALL",
+                  "_penalty_duration": "30 sec",
+                  "_yield_duration": "1 sec",
+                  "_bulletin_level": "WARN",
+                  "_run_duration_millis": 0,
+                  "_concurrently_schedulable_task_count": 1,
+                  "_auto_terminated_relationships": null,
+                  "_comments": "",
+                  "_custom_ui_url": null,
+                  "_loss_tolerant": false,
+                  "_annotation_data": null,
+                  "_default_concurrent_tasks": {
+                    "TIMER_DRIVEN": "1",
+                    "EVENT_DRIVEN": "0",
+                    "CRON_DRIVEN": "1"
+                  },
+                  "_default_scheduling_period": {
+                    "TIMER_DRIVEN": "0 sec",
+                    "CRON_DRIVEN": "* * * * * ?"
+                  }
+                },
+                "_validation_errors": null,
+                "_validation_status": "VALID",
+                "_extension_missing": false
+              },
+              "_input_requirement": "INPUT_FORBIDDEN",
+              "_status": {
+                "py/object": "nipyapi.nifi.models.processor_status_dto.ProcessorStatusDTO",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
+                "_name": "Generate Empty File",
+                "_type": null,
+                "_run_status": "Stopped",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
+                  "_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Generate Empty File",
+                  "_type": "GenerateFlowFile",
+                  "_run_status": "Stopped",
+                  "_execution_node": "ALL",
+                  "_bytes_read": 0,
+                  "_bytes_written": 0,
+                  "_read": "0 bytes",
+                  "_written": "0 bytes",
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_task_count": 0,
+                  "_tasks_duration_nanos": 0,
+                  "_tasks": "0",
+                  "_tasks_duration": "00:00:00.000",
+                  "_active_thread_count": 0,
+                  "_terminated_thread_count": 0
+                },
+                "_node_snapshots": null
+              },
+              "_operate_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              }
+            },
+            {
+              "py/object": "nipyapi.nifi.models.processor_entity.ProcessorEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "25b139c3-db89-4272-59c3-774ce58f0973",
+              "_uri": "http://localhost:8080/nifi-api/processors/25b139c3-db89-4272-59c3-774ce58f0973",
+              "_position": {
+                "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                "_x": 1265.0091645997952,
+                "_y": 124.76408080614675
+              },
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": [],
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.processor_dto.ProcessorDTO",
+                "_id": "25b139c3-db89-4272-59c3-774ce58f0973",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": {
+                  "py/object": "nipyapi.nifi.models.position_dto.PositionDTO",
+                  "_x": 1265.0091645997952,
+                  "_y": 124.76408080614675
+                },
+                "_name": "No-Op Termination",
+                "_type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+                "_bundle": {
+                  "py/object": "nipyapi.nifi.models.bundle_dto.BundleDTO",
+                  "_group": "org.apache.nifi",
+                  "_artifact": "nifi-update-attribute-nar",
+                  "_version": "1.12.0-SNAPSHOT"
+                },
+                "_state": "STOPPED",
+                "_style": {},
+                "_relationships": [
+                  {
+                    "py/object": "nipyapi.nifi.models.relationship_dto.RelationshipDTO",
+                    "_name": "success",
+                    "_description": "All successful FlowFiles are routed to this relationship",
+                    "_auto_terminate": true
+                  }
+                ],
+                "_description": null,
+                "_supports_parallel_processing": true,
+                "_supports_event_driven": true,
+                "_supports_batching": true,
+                "_persists_state": true,
+                "_restricted": false,
+                "_deprecated": false,
+                "_execution_node_restricted": false,
+                "_multiple_versions_available": false,
+                "_input_requirement": "INPUT_REQUIRED",
+                "_config": {
+                  "py/object": "nipyapi.nifi.models.processor_config_dto.ProcessorConfigDTO",
+                  "_properties": {
+                    "Delete Attributes Expression": null,
+                    "Store State": "Do not store state",
+                    "Stateful Variables Initial Value": null,
+                    "canonical-value-lookup-cache-size": "100"
+                  },
+                  "_descriptors": {
+                    "Delete Attributes Expression": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Delete Attributes Expression",
+                      "_display_name": "Delete Attributes Expression",
+                      "_description": "Regular expression for attributes to be deleted from FlowFiles.  Existing attributes that match will be deleted regardless of whether they are updated by this processor.",
+                      "_default_value": null,
+                      "_allowable_values": null,
+                      "_required": false,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": true,
+                      "_expression_language_scope": "Variable Registry and FlowFile Attributes",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Store State": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Store State",
+                      "_display_name": "Store State",
+                      "_description": "Select whether or not state will be stored. Selecting 'Stateless' will offer the default functionality of purely updating the attributes on a FlowFile in a stateless manner. Selecting a stateful option will not only store the attributes on the FlowFile but also in the Processors state. See the 'Stateful Usage' topic of the 'Additional Details' section of this processor's documentation for more information",
+                      "_default_value": "Do not store state",
+                      "_allowable_values": [
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Do not store state",
+                            "_value": "Do not store state",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        },
+                        {
+                          "py/object": "nipyapi.nifi.models.allowable_value_entity.AllowableValueEntity",
+                          "_allowable_value": {
+                            "py/object": "nipyapi.nifi.models.allowable_value_dto.AllowableValueDTO",
+                            "_display_name": "Store state locally",
+                            "_value": "Store state locally",
+                            "_description": null
+                          },
+                          "_can_read": true
+                        }
+                      ],
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "Stateful Variables Initial Value": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "Stateful Variables Initial Value",
+                      "_display_name": "Stateful Variables Initial Value",
+                      "_description": "If using state to set/reference variables then this value is used to set the initial value of the stateful variable. This will only be used in the @OnScheduled method when state does not contain a value for the variable. This is required if running statefully but can be empty if needed.",
+                      "_default_value": null,
+                      "_allowable_values": null,
+                      "_required": false,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    },
+                    "canonical-value-lookup-cache-size": {
+                      "py/object": "nipyapi.nifi.models.property_descriptor_dto.PropertyDescriptorDTO",
+                      "_name": "canonical-value-lookup-cache-size",
+                      "_display_name": "Cache Value Lookup Cache Size",
+                      "_description": "Specifies how many canonical lookup values should be stored in the cache",
+                      "_default_value": "100",
+                      "_allowable_values": null,
+                      "_required": true,
+                      "_sensitive": false,
+                      "_dynamic": false,
+                      "_supports_el": false,
+                      "_expression_language_scope": "Not Supported",
+                      "_identifies_controller_service": null,
+                      "_identifies_controller_service_bundle": null
+                    }
+                  },
+                  "_scheduling_period": "0 sec",
+                  "_scheduling_strategy": "TIMER_DRIVEN",
+                  "_execution_node": "ALL",
+                  "_penalty_duration": "30 sec",
+                  "_yield_duration": "1 sec",
+                  "_bulletin_level": "WARN",
+                  "_run_duration_millis": 0,
+                  "_concurrently_schedulable_task_count": 1,
+                  "_auto_terminated_relationships": null,
+                  "_comments": "",
+                  "_custom_ui_url": "/nifi-update-attribute-ui-1.12.0-SNAPSHOT/configure",
+                  "_loss_tolerant": false,
+                  "_annotation_data": null,
+                  "_default_concurrent_tasks": {
+                    "TIMER_DRIVEN": "1",
+                    "EVENT_DRIVEN": "0",
+                    "CRON_DRIVEN": "1"
+                  },
+                  "_default_scheduling_period": {
+                    "TIMER_DRIVEN": "0 sec",
+                    "CRON_DRIVEN": "* * * * * ?"
+                  }
+                },
+                "_validation_errors": null,
+                "_validation_status": "VALID",
+                "_extension_missing": false
+              },
+              "_input_requirement": "INPUT_REQUIRED",
+              "_status": {
+                "py/object": "nipyapi.nifi.models.processor_status_dto.ProcessorStatusDTO",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_id": "25b139c3-db89-4272-59c3-774ce58f0973",
+                "_name": "No-Op Termination",
+                "_type": null,
+                "_run_status": "Stopped",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.processor_status_snapshot_dto.ProcessorStatusSnapshotDTO",
+                  "_id": "25b139c3-db89-4272-59c3-774ce58f0973",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "No-Op Termination",
+                  "_type": "UpdateAttribute",
+                  "_run_status": "Stopped",
+                  "_execution_node": "ALL",
+                  "_bytes_read": 0,
+                  "_bytes_written": 0,
+                  "_read": "0 bytes",
+                  "_written": "0 bytes",
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_task_count": 0,
+                  "_tasks_duration_nanos": 0,
+                  "_tasks": "0",
+                  "_tasks_duration": "00:00:00.000",
+                  "_active_thread_count": 0,
+                  "_terminated_thread_count": 0
+                },
+                "_node_snapshots": null
+              },
+              "_operate_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              }
+            }
+          ],
+          "_input_ports": [],
+          "_output_ports": [],
+          "_connections": [
+            {
+              "py/object": "nipyapi.nifi.models.connection_entity.ConnectionEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "53cf55eb-3478-47be-c4a2-572f6427077a",
+              "_uri": "http://localhost:8080/nifi-api/connections/53cf55eb-3478-47be-c4a2-572f6427077a",
+              "_position": null,
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": null,
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.connection_dto.ConnectionDTO",
+                "_id": "53cf55eb-3478-47be-c4a2-572f6427077a",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": null,
+                "_source": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
+                  "_versioned_component_id": null,
+                  "_type": "PROCESSOR",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Generate Empty File",
+                  "_running": false,
+                  "_transmitting": null,
+                  "_exists": null,
+                  "_comments": ""
+                },
+                "_destination": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+                  "_versioned_component_id": null,
+                  "_type": "PROCESSOR",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Set CSV Content",
+                  "_running": false,
+                  "_transmitting": null,
+                  "_exists": null,
+                  "_comments": ""
+                },
+                "_name": "",
+                "_label_index": 1,
+                "_getz_index": null,
+                "_selected_relationships": [
+                  "success"
+                ],
+                "_available_relationships": [
+                  "success"
+                ],
+                "_back_pressure_object_threshold": 0,
+                "_back_pressure_data_size_threshold": "0 MB",
+                "_flow_file_expiration": "0 sec",
+                "_prioritizers": [],
+                "_bends": [],
+                "_load_balance_strategy": "DO_NOT_LOAD_BALANCE",
+                "_load_balance_partition_attribute": "",
+                "_load_balance_compression": "DO_NOT_COMPRESS",
+                "_load_balance_status": "LOAD_BALANCE_NOT_CONFIGURED"
+              },
+              "_status": {
+                "py/object": "nipyapi.nifi.models.connection_status_dto.ConnectionStatusDTO",
+                "_id": "53cf55eb-3478-47be-c4a2-572f6427077a",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_name": "success",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_source_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
+                "_source_name": "Generate Empty File",
+                "_destination_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+                "_destination_name": "Set CSV Content",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.connection_status_snapshot_dto.ConnectionStatusSnapshotDTO",
+                  "_id": "53cf55eb-3478-47be-c4a2-572f6427077a",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "success",
+                  "_source_id": null,
+                  "_source_name": "Generate Empty File",
+                  "_destination_id": null,
+                  "_destination_name": "Set CSV Content",
+                  "_predictions": null,
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_flow_files_queued": 0,
+                  "_bytes_queued": 0,
+                  "_queued": "0 (0 bytes)",
+                  "_queued_size": "0 bytes",
+                  "_queued_count": "0",
+                  "_percent_use_count": null,
+                  "_percent_use_bytes": null
+                },
+                "_node_snapshots": null
+              },
+              "_bends": [],
+              "_label_index": 1,
+              "_getz_index": null,
+              "_source_id": "bc3ad300-c93c-430b-fc94-3a32c3020f53",
+              "_source_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_source_type": "PROCESSOR",
+              "_destination_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+              "_destination_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_destination_type": "PROCESSOR"
+            },
+            {
+              "py/object": "nipyapi.nifi.models.connection_entity.ConnectionEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "86c736a2-6434-4d3a-90a2-e9acbdd5de17",
+              "_uri": "http://localhost:8080/nifi-api/connections/86c736a2-6434-4d3a-90a2-e9acbdd5de17",
+              "_position": null,
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": null,
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.connection_dto.ConnectionDTO",
+                "_id": "86c736a2-6434-4d3a-90a2-e9acbdd5de17",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": null,
+                "_source": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                  "_versioned_component_id": null,
+                  "_type": "PROCESSOR",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Reformat Date Column",
+                  "_running": false,
+                  "_transmitting": null,
+                  "_exists": null,
+                  "_comments": ""
+                },
+                "_destination": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "25b139c3-db89-4272-59c3-774ce58f0973",
+                  "_versioned_component_id": null,
+                  "_type": "PROCESSOR",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "No-Op Termination",
+                  "_running": false,
+                  "_transmitting": null,
+                  "_exists": null,
+                  "_comments": ""
+                },
+                "_name": "",
+                "_label_index": 1,
+                "_getz_index": null,
+                "_selected_relationships": [
+                  "success"
+                ],
+                "_available_relationships": [
+                  "failure",
+                  "success"
+                ],
+                "_back_pressure_object_threshold": 0,
+                "_back_pressure_data_size_threshold": "0 MB",
+                "_flow_file_expiration": "0 sec",
+                "_prioritizers": [],
+                "_bends": [],
+                "_load_balance_strategy": "DO_NOT_LOAD_BALANCE",
+                "_load_balance_partition_attribute": "",
+                "_load_balance_compression": "DO_NOT_COMPRESS",
+                "_load_balance_status": "LOAD_BALANCE_NOT_CONFIGURED"
+              },
+              "_status": {
+                "py/object": "nipyapi.nifi.models.connection_status_dto.ConnectionStatusDTO",
+                "_id": "86c736a2-6434-4d3a-90a2-e9acbdd5de17",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_name": "success",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_source_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                "_source_name": "Reformat Date Column",
+                "_destination_id": "25b139c3-db89-4272-59c3-774ce58f0973",
+                "_destination_name": "No-Op Termination",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.connection_status_snapshot_dto.ConnectionStatusSnapshotDTO",
+                  "_id": "86c736a2-6434-4d3a-90a2-e9acbdd5de17",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "success",
+                  "_source_id": null,
+                  "_source_name": "Reformat Date Column",
+                  "_destination_id": null,
+                  "_destination_name": "No-Op Termination",
+                  "_predictions": null,
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_flow_files_queued": 0,
+                  "_bytes_queued": 0,
+                  "_queued": "0 (0 bytes)",
+                  "_queued_size": "0 bytes",
+                  "_queued_count": "0",
+                  "_percent_use_count": null,
+                  "_percent_use_bytes": null
+                },
+                "_node_snapshots": null
+              },
+              "_bends": [],
+              "_label_index": 1,
+              "_getz_index": null,
+              "_source_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+              "_source_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_source_type": "PROCESSOR",
+              "_destination_id": "25b139c3-db89-4272-59c3-774ce58f0973",
+              "_destination_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_destination_type": "PROCESSOR"
+            },
+            {
+              "py/object": "nipyapi.nifi.models.connection_entity.ConnectionEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "80eab842-9376-44d9-3d7c-c4058f1933d2",
+              "_uri": "http://localhost:8080/nifi-api/connections/80eab842-9376-44d9-3d7c-c4058f1933d2",
+              "_position": null,
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": null,
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.connection_dto.ConnectionDTO",
+                "_id": "80eab842-9376-44d9-3d7c-c4058f1933d2",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": null,
+                "_source": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+                  "_versioned_component_id": null,
+                  "_type": "PROCESSOR",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Set CSV Content",
+                  "_running": false,
+                  "_transmitting": null,
+                  "_exists": null,
+                  "_comments": ""
+                },
+                "_destination": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                  "_versioned_component_id": null,
+                  "_type": "PROCESSOR",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Reformat Date Column",
+                  "_running": false,
+                  "_transmitting": null,
+                  "_exists": null,
+                  "_comments": ""
+                },
+                "_name": "",
+                "_label_index": 1,
+                "_getz_index": null,
+                "_selected_relationships": [
+                  "success"
+                ],
+                "_available_relationships": [
+                  "failure",
+                  "success"
+                ],
+                "_back_pressure_object_threshold": 0,
+                "_back_pressure_data_size_threshold": "0 MB",
+                "_flow_file_expiration": "0 sec",
+                "_prioritizers": [],
+                "_bends": [],
+                "_load_balance_strategy": "DO_NOT_LOAD_BALANCE",
+                "_load_balance_partition_attribute": "",
+                "_load_balance_compression": "DO_NOT_COMPRESS",
+                "_load_balance_status": "LOAD_BALANCE_NOT_CONFIGURED"
+              },
+              "_status": {
+                "py/object": "nipyapi.nifi.models.connection_status_dto.ConnectionStatusDTO",
+                "_id": "80eab842-9376-44d9-3d7c-c4058f1933d2",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_name": "success",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_source_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+                "_source_name": "Set CSV Content",
+                "_destination_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                "_destination_name": "Reformat Date Column",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.connection_status_snapshot_dto.ConnectionStatusSnapshotDTO",
+                  "_id": "80eab842-9376-44d9-3d7c-c4058f1933d2",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "success",
+                  "_source_id": null,
+                  "_source_name": "Set CSV Content",
+                  "_destination_id": null,
+                  "_destination_name": "Reformat Date Column",
+                  "_predictions": null,
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_flow_files_queued": 0,
+                  "_bytes_queued": 0,
+                  "_queued": "0 (0 bytes)",
+                  "_queued_size": "0 bytes",
+                  "_queued_count": "0",
+                  "_percent_use_count": null,
+                  "_percent_use_bytes": null
+                },
+                "_node_snapshots": null
+              },
+              "_bends": [],
+              "_label_index": 1,
+              "_getz_index": null,
+              "_source_id": "67626c71-910a-4342-627d-e38cfcbcb924",
+              "_source_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_source_type": "PROCESSOR",
+              "_destination_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+              "_destination_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_destination_type": "PROCESSOR"
+            },
+            {
+              "py/object": "nipyapi.nifi.models.connection_entity.ConnectionEntity",
+              "_revision": {
+                "py/object": "nipyapi.nifi.models.revision_dto.RevisionDTO",
+                "_client_id": null,
+                "_version": 0,
+                "_last_modifier": null
+              },
+              "_id": "65f9bc10-0172-1000-b685-86689d92e7e1",
+              "_uri": "http://localhost:8080/nifi-api/connections/65f9bc10-0172-1000-b685-86689d92e7e1",
+              "_position": null,
+              "_permissions": {
+                "py/object": "nipyapi.nifi.models.permissions_dto.PermissionsDTO",
+                "_can_read": true,
+                "_can_write": true
+              },
+              "_bulletins": null,
+              "_disconnected_node_acknowledged": null,
+              "_component": {
+                "py/object": "nipyapi.nifi.models.connection_dto.ConnectionDTO",
+                "_id": "65f9bc10-0172-1000-b685-86689d92e7e1",
+                "_versioned_component_id": null,
+                "_parent_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_position": null,
+                "_source": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                  "_versioned_component_id": null,
+                  "_type": "PROCESSOR",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "Reformat Date Column",
+                  "_running": false,
+                  "_transmitting": null,
+                  "_exists": null,
+                  "_comments": ""
+                },
+                "_destination": {
+                  "py/object": "nipyapi.nifi.models.connectable_dto.ConnectableDTO",
+                  "_id": "37b065f7-232b-30b9-a282-3ea28f75a2a2",
+                  "_versioned_component_id": null,
+                  "_type": "REMOTE_INPUT_PORT",
+                  "_group_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+                  "_name": "Input 1",
+                  "_running": false,
+                  "_transmitting": true,
+                  "_exists": true,
+                  "_comments": ""
+                },
+                "_name": "",
+                "_label_index": 1,
+                "_getz_index": null,
+                "_selected_relationships": [
+                  "success"
+                ],
+                "_available_relationships": [
+                  "failure",
+                  "success"
+                ],
+                "_back_pressure_object_threshold": 10000,
+                "_back_pressure_data_size_threshold": "1 GB",
+                "_flow_file_expiration": "0 sec",
+                "_prioritizers": [],
+                "_bends": [],
+                "_load_balance_strategy": "DO_NOT_LOAD_BALANCE",
+                "_load_balance_partition_attribute": "",
+                "_load_balance_compression": "DO_NOT_COMPRESS",
+                "_load_balance_status": "LOAD_BALANCE_NOT_CONFIGURED"
+              },
+              "_status": {
+                "py/object": "nipyapi.nifi.models.connection_status_dto.ConnectionStatusDTO",
+                "_id": "65f9bc10-0172-1000-b685-86689d92e7e1",
+                "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                "_name": "success",
+                "_stats_last_refreshed": "10:08:08 EDT",
+                "_source_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+                "_source_name": "Reformat Date Column",
+                "_destination_id": "37b065f7-232b-30b9-a282-3ea28f75a2a2",
+                "_destination_name": "Input 1",
+                "_aggregate_snapshot": {
+                  "py/object": "nipyapi.nifi.models.connection_status_snapshot_dto.ConnectionStatusSnapshotDTO",
+                  "_id": "65f9bc10-0172-1000-b685-86689d92e7e1",
+                  "_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+                  "_name": "success",
+                  "_source_id": null,
+                  "_source_name": "Reformat Date Column",
+                  "_destination_id": null,
+                  "_destination_name": "Input 1",
+                  "_predictions": null,
+                  "_flow_files_in": 0,
+                  "_bytes_in": 0,
+                  "_input": "0 (0 bytes)",
+                  "_flow_files_out": 0,
+                  "_bytes_out": 0,
+                  "_output": "0 (0 bytes)",
+                  "_flow_files_queued": 0,
+                  "_bytes_queued": 0,
+                  "_queued": "0 (0 bytes)",
+                  "_queued_size": "0 bytes",
+                  "_queued_count": "0",
+                  "_percent_use_count": 0,
+                  "_percent_use_bytes": 0
+                },
+                "_node_snapshots": null
+              },
+              "_bends": [],
+              "_label_index": 1,
+              "_getz_index": null,
+              "_source_id": "b268f335-2a91-44e8-b567-c676c292fd55",
+              "_source_group_id": "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+              "_source_type": "PROCESSOR",
+              "_destination_id": "37b065f7-232b-30b9-a282-3ea28f75a2a2",
+              "_destination_group_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+              "_destination_type": "REMOTE_INPUT_PORT"
+            }
+          ],
+          "_labels": [],
+          "_funnels": []
+        },
+        "_last_refreshed": "10:08:08 EDT"
+      }
+    }
+  },
+  "nipyapi.canvas.list_all_input_ports:351dbb56-0172-1000-21fa-a4af9fc0dbb1": {
+    "args": [
+      "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+      false
+    ],
+    "return": []
+  },
+  "nipyapi.canvas.list_all_output_ports:351dbb56-0172-1000-21fa-a4af9fc0dbb1": {
+    "args": [
+      "351dbb56-0172-1000-21fa-a4af9fc0dbb1",
+      false
+    ],
+    "return": []
+  },
+  "nipyapi.canvas.get_remote_process_group:65f8c7d5-0172-1000-a916-0e5562295e08": {
+    "args": [
+      "65f8c7d5-0172-1000-a916-0e5562295e08",
+      true
+    ],
+    "return": {
+      "id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+      "input_ports": [
+        {
+          "py/object": "nipyapi.nifi.models.remote_process_group_port_dto.RemoteProcessGroupPortDTO",
+          "_id": "37b065f7-232b-30b9-a282-3ea28f75a2a2",
+          "_target_id": "65f5b8db-0172-1000-407f-93e85d1d9f94",
+          "_versioned_component_id": null,
+          "_group_id": "65f8c7d5-0172-1000-a916-0e5562295e08",
+          "_name": "Input 1",
+          "_comments": "",
+          "_concurrently_schedulable_task_count": 1,
+          "_transmitting": true,
+          "_use_compression": false,
+          "_exists": true,
+          "_target_running": false,
+          "_connected": true,
+          "_batch_settings": {
+            "py/object": "nipyapi.nifi.models.batch_settings_dto.BatchSettingsDTO",
+            "_count": null,
+            "_size": null,
+            "_duration": null
+          }
+        }
+      ],
+      "output_ports": []
+    }
+  },
+  "nipyapi.nifi.ProcessGroupsApi": {
+    "args": [],
+    "return": {
+      "py/object": "nipyapi.nifi.apis.process_groups_api.ProcessGroupsApi",
+      "api_client": {
+        "py/object": "nipyapi.nifi.api_client.ApiClient",
+        "rest_client": {
+          "py/object": "nipyapi.nifi.rest.RESTClientObject",
+          "pool_manager": {
+            "py/object": "urllib3.poolmanager.PoolManager",
+            "headers": {},
+            "connection_pool_kw": {
+              "maxsize": 4,
+              "cert_reqs": {
+                "py/object": "ssl.VerifyMode",
+                "py/newargs": {
+                  "py/tuple": [
+                    2
+                  ]
+                },
+                "_value_": 2,
+                "_name_": "CERT_REQUIRED",
+                "__objclass__": {
+                  "py/type": "ssl.VerifyMode"
+                }
+              },
+              "ca_certs": "/Users/ottofowler/Library/Caches/pypoetry/virtualenvs/dotifi-bdSYdp08-py3.8/lib/python3.8/site-packages/certifi/cacert.pem",
+              "cert_file": null,
+              "key_file": null,
+              "ssl_context": null
+            },
+            "pools": {
+              "py/object": "urllib3._collections.RecentlyUsedContainer",
+              "_maxsize": 4,
+              "_container": {
+                "py/reduce": [
+                  {
+                    "py/type": "collections.OrderedDict"
+                  },
+                  {
+                    "py/tuple": []
+                  },
+                  null,
+                  null,
+                  {
+                    "py/tuple": [
+                      {
+                        "py/tuple": [
+                          {
+                            "py/object": "urllib3.poolmanager.PoolKey",
+                            "py/newargs": {
+                              "py/tuple": [
+                                "http",
+                                "localhost",
+                                8080,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                "<VerifyMode.CERT_REQUIRED: 2>",
+                                "/Users/ottofowler/Library/Caches/pypoetry/virtualenvs/dotifi-bdSYdp08-py3.8/lib/python3.8/site-packages/certifi/cacert.pem",
+                                null,
+                                null,
+                                null,
+                                4,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                              ]
+                            },
+                            "py/seq": [
+                              "http",
+                              "localhost",
+                              8080,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              "<VerifyMode.CERT_REQUIRED: 2>",
+                              "/Users/ottofowler/Library/Caches/pypoetry/virtualenvs/dotifi-bdSYdp08-py3.8/lib/python3.8/site-packages/certifi/cacert.pem",
+                              null,
+                              null,
+                              null,
+                              4,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null
+                            ]
+                          },
+                          {
+                            "py/object": "urllib3.connectionpool.HTTPConnectionPool",
+                            "host": "localhost",
+                            "_proxy_host": "localhost",
+                            "port": 8080,
+                            "headers": {},
+                            "strict": false,
+                            "timeout": {
+                              "py/object": "urllib3.util.timeout.Timeout",
+                              "_connect": {
+                                "py/object": "builtins.object"
+                              },
+                              "_read": "<object object at 0x105feb3f0>",
+                              "total": null,
+                              "_start_connect": null
+                            },
+                            "retries": {
+                              "py/object": "urllib3.util.retry.Retry",
+                              "total": 3,
+                              "connect": null,
+                              "read": null,
+                              "status": null,
+                              "redirect": null,
+                              "status_forcelist": {
+                                "py/set": []
+                              },
+                              "method_whitelist": {
+                                "py/reduce": [
+                                  {
+                                    "py/type": "builtins.frozenset"
+                                  },
+                                  {
+                                    "py/tuple": [
+                                      [
+                                        "TRACE",
+                                        "PUT",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "GET",
+                                        "HEAD"
+                                      ]
+                                    ]
+                                  }
+                                ]
+                              },
+                              "backoff_factor": 0,
+                              "raise_on_redirect": true,
+                              "raise_on_status": true,
+                              "history": {
+                                "py/tuple": []
+                              },
+                              "respect_retry_after_header": true,
+                              "remove_headers_on_redirect": {
+                                "py/reduce": [
+                                  {
+                                    "py/type": "builtins.frozenset"
+                                  },
+                                  {
+                                    "py/tuple": [
+                                      [
+                                        "authorization"
+                                      ]
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            "pool": {
+                              "py/object": "urllib3.util.queue.LifoQueue",
+                              "maxsize": 4,
+                              "queue": {
+                                "py/reduce": [
+                                  {
+                                    "py/type": "collections.deque"
+                                  },
+                                  {
+                                    "py/tuple": []
+                                  },
+                                  null,
+                                  {
+                                    "py/tuple": [
+                                      null,
+                                      null,
+                                      null,
+                                      {
+                                        "py/object": "urllib3.connection.HTTPConnection",
+                                        "source_address": null,
+                                        "socket_options": [
+                                          {
+                                            "py/tuple": [
+                                              6,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "timeout": null,
+                                        "blocksize": 8192,
+                                        "sock": null,
+                                        "_buffer": [],
+                                        "_HTTPConnection__response": {
+                                          "py/object": "http.client.HTTPResponse",
+                                          "fp": null,
+                                          "debuglevel": 0,
+                                          "_method": "GET",
+                                          "headers": {
+                                            "py/object": "http.client.HTTPMessage",
+                                            "policy": {
+                                              "py/object": "email._policybase.Compat32"
+                                            },
+                                            "_headers": [
+                                              {
+                                                "py/tuple": [
+                                                  "Date",
+                                                  "Fri, 05 Jun 2020 14:08:08 GMT"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "X-Frame-Options",
+                                                  "SAMEORIGIN"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "Content-Security-Policy",
+                                                  "frame-ancestors 'self'"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "X-XSS-Protection",
+                                                  "1; mode=block"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "Cache-Control",
+                                                  "private, no-cache, no-store, no-transform"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "Content-Type",
+                                                  "application/json"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "Vary",
+                                                  "Accept-Encoding"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "Vary",
+                                                  "User-Agent"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "Content-Length",
+                                                  "20"
+                                                ]
+                                              },
+                                              {
+                                                "py/tuple": [
+                                                  "Server",
+                                                  "Jetty(9.4.26.v20200117)"
+                                                ]
+                                              }
+                                            ],
+                                            "_unixfrom": null,
+                                            "_payload": "",
+                                            "_charset": null,
+                                            "preamble": null,
+                                            "epilogue": null,
+                                            "defects": [],
+                                            "_default_type": "text/plain"
+                                          },
+                                          "msg": "<http.client.HTTPMessage object at 0x109d803d0>",
+                                          "version": 11,
+                                          "status": 200,
+                                          "reason": "OK",
+                                          "chunked": false,
+                                          "chunk_left": "UNKNOWN",
+                                          "length": 0,
+                                          "will_close": false,
+                                          "code": 200
+                                        },
+                                        "_HTTPConnection__state": "Idle",
+                                        "_method": "GET",
+                                        "_tunnel_host": null,
+                                        "_tunnel_port": null,
+                                        "_tunnel_headers": {},
+                                        "_dns_host": "localhost",
+                                        "port": 8080,
+                                        "_create_connection": {
+                                          "py/function": "socket.create_connection"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "mutex": {
+                                "py/object": "_thread.lock",
+                                "locked": false
+                              },
+                              "not_empty": {
+                                "py/object": "threading.Condition",
+                                "_lock": "<unlocked _thread.lock object at 0x109ca2900>",
+                                "acquire": {
+                                  "py/function": "None.lock.acquire"
+                                },
+                                "release": {
+                                  "py/function": "None.lock.release"
+                                },
+                                "_waiters": {
+                                  "py/reduce": [
+                                    {
+                                      "py/type": "collections.deque"
+                                    },
+                                    {
+                                      "py/tuple": []
+                                    },
+                                    null,
+                                    {
+                                      "py/tuple": []
+                                    }
+                                  ]
+                                }
+                              },
+                              "not_full": {
+                                "py/object": "threading.Condition",
+                                "_lock": "<unlocked _thread.lock object at 0x109ca2900>",
+                                "acquire": {
+                                  "py/function": "None.lock.acquire"
+                                },
+                                "release": {
+                                  "py/function": "None.lock.release"
+                                },
+                                "_waiters": {
+                                  "py/reduce": [
+                                    {
+                                      "py/type": "collections.deque"
+                                    },
+                                    {
+                                      "py/tuple": []
+                                    },
+                                    null,
+                                    {
+                                      "py/tuple": []
+                                    }
+                                  ]
+                                }
+                              },
+                              "all_tasks_done": {
+                                "py/object": "threading.Condition",
+                                "_lock": "<unlocked _thread.lock object at 0x109ca2900>",
+                                "acquire": {
+                                  "py/function": "None.lock.acquire"
+                                },
+                                "release": {
+                                  "py/function": "None.lock.release"
+                                },
+                                "_waiters": {
+                                  "py/reduce": [
+                                    {
+                                      "py/type": "collections.deque"
+                                    },
+                                    {
+                                      "py/tuple": []
+                                    },
+                                    null,
+                                    {
+                                      "py/tuple": []
+                                    }
+                                  ]
+                                }
+                              },
+                              "unfinished_tasks": 12
+                            },
+                            "block": false,
+                            "proxy": null,
+                            "proxy_headers": {},
+                            "num_connections": 1,
+                            "num_requests": 8,
+                            "conn_kw": {}
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "lock": {
+                "py/object": "_thread.RLock"
+              }
+            },
+            "pool_classes_by_scheme": {
+              "http": {
+                "py/type": "urllib3.connectionpool.HTTPConnectionPool"
+              },
+              "https": {
+                "py/type": "urllib3.connectionpool.HTTPSConnectionPool"
+              }
+            },
+            "key_fn_by_scheme": {
+              "http": {
+                "py/reduce": [
+                  {
+                    "py/type": "functools.partial"
+                  },
+                  {
+                    "py/tuple": [
+                      {
+                        "py/function": "urllib3.poolmanager._default_key_normalizer"
+                      }
+                    ]
+                  },
+                  {
+                    "py/tuple": [
+                      {
+                        "py/function": "urllib3.poolmanager._default_key_normalizer"
+                      },
+                      {
+                        "py/tuple": [
+                          {
+                            "py/type": "urllib3.poolmanager.PoolKey"
+                          }
+                        ]
+                      },
+                      {},
+                      {}
+                    ]
+                  }
+                ]
+              },
+              "https": {
+                "py/reduce": [
+                  {
+                    "py/type": "functools.partial"
+                  },
+                  {
+                    "py/tuple": [
+                      {
+                        "py/function": "urllib3.poolmanager._default_key_normalizer"
+                      }
+                    ]
+                  },
+                  {
+                    "py/tuple": [
+                      {
+                        "py/function": "urllib3.poolmanager._default_key_normalizer"
+                      },
+                      {
+                        "py/tuple": [
+                          {
+                            "py/type": "urllib3.poolmanager.PoolKey"
+                          }
+                        ]
+                      },
+                      {},
+                      {}
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "default_headers": {
+          "User-Agent": "Swagger-Codegen/1.0.0/python"
+        },
+        "host": "http://localhost:8080/nifi-api",
+        "cookie": null,
+        "last_response": {
+          "py/object": "nipyapi.nifi.rest.RESTResponse",
+          "urllib3_response": {
+            "py/object": "urllib3.response.HTTPResponse",
+            "headers": {
+              "py/object": "urllib3._collections.HTTPHeaderDict",
+              "_container": {
+                "py/reduce": [
+                  {
+                    "py/type": "collections.OrderedDict"
+                  },
+                  {
+                    "py/tuple": []
+                  },
+                  null,
+                  null,
+                  {
+                    "py/tuple": [
+                      {
+                        "py/tuple": [
+                          "date",
+                          [
+                            "Date",
+                            "Fri, 05 Jun 2020 14:08:08 GMT"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "x-frame-options",
+                          [
+                            "X-Frame-Options",
+                            "SAMEORIGIN"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "content-security-policy",
+                          [
+                            "Content-Security-Policy",
+                            "frame-ancestors 'self'"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "x-xss-protection",
+                          [
+                            "X-XSS-Protection",
+                            "1; mode=block"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "cache-control",
+                          [
+                            "Cache-Control",
+                            "private, no-cache, no-store, no-transform"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "content-type",
+                          [
+                            "Content-Type",
+                            "application/json"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "vary",
+                          [
+                            "Vary",
+                            "Accept-Encoding",
+                            "User-Agent"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "content-length",
+                          [
+                            "Content-Length",
+                            "20"
+                          ]
+                        ]
+                      },
+                      {
+                        "py/tuple": [
+                          "server",
+                          [
+                            "Server",
+                            "Jetty(9.4.26.v20200117)"
+                          ]
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "status": 200,
+            "version": 11,
+            "reason": "OK",
+            "strict": 0,
+            "decode_content": true,
+            "retries": "Retry(total=3, connect=None, read=None, redirect=None, status=None)",
+            "enforce_content_length": false,
+            "auto_close": true,
+            "_decoder": null,
+            "_body": {
+              "py/b64": "eyJwcm9jZXNzR3JvdXBzIjpbXX0="
+            },
+            "_fp": "<http.client.HTTPResponse object at 0x109d803a0>",
+            "_original_response": "<http.client.HTTPResponse object at 0x109d803a0>",
+            "_fp_bytes_read": 20,
+            "msg": null,
+            "_request_url": "http://localhost:8080/nifi-api/process-groups/351dbb56-0172-1000-21fa-a4af9fc0dbb1/process-groups",
+            "_pool": "<urllib3.connectionpool.HTTPConnectionPool object at 0x109ca2e50>",
+            "_connection": null,
+            "chunked": false,
+            "chunk_left": null,
+            "length_remaining": 0
+          },
+          "status": 200,
+          "reason": "OK",
+          "data": "{\"processGroups\":[]}"
+        }
+      }
+    }
+  },
+  "ProcessGroupsApi.get_process_groups:351dbb56-0172-1000-21fa-a4af9fc0dbb1": {
+    "args": [
+      "351dbb56-0172-1000-21fa-a4af9fc0dbb1"
+    ],
+    "return": []
+  }
+}
