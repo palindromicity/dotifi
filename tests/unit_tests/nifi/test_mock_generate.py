@@ -63,10 +63,8 @@ def test_start_pg(pg_start_args):
 @pytest.mark.parametrize("path_arg", [HAPPY_MOCK_DATA])
 def test_rpg_attribute_override(default_args):
     """
-    Test the basic setup of our mocking
-    This function loads our pickled results from live
-    calls, and mocks the calls and returns to the parameters,
-    which are mainly uuid strings
+    Test overriding the graph_attr of a specific remote program group
+    using the yaml configuration
     :param args the args fixture
     """
 
