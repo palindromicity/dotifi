@@ -1,0 +1,9 @@
+# Options for specific remote process groups, by id
+# these values will override or mix in with the defaults
+remote_process_groups:
+    # the uuid of the remote process group
+    65f8c7d5-0172-1000-a916-0e5562295e08:
+        # NODE attributes
+        # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
+        color: yellow
+        shape: star
