@@ -19,6 +19,18 @@ RPG_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
 )
 
 
+def _find_subgraph(graph, id) -> AGraph:
+    found_graph = None
+    for sub in graph.subgraphs():
+        if sub.graph_attr["id"] == id:
+            return sub
+        else:
+            found_graph = _find_subgraph(sub, id)
+            if found_graph is not None:
+                return found_graph
+    return None
+
+
 @pytest.mark.parametrize("path_arg", [HAPPY_MOCK_DATA])
 def test_happy_path(default_args):
     """
@@ -75,8 +87,10 @@ def test_rpg_attribute_override(default_args):
     assert graph.number_of_nodes() == base_graph.number_of_nodes()
     assert sorted(dict(graph.edges())) == sorted(dict(base_graph.edges()))
     assert sorted(graph.nodes()) == sorted(base_graph.nodes())
-    rpg_subgraph = graph.subgraphs()[0].subgraphs()[0].subgraphs()[0]
-    default_subgraph = base_graph.subgraphs()[0].subgraphs()[0].subgraphs()[0]
+    rpg_subgraph = _find_subgraph(graph, "65f8c7d5-0172-1000-a916-0e5562295e08")
+    default_subgraph = _find_subgraph(
+        base_graph, "65f8c7d5-0172-1000-a916-0e5562295e08"
+    )
     assert rpg_subgraph.graph_attr["color"] == "yellow"
     assert rpg_subgraph.graph_attr["shape"] == "star"
     assert rpg_subgraph.graph_attr.get("shape") != default_subgraph.graph_attr.get(
