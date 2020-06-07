@@ -83,7 +83,6 @@ def test_start_pg(pg_start_args):
     assert graph.graph_attr["id"] == pg_start_args["start_at_pg"]
     from dotifi.publishing.publish import publish
 
-    publish(options, graph)
 
 
 @pytest.mark.parametrize("path_arg", [HAPPY_MOCK_DATA])
