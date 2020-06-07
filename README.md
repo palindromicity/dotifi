@@ -221,7 +221,7 @@ optional arguments:
 
 ```
 
-A sample of the yaml configuration is [here](configurations/sample.yml)
+A sample of the yaml configuration is [here](configurations/sample.yaml)
 
 ```yaml
 # All string values in this configuration may be replaced using

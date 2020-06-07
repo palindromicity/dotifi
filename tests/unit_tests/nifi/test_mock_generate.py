@@ -15,11 +15,14 @@ SAMPLE_GRAPH = pathlib.Path(__file__).parent.parent.parent.parent.joinpath(
     "sample_output/nifi-canvas.dot"
 )
 RPG_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
-    "resources/rpg_attrs.yml"
+    "resources/rpg_attrs.yaml"
+)
+PROCESSOR_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
+    "resources/processor_attrs.yaml"
 )
 
 
-def _find_subgraph(graph, id) -> AGraph:
+def _find_subgraph(graph: AGraph, id: str):
     found_graph = None
     for sub in graph.subgraphs():
         if sub.graph_attr["id"] == id:
@@ -28,6 +31,19 @@ def _find_subgraph(graph, id) -> AGraph:
             found_graph = _find_subgraph(sub, id)
             if found_graph is not None:
                 return found_graph
+    return None
+
+
+def _find_node(graph: AGraph, id: str):
+    found_node = None
+    for sub in graph.subgraphs():
+        for node in sub.nodes():
+            if node.attr["id"] == id:
+                return node
+        else:
+            found_node = _find_node(sub, id)
+            if found_node is not None:
+                return found_node
     return None
 
 
@@ -99,3 +115,30 @@ def test_rpg_attribute_override(default_args):
     assert rpg_subgraph.graph_attr.get("color") != default_subgraph.graph_attr.get(
         "color"
     )
+
+
+@pytest.mark.parametrize("path_arg", [HAPPY_MOCK_DATA])
+def test_processor_attribute_override(default_args):
+    """
+    Test overriding the attr of a specific processor
+    using the yaml configuration
+    :param default_args the default_args fixture
+    """
+
+    options = load_configuration(default_args, PROCESSOR_CONFIG.as_posix())
+
+    graph = generate_graph(options)
+    base_graph = AGraph(SAMPLE_GRAPH.as_posix())
+    assert graph is not None
+    assert graph.number_of_edges() == base_graph.number_of_edges()
+    assert graph.number_of_nodes() == base_graph.number_of_nodes()
+    assert sorted(dict(graph.edges())) == sorted(dict(base_graph.edges()))
+    assert sorted(graph.nodes()) == sorted(base_graph.nodes())
+    processor_node = _find_node(graph, "f96be8b1-78b2-42f2-6ba5-2579f4f6c411")
+    default_processor_node = _find_node(
+        base_graph, "f96be8b1-78b2-42f2-6ba5-2579f4f6c411"
+    )
+    assert processor_node.attr["color"] == "yellow"
+    assert processor_node.attr["shape"] == "star"
+    assert processor_node.attr.get("shape") != default_processor_node.attr.get("shape")
+    assert processor_node.attr.get("color") != default_processor_node.attr.get("color")
