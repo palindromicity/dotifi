@@ -81,7 +81,6 @@ def test_start_pg(pg_start_args):
     graph = generate_graph(options)
     assert graph is not None
     assert graph.graph_attr["id"] == pg_start_args["start_at_pg"]
-    from dotifi.publishing.publish import publish
 
 
 
