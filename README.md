@@ -299,7 +299,6 @@ process_groups:
     351b1dbc-0172-1000-056d-ec78a003b493:
         # Path to a dot file the contains the graph definition that sets the properties
         # and attributes at a graph level for this process group and it's descendents
-        # the name MUST start with cluster_.
         template: foo.dot
 # Options for specific remote process groups, by id
 # these values will override or mix in with the defaults

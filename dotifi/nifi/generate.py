@@ -46,6 +46,13 @@ def _create_port_node(subgraph, port_type, port):
     )
 
 
+def _clone_subgraph(source, target):
+    print(type(source.graph_attr))
+    target.graph_attr.update(source.graph_attr)
+    target.node_attr.update(source.node_attr)
+    target.edge_attr.update(source.edge_attr)
+
+
 def _handle_group(
     configuration,
     current_depth,
@@ -85,14 +92,19 @@ def _handle_group(
     # see if the user has configured a DOT template for this process_group
     if process_group_graph is None:
         if configuration["process_groups"][process_group.id].exists():
-            template_file = configuration["process_groups"][
-                "process_group.id"
+            template_file = configuration["process_groups"][process_group.id][
+                "template"
             ].as_filename()
             logging.debug(
                 "Using template file %s for %d", template_file, process_group.id
             )
-            process_group_graph = pgv.AGraph(template_file)
+            template_group_graph = pgv.AGraph(template_file)
+            # process_group_graph = parent_graph.add_subgraph(process_group_graph)
+            process_group_graph = parent_graph.add_subgraph(
+                name="cluster_" + process_group.component.name
+            )
             process_group_graph.graph_attr["id"] = process_group.id
+            _clone_subgraph(template_group_graph, process_group_graph)
         else:
             process_group_graph = parent_graph.add_subgraph(
                 name="cluster_" + process_group.component.name

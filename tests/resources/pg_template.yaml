@@ -1,0 +1,6 @@
+process_groups:
+    # the uuid id of the process group
+    351dbb56-0172-1000-21fa-a4af9fc0dbb1:
+        # Path to a dot file the contains the graph definition that sets the properties
+        # and attributes at a graph level for this process group and it's descendents
+        template: pg_template.dot
