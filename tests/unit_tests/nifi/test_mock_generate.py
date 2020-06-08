@@ -20,6 +20,9 @@ RPG_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
 PROCESSOR_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
     "resources/processor_attrs.yaml"
 )
+GRAPH_TEMPLATE_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
+    "resources/graph_template.yaml"
+)
 
 
 def _find_subgraph(graph: AGraph, id: str):
@@ -139,3 +142,36 @@ def test_processor_attribute_override(default_args):
     assert processor_node.attr["shape"] == "star"
     assert processor_node.attr.get("shape") != default_processor_node.attr.get("shape")
     assert processor_node.attr.get("color") != default_processor_node.attr.get("color")
+
+
+@pytest.mark.parametrize("path_arg", [HAPPY_MOCK_DATA])
+def test_graph_template(default_args):
+    """
+    Test overriding the graph_attr of a specific remote program group
+    using the yaml configuration
+    :param default_args the default_args fixture
+    """
+
+    options = load_configuration(default_args, GRAPH_TEMPLATE_CONFIG.as_posix())
+    options["graph"]["template"] = (
+        pathlib.Path(__file__)
+        .parent.parent.parent.joinpath(
+            "resources/" + options["graph"]["template"].get()
+        )
+        .as_posix()
+    )
+    graph = generate_graph(options)
+    base_graph = AGraph(SAMPLE_GRAPH.as_posix())
+    assert graph is not None
+    assert graph.number_of_edges() == base_graph.number_of_edges()
+    assert graph.number_of_nodes() == base_graph.number_of_nodes()
+    assert sorted(dict(graph.edges())) == sorted(dict(base_graph.edges()))
+    assert sorted(graph.nodes()) == sorted(base_graph.nodes())
+    assert graph.graph_attr["label"] == "My Business"
+    assert graph.node_attr["shape"] == "circle"
+    assert graph.node_attr.get("shape") != base_graph.node_attr.get("shape")
+    assert graph.graph_attr.get("label") != base_graph.graph_attr.get("label")
+
+    from dotifi.publishing.publish import publish
+
+    publish(options, graph)
