@@ -1,0 +1,6 @@
+# Options for the entire graph
+graph:
+    # Path to a dot file that contains top level graph definition that sets the properties
+    # and attributes at a graph level
+    # see https://graphviz.org/documentation/ for information on the dot language
+    template: graph_template.dot

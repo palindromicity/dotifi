@@ -1,0 +1,17 @@
+strict digraph "nifi flow" {
+	graph [compound=true,
+		label="My Business",
+		outputorder=edgesfirst,
+		rankdir=LR,
+		ratio=1.0
+	];
+	node [fixedsize=false,
+		fontsize=8,
+		label="\N",
+		shape=circle,
+		style=filled
+	];
+	edge [color=green,
+		style=dashed
+	];
+}
