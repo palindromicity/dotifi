@@ -56,7 +56,7 @@ client_key_file:
 client_key_password:
 
 # The NiFi user name
-nifi_user_name:
+nifi_username:
 
 # The NiFi user password
 nifi_user_password:

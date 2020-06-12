@@ -14,7 +14,7 @@ jobs:
           python-version: 3.8
       - name: Linting
         run: |
-          pip install pre-commit
+          pip install wheel pre-commit
           pre-commit run --all-files
 
   Tests:
@@ -24,8 +24,6 @@ jobs:
     strategy:
       matrix:
         os: [Ubuntu, MacOS]
-        #os: [MacOS]
-        #, MacOS, Windows]
         python-version: [3.8]
     steps:
       - uses: actions/checkout@v2
@@ -84,4 +82,4 @@ jobs:
 
       - name: Run pytest
         shell: bash
-        run: poetry run pytest -q tests
+        run: poetry run pytest -v tests

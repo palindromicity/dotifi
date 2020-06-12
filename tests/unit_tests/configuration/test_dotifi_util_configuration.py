@@ -5,7 +5,9 @@ from dotifi.configuration.load import load_configuration
 SAMPLE = pathlib.Path(__file__).parent.parent.parent.parent.joinpath(
     "configurations/sample.yaml"
 )
-NO_ENV = pathlib.Path(__file__).parent.parent.parent.joinpath("resources/env.yaml")
+NO_ENV = pathlib.Path(__file__).parent.parent.parent.joinpath(
+    "resources/configurations/env.yaml"
+)
 
 
 def test_load_sample_configuration():
