@@ -189,9 +189,15 @@ def process():
 
     options = load_configuration(args, args.get("with_conf_file"))
 
+    level = logging.INFO
     if options["verbose"].get():
-        logging.basicConfig(level=logging.DEBUG)
-        logging.root.setLevel(logging.NOTSET)
+        level = logging.DEBUG
+
+    logging.basicConfig(
+        level=level,
+        format="%(asctime)s %(name)s.%(funcName)s +%(lineno)s: %(levelname)-8s [%(process)d] %(message)s",
+    )
+    logging.root.setLevel(logging.NOTSET)
 
     logging.debug("Configuration:\n%s", options.dump())
 
@@ -213,7 +219,6 @@ def process():
             logging.exception(e)
             exit(1)
 
-    # print graph with options
     publish(options, graph)
 
 

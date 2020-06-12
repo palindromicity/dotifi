@@ -10,6 +10,7 @@ def configure_nifi_connection(configuration):
     """
     if logging.DEBUG >= logging.root.level:
         logging.debug("setting nifi endpoint to %s", configuration["nifi_url"].get())
+
     nipyapi.utils.set_endpoint(configuration["nifi_url"].get())
 
     if configuration["using_ssl"].exists() and configuration["using_ssl"].get(bool):
