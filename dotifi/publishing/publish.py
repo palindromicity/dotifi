@@ -11,7 +11,6 @@ def publish(publish_configuration, graph):
 
     dot_name = publish_configuration["output_dot_file"].as_filename()
     logging.debug("Graph will be written as dot file: %s", dot_name)
-
     graphic_file_name = publish_configuration["output_graphviz_file"].as_filename()
     graphic_program = publish_configuration["output_graphviz_program"].get()
     graphviz_fmt = publish_configuration["output_graphviz_format"].as_choice(
