@@ -17,25 +17,25 @@ The pattern of these tests are to:
 """
 
 HAPPY_MOCK_DATA = pathlib.Path(__file__).parent.parent.parent.joinpath(
-    "resources/test_happy_path_mock_data.pickle"
+    "resources/data/test_happy_path_mock_data.pickle"
 )
 START_AT_MOCK_DATA = pathlib.Path(__file__).parent.parent.parent.joinpath(
-    "resources/test_mock_data_start_at_pg.pickle"
+    "resources/data/test_mock_data_start_at_pg.pickle"
 )
 SAMPLE_GRAPH = pathlib.Path(__file__).parent.parent.parent.parent.joinpath(
     "sample_output/nifi-canvas.dot"
 )
 RPG_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
-    "resources/rpg_attrs.yaml"
+    "resources/configurations/rpg_attrs.yaml"
 )
 PROCESSOR_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
-    "resources/processor_attrs.yaml"
+    "resources/configurations/processor_attrs.yaml"
 )
 GRAPH_TEMPLATE_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
-    "resources/graph_template.yaml"
+    "resources/configurations/graph_template.yaml"
 )
 PG_TEMPLATE_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
-    "resources/pg_template.yaml"
+    "resources/configurations/pg_template.yaml"
 )
 
 
@@ -182,7 +182,7 @@ def test_graph_template(default_args):
     options["graph"]["template"] = (
         pathlib.Path(__file__)
         .parent.parent.parent.joinpath(
-            "resources/" + options["graph"]["template"].get()
+            "resources/dot_files/" + options["graph"]["template"].get()
         )
         .as_posix()
     )
@@ -211,7 +211,7 @@ def test_pg_template(default_args):
     options["process_groups"]["351dbb56-0172-1000-21fa-a4af9fc0dbb1"]["template"] = (
         pathlib.Path(__file__)
         .parent.parent.parent.joinpath(
-            "resources/"
+            "resources/dot_files/"
             + options["process_groups"]["351dbb56-0172-1000-21fa-a4af9fc0dbb1"][
                 "template"
             ].get()

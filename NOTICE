@@ -1,2 +1,5 @@
 dotifi
 Copyright (c) 2020, Otto Fowler
+
+The testing of secure cluster interactions uses code and security files/configurations adapted from
+the NiPyApi project https://github.com/Chaffelson/nipyapi  ASL 2.0
