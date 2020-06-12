@@ -9,7 +9,18 @@ from dotifi.publishing.publish import publish
 from pygraphviz import AGraph
 
 
+"""
+dotifi main script
+dotifi will, based on configuration, produce a .dot file and image file from a Apache Nifi canvas.
+"""
+
+
 def process():
+    """
+    dotifi process function, handles parameter checking, merging with possible configuration files and executing
+    the generation
+    :return:
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--with-existing-dot-file",

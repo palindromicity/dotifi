@@ -36,6 +36,13 @@ def _add_mock_info(
 
 
 def _create_port_node(subgraph, port_type, port):
+    """
+    Create a graph node for an input or output port
+    :param subgraph: the graph parent of the created node
+    :param port_type: a str [input | output]
+    :param port: the port object
+    :return:
+    """
     subgraph.add_node(port.id)
     port_node = subgraph.get_node(port.id)
     port_node.attr["label"] = port.component.name + "\n" + port.component.type
@@ -46,7 +53,13 @@ def _create_port_node(subgraph, port_type, port):
     )
 
 
-def _clone_subgraph(source, target):
+def _clone_graph_attrs(source, target):
+    """
+    Clone one graph's attributes into another graph's
+    :param source: the graph from which to take attributes
+    :param target: the graph to which to clone the attributes
+    :return:
+    """
     print(type(source.graph_attr))
     target.graph_attr.update(source.graph_attr)
     target.node_attr.update(source.node_attr)
@@ -104,7 +117,7 @@ def _handle_group(
                 name="cluster_" + process_group.component.name
             )
             process_group_graph.graph_attr["id"] = process_group.id
-            _clone_subgraph(template_group_graph, process_group_graph)
+            _clone_graph_attrs(template_group_graph, process_group_graph)
         else:
             process_group_graph = parent_graph.add_subgraph(
                 name="cluster_" + process_group.component.name
@@ -296,7 +309,13 @@ def _handle_group(
         )
 
 
-def _generate_default_root_attrs(root_graph, name="nifi flow"):
+def _set_default_root_attrs(root_graph, name="nifi flow"):
+    """
+    Sets the default attributes for the root graph
+    :param root_graph: the graph to configure
+    :param name: the graph name
+    :return:
+    """
     root_graph.node_attr["shape"] = "rectangle"
     root_graph.graph_attr["compound"] = "true"
     root_graph.node_attr["fixedsize"] = "false"
@@ -359,7 +378,7 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
             _root_graph = pgv.AGraph(
                 name=root_group.component.name + " flow", directed="true", rankdir="LR"
             )
-            _generate_default_root_attrs(_root_graph, root_group.component.name)
+            _set_default_root_attrs(_root_graph, root_group.component.name)
 
         if "label" not in _root_graph.graph_attr:
             _root_graph.graph_attr["label"] = root_group.component.name
@@ -377,7 +396,7 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
         else:
             logging.debug("root graph will be created from defaults")
             _root_graph = pgv.AGraph(name="nifi flow", directed="true", rankdir="LR")
-            _generate_default_root_attrs(_root_graph)
+            _set_default_root_attrs(_root_graph)
 
         if logging.DEBUG >= logging.root.level:
             logging.debug("ROOT GRAPH : \n%s", _root_graph.string())
