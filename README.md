@@ -23,6 +23,13 @@ dotifi supports
     - Processors by id
     - Remote Process Groups by id
 
+## Install
+
+```bash
+>pip install dotifi
+```
+> with python 3 as your default 
+>
 ### Sample output
 
 `DOT`
