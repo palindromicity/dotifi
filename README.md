@@ -28,7 +28,7 @@ dotifi supports
 ```bash
 >pip install dotifi
 ```
-> with python 3 as your default 
+> with python 3 as your default
 >
 ### Sample output
 
