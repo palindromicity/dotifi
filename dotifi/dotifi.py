@@ -189,15 +189,16 @@ def process():
 
     options = load_configuration(args, args.get("with_conf_file"))
 
-    level = logging.INFO
+    level = logging.WARNING
     if options["verbose"].get():
         level = logging.DEBUG
 
     logging.basicConfig(
         level=level,
         format="%(asctime)s %(name)s.%(funcName)s +%(lineno)s: %(levelname)-8s [%(process)d] %(message)s",
+        force=True,
     )
-    logging.root.setLevel(logging.NOTSET)
+    # logging.root.setLevel(level)
 
     logging.debug("Configuration:\n%s", options.dump())
 
