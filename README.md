@@ -234,6 +234,9 @@ A sample of the yaml configuration is [here](configurations/sample.yaml)
 # All string values in this configuration may be replaced using
 # environmental variables in the form of $VARIABLENAME
 #
+# the version of this configuration
+configuration_version : 1
+
 
 #  Flag to set logging to verbose ( debugging level )
 verbose:

@@ -45,7 +45,7 @@ def _create_port_node(subgraph, port_type, port):
     """
     subgraph.add_node(port.id)
     port_node = subgraph.get_node(port.id)
-    port_node.attr["label"] = port.component.name + "\n" + port.component.type
+    port_node.attr["label"] = port.component.name + " : " + port.component.type
     port_node.attr["pos"] = "{0:f},{0:f}".format(port.position.x, port.position.y)
     port_node.attr["id"] = port.id
     logging.debug(
@@ -161,7 +161,7 @@ def _handle_group(
         node = process_group_graph.get_node(processor.id)
         class_full = processor.component.type.split(".")
         node.attr["label"] = (
-            processor.component.name + "\n" + class_full[len(class_full) - 1]
+            processor.component.name + " : " + class_full[len(class_full) - 1]
         )
         node.attr["pos"] = "{0:f},{0:f}".format(
             processor.position.x, processor.position.y
@@ -172,10 +172,12 @@ def _handle_group(
         )
 
         # see if user has configured a set of attributes for this processor
-        if configuration["processors"][processor.id].exists():
+        if configuration["processors"][processor.id]["node_attr"].exists():
             logging.debug("Processor %s has configured attributes", processor.id)
-            for key in configuration["processors"][processor.id]:
-                node.attr[key] = configuration["processors"][processor.id][key].get()
+            for key in configuration["processors"][processor.id]["node_attr"]:
+                node.attr[key] = configuration["processors"][processor.id]["node_attr"][
+                    key
+                ].get()
                 logging.debug(
                     "Set Processor %s configured attribute %s to %s",
                     processor.id,
@@ -188,7 +190,7 @@ def _handle_group(
             name="cluster_" + remote_group.component.name
         )
         remote_subgraph.graph_attr["label"] = (
-            remote_group.component.target_uri + "\n" + "Remote Process Group"
+            remote_group.component.target_uri + " : " + "Remote Process Group"
         )
         remote_subgraph.graph_attr["style"] = "filled"
         remote_subgraph.graph_attr["color"] = "blue"
@@ -214,15 +216,19 @@ def _handle_group(
         )
 
         # see if user has configured a set of attributes for this remote process group
-        if configuration["remote_process_groups"][remote_group.id].exists():
+        if configuration["remote_process_groups"][remote_group.id][
+            "node_attr"
+        ].exists():
             logging.debug(
                 "Remote Process Group %s has configured attributes",
                 remote_group.component.name,
             )
-            for key in configuration["remote_process_groups"][remote_group.id]:
+            for key in configuration["remote_process_groups"][remote_group.id][
+                "node_attr"
+            ]:
                 remote_subgraph.graph_attr[key] = configuration[
                     "remote_process_groups"
-                ][remote_group.id][key].get()
+                ][remote_group.id]["node_attr"][key].get()
                 logging.debug(
                     "Set Remote Process Group %s configured graph attribute %s to %s",
                     remote_group.component.name,
@@ -237,7 +243,9 @@ def _handle_group(
             )
             remote_subgraph.add_node(input_port.id)
             remote_input_port_node = remote_subgraph.get_node(input_port.id)
-            remote_input_port_node.attr["label"] = input_port.name + "\n" + "INPUT_PORT"
+            remote_input_port_node.attr["label"] = (
+                input_port.name + " : " + "INPUT_PORT"
+            )
             remote_input_port_node.attr["id"] = input_port.id
             logging.debug(
                 "Generated node for Remote Process Group %s input port %s",
