@@ -2,6 +2,9 @@
 # environmental variables in the form of $VARIABLENAME
 #
 
+# the version of this configuration
+configuration_version : 1
+
 #  Flag to set logging to verbose ( debugging level )
 verbose:
 #  Path to an existing DOT graph definition as opposed to being built from NiFi
@@ -79,13 +82,15 @@ process_groups:
 remote_process_groups:
     # the uuid of the remote process group
     35199793-0172-1000-02ea-52da1888a03d:
-        # NODE attributes
-        # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
-        color: grey
+        node_attr:
+            # NODE attributes
+            # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
+            color: grey
 # Options for specific processors, by id
 processors:
     # the uuid of the processor
     351b1dbc-0172-1000-056d-ec78a003b49:
-        # NODE attributes
-        # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
-        color: blue
+        node_attr:
+            # NODE attributes
+            # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
+            color: blue

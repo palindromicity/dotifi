@@ -172,10 +172,12 @@ def _handle_group(
         )
 
         # see if user has configured a set of attributes for this processor
-        if configuration["processors"][processor.id].exists():
+        if configuration["processors"][processor.id]["node_attr"].exists():
             logging.debug("Processor %s has configured attributes", processor.id)
-            for key in configuration["processors"][processor.id]:
-                node.attr[key] = configuration["processors"][processor.id][key].get()
+            for key in configuration["processors"][processor.id]["node_attr"]:
+                node.attr[key] = configuration["processors"][processor.id]["node_attr"][
+                    key
+                ].get()
                 logging.debug(
                     "Set Processor %s configured attribute %s to %s",
                     processor.id,
@@ -214,15 +216,19 @@ def _handle_group(
         )
 
         # see if user has configured a set of attributes for this remote process group
-        if configuration["remote_process_groups"][remote_group.id].exists():
+        if configuration["remote_process_groups"][remote_group.id][
+            "node_attr"
+        ].exists():
             logging.debug(
                 "Remote Process Group %s has configured attributes",
                 remote_group.component.name,
             )
-            for key in configuration["remote_process_groups"][remote_group.id]:
+            for key in configuration["remote_process_groups"][remote_group.id][
+                "node_attr"
+            ]:
                 remote_subgraph.graph_attr[key] = configuration[
                     "remote_process_groups"
-                ][remote_group.id][key].get()
+                ][remote_group.id]["node_attr"][key].get()
                 logging.debug(
                     "Set Remote Process Group %s configured graph attribute %s to %s",
                     remote_group.component.name,
