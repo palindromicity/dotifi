@@ -56,8 +56,8 @@ def publish(publish_configuration, graph):
 
     if not graphic_file_name.endswith(graphviz_fmt):
         graphic_file_name = graphic_file_name + "." + graphviz_fmt
-    if not dot_name.endswith(".dot"):
-        dot_name = dot_name + ".dot"
+    if not dot_name.endswith(".gv"):
+        dot_name = dot_name + ".gv"
 
     graph.write(dot_name)
     logging.debug("Wrote %s", dot_name)

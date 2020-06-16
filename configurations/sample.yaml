@@ -9,7 +9,7 @@ configuration_version : 1
 verbose:
 #  Path to an existing DOT graph definition as opposed to being built from NiFi
 with_existing_dot_file:
-# Path to the dot file to store the dot results to
+# Path to the gv file to store the dot results to
 output_dot_file:
 
 #  The format of the graphviz generated file. Formats (not all may be available on every system

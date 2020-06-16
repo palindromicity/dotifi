@@ -41,7 +41,7 @@ def process():
         "-o",
         required=False,
         default="nifi-canvas",
-        help="Path to the dot file to store the dot results to.",
+        help="Path to the gv file to store the dot results to.",
     )
     parser.add_argument(
         "--output-graphviz-format",
@@ -100,7 +100,7 @@ def process():
         "-g",
         required=False,
         default="nifi-canvas",
-        help="Path to the dot file to store the graphviz results to. "
+        help="Path to the graphical file to store the graphviz results to. "
         + "Results will be saved with the extension "
         + "of the --output-graphviz-format option",
     )
