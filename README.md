@@ -1,6 +1,6 @@
 # dotifi
 
-![Tests](https://github.com/palindromicity/dotifi/workflows/Tests/badge.svg?branch=master) [![PyPI version](https://badge.fury.io/py/dotifi.svg)](https://badge.fury.io/py/dotifi)
+![Tests](https://github.com/palindromicity/dotifi/workflows/Tests/badge.svg?branch=master) [![PyPI version](https://badge.fury.io/py/dotifi.svg)](https://badge.fury.io/py/dotifi) [![Downloads](https://pepy.tech/badge/dotifi)](https://pepy.tech/project/dotifi) [![Downloads](https://pepy.tech/badge/dotifi/month)](https://pepy.tech/project/dotifi/month) [![Downloads](https://pepy.tech/badge/dotifi/week)](https://pepy.tech/project/dotifi/week)
 
 A utility to generate [DOT](https://graphviz.org/doc/info/lang.html) files and images based on [graphviz](https://graphviz.org/documentation/) from the canvas of an [Apache NiFi](https://nifi.apache.org) instance.
 
