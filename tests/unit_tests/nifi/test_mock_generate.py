@@ -23,7 +23,7 @@ START_AT_MOCK_DATA = pathlib.Path(__file__).parent.parent.parent.joinpath(
     "resources/data/test_mock_data_start_at_pg.pickle"
 )
 SAMPLE_GRAPH = pathlib.Path(__file__).parent.parent.parent.parent.joinpath(
-    "sample_output/nifi-canvas.dot"
+    "sample_output/nifi-canvas.gv"
 )
 RPG_CONFIG = pathlib.Path(__file__).parent.parent.parent.joinpath(
     "resources/configurations/rpg_attrs.yaml"
