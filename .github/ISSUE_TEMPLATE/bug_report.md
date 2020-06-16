@@ -25,6 +25,7 @@ If applicable, add screenshots to help explain your problem.
     - OS: [e.g. iOS] VERSION:
     - NIFI: [e.g. 1.12.0]
     - Python: [e.g. 3.8]
+    - dotifi: [e.g 0.1.2]
 
 **Additional context**
 Add any other context about the problem here.
