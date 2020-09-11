@@ -6,6 +6,7 @@ adapted from secure_connection.py, nipyapi project.
 import logging
 
 import pytest
+
 from dotifi.configuration.load import load_configuration
 from dotifi.nifi.connection import configure_nifi_connection
 from dotifi.nifi.generate import generate_graph
