@@ -206,10 +206,10 @@ optional arguments:
   --nifi-url NIFI_URL, -n NIFI_URL
                         The url of the NiFi instance to connect to. This is
                         used if --with-existing is not set.
-  --using-ssl USING_SSL
+  --using-ssl
                         Flag, when specified it signals that the NiFi
                         connection requires SSL
-  --using-user-pw USING_USER_PW
+  --using-user-pw
                         Flag, when specified it signals that the NiFi
                         connection requires a username and password
   --ca-file CA_FILE     A PEM file containing certs for the root CA(s) for the

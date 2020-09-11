@@ -130,12 +130,14 @@ def process():
     )
     parser.add_argument(
         "--using-ssl",
+        action="store_true",
         required=False,
         default=False,
         help="Flag, when specified it signals that the NiFi connection requires SSL",
     )
     parser.add_argument(
         "--using-user-pw",
+        action="store_true",
         required=False,
         default=False,
         help="Flag, when specified it signals that the NiFi connection requires a username and password",
