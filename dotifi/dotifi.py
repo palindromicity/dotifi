@@ -2,12 +2,12 @@ import argparse
 import logging
 
 from confuse import NotFoundError
+from pygraphviz import AGraph
+
 from dotifi.configuration.load import load_configuration
 from dotifi.nifi import generate
 from dotifi.nifi.connection import configure_nifi_connection
 from dotifi.publishing.publish import publish
-from pygraphviz import AGraph
-
 
 """
 dotifi main script
@@ -130,12 +130,14 @@ def process():
     )
     parser.add_argument(
         "--using-ssl",
+        action="store_true",
         required=False,
         default=False,
         help="Flag, when specified it signals that the NiFi connection requires SSL",
     )
     parser.add_argument(
         "--using-user-pw",
+        action="store_true",
         required=False,
         default=False,
         help="Flag, when specified it signals that the NiFi connection requires a username and password",

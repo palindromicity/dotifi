@@ -1,9 +1,10 @@
 import pathlib
 
 import pytest
+from pygraphviz import AGraph
+
 from dotifi.configuration.load import load_configuration
 from dotifi.nifi.generate import generate_graph
-from pygraphviz import AGraph
 
 """
 Tests for generation
@@ -100,10 +101,10 @@ def test_happy_path(default_args):
 @pytest.mark.parametrize("path_arg", [START_AT_MOCK_DATA])
 def test_start_pg(pg_start_args):
     """
-        Test outputing a subset of a canvas by specifying
-        the process group to start at
-        :param pg_start_args the pg_start_args fixture
-        """
+    Test outputing a subset of a canvas by specifying
+    the process group to start at
+    :param pg_start_args the pg_start_args fixture
+    """
 
     options = load_configuration(pg_start_args, None)
 
