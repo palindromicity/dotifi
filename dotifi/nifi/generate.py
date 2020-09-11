@@ -46,7 +46,7 @@ def _create_port_node(subgraph, port_type, port):
     subgraph.add_node(port.id)
     port_node = subgraph.get_node(port.id)
     port_node.attr["label"] = port.component.name + " : " + port.component.type
-    port_node.attr["pos"] = "{0:f},{0:f}".format(port.position.x, port.position.y)
+    port_node.attr["pos"] = f"{port.position.x:f},{port.position.x:f}"
     port_node.attr["id"] = port.id
     logging.debug(
         "Generate node for %s_port %s:%s", port_type, port.id, port.component.name
@@ -163,9 +163,7 @@ def _handle_group(
         node.attr["label"] = (
             processor.component.name + " : " + class_full[len(class_full) - 1]
         )
-        node.attr["pos"] = "{0:f},{0:f}".format(
-            processor.position.x, processor.position.y
-        )
+        node.attr["pos"] = f"{processor.position.x:f},{processor.position.y:f}"
         node.attr["id"] = processor.id
         logging.debug(
             "Generate node for processor %s:%s", processor.id, processor.component.name
