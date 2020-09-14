@@ -23,6 +23,9 @@ dotifi supports
     - Processors by id
     - Remote Process Groups by id
 
+Experimental Support (untested)
+- auth-tokens
+
 ## Install
 
 ```bash
