@@ -19,3 +19,4 @@ def test_load_env_configuration():
     configuration = load_configuration({}, NO_ENV.absolute().as_posix())
     assert configuration["path"].as_str_expanded() != "${PATH}"
     assert configuration["not_path"].get() == "not path"
+    assert configuration["using_ssl"].get(bool) is True
