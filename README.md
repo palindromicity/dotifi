@@ -332,3 +332,6 @@ processors:
         # see https://graphviz.gitlab.io/_pages/doc/info/attrs.html
         color: blue
 ```
+
+> command line parameters that are described as `flags` need only be specified without a value to be set to `True`.
+> YAML configuration values however need to be explicitly set to `True` or `False`
