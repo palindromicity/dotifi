@@ -162,6 +162,16 @@ def process():
         required=False,
         help="The password to decrypt the client_key_file",
     )
+    parser.add_argument(
+        "--auth-token",
+        required=False,
+        help="Authorization token string",
+    )
+    parser.add_argument(
+        "--auth-token-api-field",
+        required=False,
+        help="the api_key field name to set the token to. Defaults to 'tokenAuth'",
+    )
     parser.add_argument("--nifi-username", required=False, help="The NiFi user name")
     parser.add_argument(
         "--nifi-user-password", required=False, help="The NiFi user password"
