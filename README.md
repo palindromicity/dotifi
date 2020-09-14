@@ -22,9 +22,7 @@ dotifi supports
 - supplying name value pairs ( in yaml configuration file) to override and set [attributes](https://graphviz.gitlab.io/_pages/doc/info/attrs.html)
     - Processors by id
     - Remote Process Groups by id
-
-Experimental Support (untested)
-- auth-tokens
+- ssl, certificates, and auth-tokens
 
 ## Install
 
