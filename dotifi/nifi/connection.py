@@ -90,3 +90,12 @@ def configure_nifi_connection(configuration):
             if configuration["configure_test_policies"].exists():
                 if configuration["configure_test_policies"].get(bool):
                     _bootstrap_test_nifi_access_policies()
+
+    if configuration["auth_token"].exists():
+        api_token = configuration["auth_token"].get()
+        if configuration["auth_token_api_field"].exists():
+            nipyapi.security.set_service_auth_token(
+                token=api_token, token_name=configuration["auth_token_api_field"].get()
+            )
+        else:
+            nipyapi.security.set_service_auth_token(token=api_token)

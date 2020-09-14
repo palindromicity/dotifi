@@ -156,21 +156,22 @@ String values in the configuration file may be entered as shell environment vari
 
 
 ```bash
-usage: dotifi.py [-h] [--with-existing-dot-file WITH_EXISTING_DOT_FILE]
-                 [--with-conf-file WITH_CONF_FILE]
-                 [--output-dot-file OUTPUT_DOT_FILE]
-                 [--output-graphviz-format {canon,cmap,cmapx,cmapx_np,dia,dot,fig,gd,gd2,gif,hpgl,imap,imap_np,ismap,jpe,jpeg,jpg,mif,mp,pcl,pdf,pic,plain,plain-ext,png,ps,ps2,svg,svgz,vml,vmlz,vrml,vtx,wbmp,xdot,xlib}]
-                 [--output-graphviz-program {neato,dot,twopi,circo,fdp,nop}]
-                 [--output-graphviz-file OUTPUT_GRAPHVIZ_FILE]
-                 [--start-at-pg START_AT_PG] [--depth DEPTH]
-                 [--nifi-url NIFI_URL] [--using-ssl USING_SSL]
-                 [--using-user-pw USING_USER_PW] [--ca-file CA_FILE]
-                 [--client-cert-file CLIENT_CERT_FILE]
-                 [--client-key-file CLIENT_KEY_FILE]
-                 [--client-key-password CLIENT_KEY_PASSWORD]
-                 [--nifi-username NIFI_USERNAME]
-                 [--nifi-user-password NIFI_USER_PASSWORD] [--verbose]
-                 [--generate-mock-data] [--mock-data-file MOCK_DATA_FILE]
+usage: dotifi [-h] [--with-existing-dot-file WITH_EXISTING_DOT_FILE]
+              [--with-conf-file WITH_CONF_FILE]
+              [--output-dot-file OUTPUT_DOT_FILE]
+              [--output-graphviz-format {canon,cmap,cmapx,cmapx_np,dia,dot,fig,gd,gd2,gif,hpgl,imap,imap_np,ismap,jpe,jpeg,jpg,mif,mp,pcl,pdf,pic,plain,plain-ext,png,ps,ps2,svg,svgz,vml,vmlz,vrml,vtx,wbmp,xdot,xlib}]
+              [--output-graphviz-program {neato,dot,twopi,circo,fdp,nop}]
+              [--output-graphviz-file OUTPUT_GRAPHVIZ_FILE]
+              [--start-at-pg START_AT_PG] [--depth DEPTH]
+              [--nifi-url NIFI_URL] [--using-ssl] [--using-user-pw]
+              [--ca-file CA_FILE] [--client-cert-file CLIENT_CERT_FILE]
+              [--client-key-file CLIENT_KEY_FILE]
+              [--client-key-password CLIENT_KEY_PASSWORD]
+              [--auth-token AUTH_TOKEN]
+              [--auth-token-api-field AUTH_TOKEN_API_FIELD]
+              [--nifi-username NIFI_USERNAME]
+              [--nifi-user-password NIFI_USER_PASSWORD] [--verbose]
+              [--generate-mock-data] [--mock-data-file MOCK_DATA_FILE]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -181,7 +182,7 @@ optional arguments:
                         Path to the .yaml file with the configuration. All
                         options can be set in the configuration, with
   --output-dot-file OUTPUT_DOT_FILE, -o OUTPUT_DOT_FILE
-                        Path to the dot file to store the dot results to.
+                        Path to the gv file to store the dot results to.
   --output-graphviz-format {canon,cmap,cmapx,cmapx_np,dia,dot,fig,gd,gd2,gif,hpgl,imap,imap_np,ismap,jpe,jpeg,jpg,mif,mp,pcl,pdf,pic,plain,plain-ext,png,ps,ps2,svg,svgz,vml,vmlz,vrml,vtx,wbmp,xdot,xlib}, -f {canon,cmap,cmapx,cmapx_np,dia,dot,fig,gd,gd2,gif,hpgl,imap,imap_np,ismap,jpe,jpeg,jpg,mif,mp,pcl,pdf,pic,plain,plain-ext,png,ps,ps2,svg,svgz,vml,vmlz,vrml,vtx,wbmp,xdot,xlib}
                         The format of the graphviz generated file. Formats
                         (not all may be available on every system depending on
@@ -189,9 +190,9 @@ optional arguments:
   --output-graphviz-program {neato,dot,twopi,circo,fdp,nop}
                         Graphviz layout method to use.
   --output-graphviz-file OUTPUT_GRAPHVIZ_FILE, -g OUTPUT_GRAPHVIZ_FILE
-                        Path to the dot file to store the graphviz results to.
-                        Results will be saved with the extension of the
-                        --output-graphviz-format option
+                        Path to the graphical file to store the graphviz
+                        results to. Results will be saved with the extension
+                        of the --output-graphviz-format option
   --start-at-pg START_AT_PG, -s START_AT_PG
                         The id of the process group to start at. This will be
                         a uuid. When set the output will start with this
@@ -206,11 +207,9 @@ optional arguments:
   --nifi-url NIFI_URL, -n NIFI_URL
                         The url of the NiFi instance to connect to. This is
                         used if --with-existing is not set.
-  --using-ssl
-                        Flag, when specified it signals that the NiFi
+  --using-ssl           Flag, when specified it signals that the NiFi
                         connection requires SSL
-  --using-user-pw
-                        Flag, when specified it signals that the NiFi
+  --using-user-pw       Flag, when specified it signals that the NiFi
                         connection requires a username and password
   --ca-file CA_FILE     A PEM file containing certs for the root CA(s) for the
                         NiFi server
@@ -222,6 +221,11 @@ optional arguments:
                         the client's secret key
   --client-key-password CLIENT_KEY_PASSWORD
                         The password to decrypt the client_key_file
+  --auth-token AUTH_TOKEN
+                        Authorization token string
+  --auth-token-api-field AUTH_TOKEN_API_FIELD
+                        the api_key field name to set the token to. Defaults
+                        to 'tokenAuth'
   --nifi-username NIFI_USERNAME
                         The NiFi user name
   --nifi-user-password NIFI_USER_PASSWORD
@@ -231,7 +235,6 @@ optional arguments:
   --mock-data-file MOCK_DATA_FILE
                         When --generate-mock-data is specified, it will be
                         written to this file
-
 ```
 
 A sample of the yaml configuration is [here](configurations/sample.yaml)
