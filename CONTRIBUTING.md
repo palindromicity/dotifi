@@ -10,7 +10,7 @@ First fork this project.
     - for example setup pyenv local to the project directory
 - In the source route directory run `poetry install`, this will install all the dependencies
 - Run `peotry run pytest -v` to run the tests and ensure things are working
-* git checkout -b my-fix upstream/master
+* git checkout -b my-fix upstream/main
 
 #### fix some code...
 
