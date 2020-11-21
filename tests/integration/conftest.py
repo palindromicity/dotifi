@@ -70,12 +70,12 @@ def _start_docker_containers(docker_containers, network_name="test"):
     # Pull relevant Images
     log.info("Pulling relevant Docker Images if needed")
     for image in set([(c.image_name + ":" + c.image_tag) for c in docker_containers]):
-        log.info("Checking image %s", image)
+        log.info(f"Checking image {image}")
         try:
             d_client.images.get(image)
-            log.info("Using local image for %s", image)
+            log.info(f"Using local image for {image}")
         except ImageNotFound:
-            log.info("Pulling %s", image)
+            log.info(f"Pulling {image}")
             d_client.images.pull(image)
 
     # Clear previous containers
@@ -86,7 +86,7 @@ def _start_docker_containers(docker_containers, network_name="test"):
         if li.name in [i.name for i in docker_containers]
     ]
     for c in d_clear_list:
-        log.info("Removing old container %s", c.name)
+        log.info(f"Removing old container {c.name}")
         c.remove(force=True)
 
     # Deploy/Get Network
@@ -100,12 +100,12 @@ def _start_docker_containers(docker_containers, network_name="test"):
         raise EnvironmentError("Too many test networks found")
     else:
         d_network = d_n_list[0]
-    log.info("Using Docker network: %s", d_network.name)
+    log.info(f"Using Docker network: {d_network.name}")
 
     # Deploy Containers
     log.info("Starting relevant Docker Containers")
     for c in docker_containers:
-        log.info("Starting Container %s", c.name)
+        log.info(f"Starting Container {c.name}")
         c.set_container(
             d_client.containers.run(
                 image=c.image_name + ":" + c.image_tag,

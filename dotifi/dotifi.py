@@ -212,15 +212,15 @@ def process():
     )
     # logging.root.setLevel(level)
 
-    logging.debug("Configuration:\n%s", options.dump())
+    logging.debug(f"Configuration:\n{options.dump()}")
 
     graph = None
     if options["with_existing_dot_file"].exists():
         existing_path = options["with_existing_dot_file"].as_filename()
-        logging.debug("Using existing DOT file %s", existing_path)
+        logging.debug(f"Using existing DOT file {existing_path}")
         try:
             graph = AGraph(existing_path)
-            logging.debug("Loaded graph from %s :\n%s", existing_path, graph.string())
+            logging.debug(f"Loaded graph from {existing_path} :\n{graph.string()}")
         except FileNotFoundError as e:
             logging.exception(e)
             exit(1)

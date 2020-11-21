@@ -49,7 +49,7 @@ def _create_port_node(subgraph, port_type, port):
     port_node.attr["pos"] = f"{port.position.x:f},{port.position.x:f}"
     port_node.attr["id"] = port.id
     logging.debug(
-        "Generate node for %s_port %s:%s", port_type, port.id, port.component.name
+        f"Generate node for {port_type}_port {port.id}:{port.component.name}"
     )
 
 
@@ -90,7 +90,7 @@ def _handle_group(
     :param mock_info: mock data storage
     :return:
     """
-    logging.debug("Handling group %s", process_group.id)
+    logging.debug(f"Handling group {process_group.id}")
     this_flow = nipyapi.canvas.get_flow(process_group.id)
     _add_mock_info(
         do_mock,
@@ -109,7 +109,7 @@ def _handle_group(
                 "template"
             ].as_filename()
             logging.debug(
-                "Using template file %s for %d", template_file, process_group.id
+                f"Using template file {template_file} for {process_group.id}"
             )
             template_group_graph = pgv.AGraph(template_file)
             # process_group_graph = parent_graph.add_subgraph(process_group_graph)
@@ -125,9 +125,8 @@ def _handle_group(
             process_group_graph.graph_attr["label"] = process_group.component.name
             process_group_graph.graph_attr["id"] = process_group.id
             logging.debug(
-                "Created subgraph %s with label %s",
-                process_group_graph.name,
-                process_group.component.name,
+                f"Created subgraph {process_group_graph.name} " \
+                f"with label {process_group.component.name}"
             )
 
     input_ports = nipyapi.canvas.list_all_input_ports(process_group.id, False)
@@ -166,21 +165,18 @@ def _handle_group(
         node.attr["pos"] = f"{processor.position.x:f},{processor.position.y:f}"
         node.attr["id"] = processor.id
         logging.debug(
-            "Generate node for processor %s:%s", processor.id, processor.component.name
+            f"Generate node for processor {processor.id}:{processor.component.name}" 
         )
 
         # see if user has configured a set of attributes for this processor
         if configuration["processors"][processor.id]["node_attr"].exists():
-            logging.debug("Processor %s has configured attributes", processor.id)
+            logging.debug(f"Processor {processor.id} has configured attributes")
             for key in configuration["processors"][processor.id]["node_attr"]:
                 node.attr[key] = configuration["processors"][processor.id]["node_attr"][
                     key
                 ].get()
                 logging.debug(
-                    "Set Processor %s configured attribute %s to %s",
-                    processor.id,
-                    key,
-                    node.attr[key],
+                    f"Set Processor {processor.id} configured attribute {key} to {node.attr[key]}"
                 )
 
     for remote_group in this_flow.process_group_flow.flow.remote_process_groups:
@@ -196,9 +192,8 @@ def _handle_group(
         remote_subgraph.graph_attr["id"] = remote_group.id
 
         logging.debug(
-            "Generate node for Remote Process Group %s:%s",
-            remote_group.component.name,
-            remote_group.component.target_uri,
+            "Generate node for Remote Process Group " \
+            f"{remote_group.component.name}:{remote_group.component.target_uri}"
         )
 
         remote_process_group = nipyapi.canvas.get_remote_process_group(
@@ -218,8 +213,7 @@ def _handle_group(
             "node_attr"
         ].exists():
             logging.debug(
-                "Remote Process Group %s has configured attributes",
-                remote_group.component.name,
+                f"Remote Process Group {remote_group.component.name} has configured attributes"
             )
             for key in configuration["remote_process_groups"][remote_group.id][
                 "node_attr"
@@ -228,16 +222,13 @@ def _handle_group(
                     "remote_process_groups"
                 ][remote_group.id]["node_attr"][key].get()
                 logging.debug(
-                    "Set Remote Process Group %s configured graph attribute %s to %s",
-                    remote_group.component.name,
-                    key,
-                    remote_subgraph.graph_attr[key],
+                    f"Set Remote Process Group {remote_group.component.name} " \
+                    f"configured graph attribute {key} to {remote_subgraph.graph_attr[key]}"
                 )
         for input_port in remote_process_group["input_ports"]:
             logging.debug(
-                "Found Remote Process Group %s input port %s",
-                remote_group.component.name,
-                input_port.id,
+                f"Found Remote Process Group {remote_group.component.name} "\
+                f"input port {input_port.id}"
             )
             remote_subgraph.add_node(input_port.id)
             remote_input_port_node = remote_subgraph.get_node(input_port.id)
@@ -246,11 +237,10 @@ def _handle_group(
             )
             remote_input_port_node.attr["id"] = input_port.id
             logging.debug(
-                "Generated node for Remote Process Group %s input port %s",
-                remote_group.component.name,
-                input_port.id,
+                f"Generated node for Remote Process Group {remote_group.component.name} " \
+                f"input port {input_port.id}"
             )
-    logging.debug("Checking connections for %s flow", process_group.id)
+    logging.debug(f"Checking connections for {process_group.id} flow")
     for connection in this_flow.process_group_flow.flow.connections:
         if connection.component.selected_relationships is not None:
             for relationship in connection.component.selected_relationships:
@@ -270,16 +260,14 @@ def _handle_group(
             )
             edge.attr["label"] = connection.component.name
         logging.debug(
-            "Generated Edge from %s to %s",
-            connection.source_id,
-            connection.destination_id,
+            f"Generated Edge from {connection.source_id} to {connection.destination_id}"
         )
 
     # check and see if we are at the configured depth or that we can keep going
     configured_depth = int(configuration["depth"].get())
     next_depth = current_depth + 1
     if (configured_depth == -1) or (next_depth <= configured_depth):
-        logging.debug("Moving to depth %d", next_depth)
+        logging.debug(f"Moving to depth {next_depth}")
         process_groups_api = nipyapi.nifi.ProcessGroupsApi()
         _add_mock_info(
             do_mock, mock_info, "nipyapi.nifi.ProcessGroupsApi", data=process_groups_api
@@ -309,9 +297,7 @@ def _handle_group(
             )
     else:
         logging.debug(
-            "Max depth %d met in Process Group %s, stopping",
-            configured_depth,
-            process_group.id,
+            f"Max depth {configured_depth} met in Process Group {process_group.id}, stopping"
         )
 
 
@@ -355,7 +341,7 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
     # check if the user wishes to start somewhere other than the root
     if generate_configuration["start_at_pg"].exists():
         root_id = generate_configuration["start_at_pg"].get()
-        logging.debug("using specified start_at_pg %s", root_id)
+        logging.debug(f"using specified start_at_pg {root_id}")
         root_group = nipyapi.canvas.get_process_group(root_id, identifier_type="id")
         _add_mock_info(
             do_mock,
@@ -371,9 +357,7 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
                 root_id
             ].as_filename()
             logging.debug(
-                "specified start_at_pg %s has a configured template %s",
-                root_id,
-                template_file,
+                f"specified start_at_pg {root_id} has a configured template {template_file}"
             )
             _root_graph = pgv.AGraph(template_file)
             logging.debug("root graph based on start_at_pg.id and template created")
@@ -397,7 +381,7 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
             graph_template_file = generate_configuration["graph"][
                 "template"
             ].as_filename()
-            logging.debug("Graph has a configured template %s", graph_template_file)
+            logging.debug(f"Graph has a configured template {graph_template_file}")
             _root_graph = pgv.AGraph(graph_template_file)
         else:
             logging.debug("root graph will be created from defaults")
@@ -405,7 +389,8 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
             _set_default_root_attrs(_root_graph)
 
         if logging.DEBUG >= logging.root.level:
-            logging.debug("ROOT GRAPH : \n%s", _root_graph.string())
+            logging.debug("ROOT GRAPH : \n" \
+            f"{_root_graph.string()}")
         root_id = nipyapi.canvas.get_root_pg_id()
         _add_mock_info(do_mock, mock, "nipyapi.canvas.get_root_pg_id", data=root_id)
         root_group = nipyapi.canvas.get_process_group(root_id, identifier_type="id")
