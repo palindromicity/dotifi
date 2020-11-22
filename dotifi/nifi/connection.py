@@ -32,7 +32,7 @@ def configure_nifi_connection(configuration):
     :param configuration: confuse.LazyConfig
     """
     if logging.DEBUG >= logging.root.level:
-        logging.debug("setting nifi endpoint to %s", configuration["nifi_url"].get())
+        logging.debug(f"setting nifi endpoint to {configuration['nifi_url'].get()}")
 
     nipyapi.utils.set_endpoint(configuration["nifi_url"].get())
 
@@ -42,15 +42,15 @@ def configure_nifi_connection(configuration):
         ca_file = None
         if configuration["ca_file"].exists():
             ca_file = configuration["ca_file"].as_filename()
-            logging.debug("setting ca_file to %s", ca_file)
+            logging.debug(f"setting ca_file to {ca_file}")
         client_cert_file = None
         if configuration["client_cert_file"].exists():
             client_cert_file = configuration["client_cert_file"].as_filename()
-            logging.debug("setting client_cert_file to %s", client_cert_file)
+            logging.debug(f"setting client_cert_file to {client_cert_file}")
         client_key_file = None
         if configuration["client_key_file"].exists():
             client_key_file = configuration["client_key_file"].as_filename()
-            logging.debug("setting client_key_file to %s", client_key_file)
+            logging.debug(f"setting client_key_file to {client_key_file}")
         client_key_password = None
         if configuration["client_key_password"].exists():
             client_key_password = configuration["client_key_password"].get()
@@ -70,7 +70,7 @@ def configure_nifi_connection(configuration):
         ].get(bool):
             logging.debug("Configured for user / password authentication")
             username = configuration["nifi_username"].get()
-            logging.debug("nifi_user_name is %s", username)
+            logging.debug(f"nifi_user_name is {username}")
             password = configuration["nifi_user_password"].get()
             logging.debug("attempting to log into nifi")
             nipyapi.utils.wait_to_complete(
