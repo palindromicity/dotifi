@@ -48,9 +48,7 @@ def _create_port_node(subgraph, port_type, port):
     port_node.attr["label"] = port.component.name + " : " + port.component.type
     port_node.attr["pos"] = f"{port.position.x:f},{port.position.x:f}"
     port_node.attr["id"] = port.id
-    logging.debug(
-        f"Generate node for {port_type}_port {port.id}:{port.component.name}"
-    )
+    logging.debug(f"Generate node for {port_type}_port {port.id}:{port.component.name}")
 
 
 def _clone_graph_attrs(source, target):
@@ -108,9 +106,7 @@ def _handle_group(
             template_file = configuration["process_groups"][process_group.id][
                 "template"
             ].as_filename()
-            logging.debug(
-                f"Using template file {template_file} for {process_group.id}"
-            )
+            logging.debug(f"Using template file {template_file} for {process_group.id}")
             template_group_graph = pgv.AGraph(template_file)
             # process_group_graph = parent_graph.add_subgraph(process_group_graph)
             process_group_graph = parent_graph.add_subgraph(
@@ -125,7 +121,7 @@ def _handle_group(
             process_group_graph.graph_attr["label"] = process_group.component.name
             process_group_graph.graph_attr["id"] = process_group.id
             logging.debug(
-                f"Created subgraph {process_group_graph.name} " \
+                f"Created subgraph {process_group_graph.name} "
                 f"with label {process_group.component.name}"
             )
 
@@ -165,7 +161,7 @@ def _handle_group(
         node.attr["pos"] = f"{processor.position.x:f},{processor.position.y:f}"
         node.attr["id"] = processor.id
         logging.debug(
-            f"Generate node for processor {processor.id}:{processor.component.name}" 
+            f"Generate node for processor {processor.id}:{processor.component.name}"
         )
 
         # see if user has configured a set of attributes for this processor
@@ -192,7 +188,7 @@ def _handle_group(
         remote_subgraph.graph_attr["id"] = remote_group.id
 
         logging.debug(
-            "Generate node for Remote Process Group " \
+            "Generate node for Remote Process Group "
             f"{remote_group.component.name}:{remote_group.component.target_uri}"
         )
 
@@ -222,12 +218,12 @@ def _handle_group(
                     "remote_process_groups"
                 ][remote_group.id]["node_attr"][key].get()
                 logging.debug(
-                    f"Set Remote Process Group {remote_group.component.name} " \
+                    f"Set Remote Process Group {remote_group.component.name} "
                     f"configured graph attribute {key} to {remote_subgraph.graph_attr[key]}"
                 )
         for input_port in remote_process_group["input_ports"]:
             logging.debug(
-                f"Found Remote Process Group {remote_group.component.name} "\
+                f"Found Remote Process Group {remote_group.component.name} "
                 f"input port {input_port.id}"
             )
             remote_subgraph.add_node(input_port.id)
@@ -237,7 +233,7 @@ def _handle_group(
             )
             remote_input_port_node.attr["id"] = input_port.id
             logging.debug(
-                f"Generated node for Remote Process Group {remote_group.component.name} " \
+                f"Generated node for Remote Process Group {remote_group.component.name} "
                 f"input port {input_port.id}"
             )
     logging.debug(f"Checking connections for {process_group.id} flow")
@@ -389,8 +385,7 @@ def generate_graph(generate_configuration) -> pgv.AGraph:
             _set_default_root_attrs(_root_graph)
 
         if logging.DEBUG >= logging.root.level:
-            logging.debug("ROOT GRAPH : \n" \
-            f"{_root_graph.string()}")
+            logging.debug("ROOT GRAPH : \n" f"{_root_graph.string()}")
         root_id = nipyapi.canvas.get_root_pg_id()
         _add_mock_info(do_mock, mock, "nipyapi.canvas.get_root_pg_id", data=root_id)
         root_group = nipyapi.canvas.get_process_group(root_id, identifier_type="id")
