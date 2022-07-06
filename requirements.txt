@@ -5,7 +5,7 @@ docker==4.3.1
 idna==2.10
 importlib-metadata==2.0.0
 jsonpickle==1.4.1
-lxml==4.3.5
+lxml==4.9.1
 nipyapi==0.15.0
 packaging==20.4
 pygraphviz==1.6
